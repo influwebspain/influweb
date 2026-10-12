@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influweb | Diseño Web, Marketing y Automatización IA para Clínicas y Negocios</title>
+  <meta name="description" content="Impulsa tu clínica o negocio con webs de alto rendimiento, captación de clientes y automatizaciones con Inteligencia Artificial. Oferta especial lanzamiento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030712;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --card-border: rgba(56, 189, 248, 0.2);
+      --primary: #0ea5e9;
+      --primary-glow: rgba(14, 165, 233, 0.35);
+      --accent: #00f3ff;
+      --accent-green: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(0, 243, 255, 0.08) 0%, transparent 45%);
+    }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(3, 7, 18, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px 24px;
+    }
+    .nav-container {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px; font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff; display: flex; align-items: center; gap: 8px;
+    }
+    .logo-badge {
+      font-size: 11px; padding: 2px 8px; border-radius: 12px;
+      background: rgba(14, 165, 233, 0.2); border: 1px solid var(--primary);
+      color: var(--accent); font-weight: 600;
+    }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .btn-cta {
+      background: linear-gradient(135deg, var(--primary), #0284c7);
+      color: #fff; padding: 10px 22px; border-radius: 8px;
+      font-weight: 600; font-size: 14px; text-decoration: none;
+      box-shadow: 0 0 16px var(--primary-glow);
+      transition: all 0.2s ease; border: none; cursor: pointer;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(14, 165, 233, 0.6); }
+
+    .hero {
+      max-width: 1100px; margin: 80px auto 60px auto;
+      text-align: center; padding: 0 20px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(14, 165, 233, 0.1); border: 1px solid var(--card-border);
+      padding: 6px 16px; border-radius: 30px; font-size: 13px; color: var(--accent);
+      margin-bottom: 24px; font-weight: 600;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(38px, 6vw, 64px); font-weight: 800;
+      line-height: 1.15; margin-bottom: 24px;
+      background: linear-gradient(180deg, #ffffff 40%, #94a3b8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(17px, 2vw, 20px); color: var(--text-muted);
+      max-width: 760px; margin: 0 auto 36px auto;
+    }
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05); color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 12px 24px; border-radius: 8px; font-weight: 600;
+      text-decoration: none; transition: all 0.2s ease;
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: #fff; }
+
+    .pricing { max-width: 1200px; margin: 100px auto; padding: 0 20px; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 {
+      font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; margin-bottom: 12px;
+    }
+    .section-title p { color: var(--text-muted); font-size: 16px; }
+
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .pricing-card {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 16px; padding: 36px 28px; display: flex; flex-direction: column;
+      position: relative; transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .pricing-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+    .pricing-card.featured {
+      border-color: var(--primary);
+      box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+    }
+    .card-popular {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .card-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .card-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; min-height: 40px; }
+    .card-price { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .card-price span { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+    .card-subtext { font-size: 12px; color: var(--accent-green); margin-bottom: 28px; font-weight: 600; }
+    .card-features { list-style: none; margin-bottom: 32px; flex: 1; }
+    .card-features li {
+      font-size: 14px; color: #cbd5e1; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .card-features li::before {
+      content: '✓'; color: var(--accent); font-weight: 800;
+    }
+
+    .contact-section {
+      max-width: 800px; margin: 80px auto; padding: 40px 24px;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 20px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #cbd5e1; }
+    .form-control {
+      width: 100%; padding: 12px 16px; border-radius: 8px;
+      background: rgba(3, 7, 18, 0.7); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff; font-family: inherit; font-size: 14px; outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-control:focus { border-color: var(--primary); box-shadow: 0 0 10px var(--primary-glow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    
+    #form-status {
+      margin-top: 16px; padding: 12px; border-radius: 8px;
+      display: none; font-size: 14px; font-weight: 600; text-align: center;
+    }
+    #form-status.success {
+      display: block; background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--accent-green); color: #34d399;
+    }
+    #form-status.error {
+      display: block; background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #ef4444; color: #f87171;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px 20px; text-align: center; color: var(--text-muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        ⚡ INFLUWEB <span class="logo-badge">PRO</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#tarifas">Tarifas</a>
+        <a href="#contacto" class="btn-cta">Pedir Presupuesto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-badge">🚀 Agencia Digital & Automatizaciones IA</div>
+    <h1>Webs de Alto Rendimiento y Automatización para tu Negocio</h1>
+    <p>Desarrollamos soluciones digitales que convierten visitas en pacientes y clientes reales. Especialistas en clínicas y profesionales en Valencia y toda España.</p>
+    <div class="hero-buttons">
+      <a href="#contacto" class="btn-cta" style="padding: 14px 28px; font-size: 16px;">Ver Oferta de Lanzamiento (690 €)</a>
+      <a href="#tarifas" class="btn-secondary">Explorar Servicios</a>
+    </div>
+  </section>
+
+  <section class="pricing" id="tarifas">
+    <div class="section-title">
+      <h2>Tarifas Claras y Sin Sorpresas</h2>
+      <p>Paquetes diseñados para maximizar tu retorno de inversión desde el primer día.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Card 1 -->
+      <div class="pricing-card featured">
+        <div class="card-popular">Más Demandado</div>
+        <div class="card-title">Web Profesional Inicial</div>
+        <div class="card-desc">Diseño exclusivo optimizado para conversión, SEO local y dispositivos móviles.</div>
+        <div class="card-price">690 € <span>+ IVA</span></div>
+        <div class="card-subtext">Pago único de lanzamiento</div>
+        <ul class="card-features">
+          <li>Diseño 100% personalizado a tu marca</li>
+          <li>Optimización SEO Local (Google Maps)</li>
+          <li>Velocidad ultra-rápida (Score 95+ PageSpeed)</li>
+          <li>Integración con WhatsApp y Formulario</li>
+          <li>Cumplimiento RGPD y Aviso Legal</li>
+        </ul>
+        <a href="#contacto" class="btn-cta" style="text-align: center;">Solicitar Web</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pricing-card">
+        <div class="card-title">Mantenimiento & Soporte</div>
+        <div class="card-desc">Tranquilidad absoluta para que tu presencia online nunca deje de funcionar.</div>
+        <div class="card-price">49 € <span>/ mes + IVA</span></div>
+        <div class="card-subtext">Sin permanencia obligatoria</div>
+        <ul class="card-features">
+          <li>Copias de seguridad diarias en la nube</li>
+          <li>Monitorización 24/7 y certificado SSL</li>
+          <li>Actualizaciones técnicas de seguridad</li>
+          <li>Soporte técnico preferente en 24h</li>
+          <li>Cambios de contenido menores incluidos</li>
+        </ul>
+        <a href="#contacto" class="btn-secondary" style="text-align: center;">Añadir Mantenimiento</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pricing-card">
+        <div class="card-title">Automatizaciones con IA</div>
+        <div class="card-desc">Elimina tareas manuales y capta citas automáticamente vía n8n y WhatsApp.</div>
+        <div class="card-price">Desde 300 € <span>+ IVA</span></div>
+        <div class="card-subtext">Configuración según complejidad</div>
+        <ul class="card-features">
+          <li>Recepción automática de leads vía Webhook</li>
+          <li>Integración con Google Sheets / CRM</li>
+          <li>Avisos inmediatos por Email / WhatsApp</li>
+          <li>Recordatorios automáticos a pacientes</li>
+          <li>Sincronización con n8n de alta disponibilidad</li>
+        </ul>
+        <a href="#contacto" class="btn-secondary" style="text-align: center;">Consultar Proyecto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto">
+    <div class="section-title" style="margin-bottom: 30px;">
+      <h2>Inicia tu Proyecto con Influweb</h2>
+      <p>Déjanos tus datos y nos pondremos en contacto contigo en menos de 2 horas laborables.</p>
+    </div>
+
+    <form id="lead-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Nombre y Apellidos *</label>
+          <input type="text" id="name" class="form-control" placeholder="Dr. Carlos Martínez" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Clínica o Negocio *</label>
+          <input type="text" id="company" class="form-control" placeholder="Clínica Dental Martínez" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Correo Electrónico *</label>
+          <input type="email" id="email" class="form-control" placeholder="contacto@clinicamartinez.es" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono / WhatsApp *</label>
+          <input type="tel" id="phone" class="form-control" placeholder="612 345 678" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Servicio de Interés</label>
+        <select id="service" class="form-control">
+          <option value="Web Profesional 690€">Web Profesional Completa (690 €)</option>
+          <option value="Web + Mantenimiento">Web Profesional + Mantenimiento Mensual (49 €/mes)</option>
+          <option value="Automatización IA n8n">Automatizaciones & IA para Gestión de Citas</option>
+          <option value="Pack Completo">Pack Completo Digitalización 360°</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensaje o Detalles del Proyecto</label>
+        <textarea id="message" class="form-control" rows="4" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn-cta" style="width: 100%; padding: 14px; font-size: 16px;">
+        🚀 Enviar Solicitud de Presupuesto
+      </button>
+
+      <div id="form-status"></div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 INFLUWEB (influweb.es) · Todos los derechos reservados · Valencia, España</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('lead-form');
+    const statusBox = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Enviando solicitud...';
+      statusBox.className = '';
+      statusBox.style.display = 'none';
+
+      const payload = {
+        asunto: 'Nuevo Lead Web - ' + document.getElementById('company').value,
+        mensaje: `Nuevo cliente interesado en Influweb:\n\n` +
+                 `• Nombre: ${document.getElementById('name').value}\n` +
+                 `• Clínica/Negocio: ${document.getElementById('company').value}\n` +
+                 `• Email: ${document.getElementById('email').value}\n` +
+                 `• Teléfono: ${document.getElementById('phone').value}\n` +
+                 `• Servicio: ${document.getElementById('service').value}\n` +
+                 `• Mensaje: ${document.getElementById('message').value || 'Sin mensaje adicional'}\n\n` +
+                 `Recibido desde formulario en influweb.es`
+      };
+
+      try {
+        const resp = await fetch('https://n8n.mundoarneses.com/webhook/influweb-notif', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (resp.ok) {
+          statusBox.className = 'success';
+          statusBox.innerText = '¡Solicitud recibida con éxito! Nuestro equipo revisará tu caso y te contactará en breve.';
+          form.reset();
+        } else {
+          throw new Error('Error al conectar con el servidor');
+        }
+      } catch (err) {
+        statusBox.className = 'error';
+        statusBox.innerText = 'No se ha podido enviar la solicitud en este momento. Por favor contáctanos directamente a info@influweb.es';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '🚀 Enviar Solicitud de Presupuesto';
+      }
+    });
+  </script>
+</body>
+</html>
