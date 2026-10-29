@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/influweb-home-unica-de-influweb-es-todo-en-una-s-lroxt",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/influweb-home-unica-de-influweb-es-todo-en-una-s-lroxt/(.*)",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ]
+}
