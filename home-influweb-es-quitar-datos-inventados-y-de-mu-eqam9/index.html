@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INFLUWEB — Agencia de marketing online en España</title>
+<meta name="description" content="Agencia de marketing online: redes sociales, textos y contenido, diseño gráfico, web y anuncios. Trabajamos con marcas de toda España.">
+<meta name="theme-color" content="#2563EB">
+<meta property="og:title" content="INFLUWEB — Agencia de marketing online">
+<meta property="og:description" content="Redes sociales, contenido, diseño, web y anuncios para marcas que quieren crecer en España.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:locale" content="es_ES">
+<link rel="canonical" href="https://influweb.es/">
+<style>
+:root{
+  --blue:#2563EB;--blue-dark:#1D4ED8;--blue-soft:#EFF4FF;
+  --ink:#0F172A;--ink-2:#334155;--muted:#64748B;
+  --bg:#F8FAFC;--card:#FFFFFF;--line:#E2E8F0;
+  --radius:16px;--radius-sm:10px;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 12px 32px -12px rgba(15,23,42,.12);
+  --max:1140px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink-2);
+  font-family:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5vw,3.35rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.2vw,2.25rem);font-weight:750}
+h3{font-size:1.115rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:100}
+.skip:focus{left:0}
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(248,250,252,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:18px;height:68px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.15rem;letter-spacing:-.03em;color:var(--ink)}
+.logo:hover{text-decoration:none}
+.logo .dot{width:11px;height:11px;border-radius:3px;background:var(--blue);display:inline-block;transform:rotate(45deg)}
+.logo span.tld{color:var(--muted);font-weight:600;font-size:.78rem;letter-spacing:.04em;margin-left:-4px;align-self:flex-end;padding-bottom:5px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:6px}
+.nav a{color:var(--ink-2);font-weight:550;font-size:.945rem;padding:9px 12px;border-radius:8px}
+.nav a:hover{background:#fff;color:var(--blue);text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-weight:650;font-size:.96rem;padding:12px 20px;border:1px solid transparent;cursor:pointer;transition:transform .12s ease,background .15s ease,box-shadow .15s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px -10px rgba(37,99,235,.75)}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:#C9D6EC;color:var(--blue)}
+.hdr .btn{margin-left:8px;padding:10px 16px}
+.burger{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;align-items:center;justify-content:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,7vw,88px) 0 clamp(40px,6vw,72px)}
+.hero::before{content:"";position:absolute;inset:-30% 45% 30% -20%;background:radial-gradient(60% 60% at 40% 40%,rgba(37,99,235,.14),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.79rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);border:1px solid #DBE6FF;border-radius:999px;padding:7px 14px;margin-bottom:20px}
+.hero p.lead{font-size:clamp(1.03rem,1.6vw,1.18rem);color:var(--ink-2);max-width:36em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;padding:0;list-style:none}
+.chips li{font-size:.83rem;font-weight:600;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+/* panel visual (sin cifras) */
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:22px}
+.panel h3{font-size:.95rem;margin-bottom:14px;color:var(--ink)}
+.bar{height:10px;border-radius:6px;background:linear-gradient(90deg,var(--blue),#60A5FA);margin-bottom:10px}
+.bar.sm{width:62%;background:#DBE6FF}
+.bar.md{width:82%;background:#BFD3FB}
+.panel .rowline{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;margin-top:10px;font-size:.88rem;color:var(--ink-2);background:#FBFDFF}
+.panel .rowline b{color:var(--ink);font-weight:650}
+.tick{width:18px;height:18px;flex:0 0 18px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:.7rem;font-weight:800}
+/* sections */
+section{padding:clamp(44px,6vw,76px) 0}
+.sec-head{max-width:44em;margin-bottom:clamp(26px,3.4vw,40px)}
+.sec-head p{margin-bottom:0}
+.grid{display:grid;gap:clamp(14px,2vw,22px)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(2,1fr)}
+.g-auto{grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,2.4vw,26px);box-shadow:0 1px 2px rgba(15,23,42,.03)}
+.card p:last-child{margin-bottom:0}
+.card p{font-size:.955rem}
+.icon{width:40px;height:40px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;margin-bottom:15px}
+.icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* casos */
+.case{display:flex;flex-direction:column;gap:14px}
+.case .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:#F1F5F9;border-radius:6px;padding:4px 9px}
+.tag.blue{background:var(--blue-soft);color:var(--blue)}
+.case h3{margin:0}
+.case ul{margin:0;padding-left:18px;font-size:.93rem;color:var(--ink-2)}
+.case ul li{margin-bottom:5px}
+.case .foot{margin-top:auto;border-top:1px dashed var(--line);padding-top:13px}
+.pend{display:inline-flex;align-items:center;gap:7px;font-size:.79rem;font-weight:700;letter-spacing:.03em;color:#8A5A00;background:#FFF8E6;border:1px dashed #E5B84B;border-radius:7px;padding:5px 10px;line-height:1.3}
+.pend::before{content:"";width:6px;height:6px;border-radius:50%;background:#D79A1E;flex:0 0 6px}
+.pend-note{font-size:.78rem;color:var(--muted);margin:8px 0 0}
+/* proceso */
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(4,1fr)}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px}
+.step .num{font-size:.8rem;font-weight:800;color:var(--blue);letter-spacing:.08em;margin-bottom:10px;display:block}
+.step h3{font-size:1rem}
+.step p{font-size:.9rem;margin:0}
+/* contacto */
+.contact{background:linear-gradient(160deg,#0F172A,#111E3A);color:#CBD5E1;border-radius:22px;padding:clamp(26px,4vw,48px)}
+.contact h2,.contact h3{color:#fff}
+.contact p{color:#C7D2E4}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,44px);align-items:start}
+.cbox{border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:20px;background:rgba(255,255,255,.05)}
+.citem{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.citem:last-child{border-bottom:0;padding-bottom:0}
+.citem span.lbl{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#94A3B8;margin-bottom:4px}
+.citem .val{color:#fff;font-weight:600;font-size:.98rem;word-break:break-word}
+.contact .pend{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);color:#FFE7A8}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:650;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--blue);font-weight:800;font-size:1.15rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;font-size:.94rem}
+/* footer */
+.ftr{background:#fff;border-top:1px solid var(--line);padding:clamp(34px,4.5vw,54px) 0 26px;font-size:.92rem}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:clamp(20px,3vw,36px)}
+.ftr h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ftr ul{list-style:none;margin:0;padding:0}
+.ftr li{margin-bottom:8px}
+.ftr a{color:var(--ink-2);font-size:.92rem}
+.ftr a:hover{color:var(--blue)}
+.ftr .about{max-width:30em;font-size:.92rem;color:var(--muted)}
+.ftr .citem{border-color:var(--line)}
+.ftr .citem span.lbl{color:var(--muted)}
+.ftr .citem .val{color:var(--ink-2)}
+.ftr .pend{background:#FFF8E6;border:1px dashed #E5B84B;color:#8A5A00}
+.copy{border-top:1px solid var(--line);margin-top:clamp(24px,3vw,36px);padding-top:18px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;color:var(--muted);font-size:.84rem}
+.legal{padding:clamp(30px,4vw,48px) 0;border-top:1px solid var(--line);background:#fff}
+.legal h2{font-size:1.25rem}
+.legal p,.legal li{font-size:.9rem;color:var(--muted)}
+.legal ul{padding-left:18px}
+/* responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .g-3{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .burger{display:flex}
+  .nav{position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:2px;padding:10px 16px 16px;display:none;box-shadow:0 18px 24px -20px rgba(15,23,42,.4)}
+  .nav.open{display:flex}
+  .nav a{padding:12px 10px}
+  .hdr .btn{margin:6px 0 0;width:100%}
+  .g-3,.g-4,.steps{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#inicio" aria-label="INFLUWEB, inicio">
+      <span class="dot" aria-hidden="true"></span>influweb<span class="tld">.es</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span aria-hidden="true"></span></button>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">Preguntas</a>
+      <a class="btn btn-primary" href="#contacto">Hablemos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <!-- HERO -->
+  <div class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Agencia de marketing online · España</span>
+        <h1>Marketing online que ordena tu marca y la hace crecer</h1>
+        <p class="lead">Redes sociales, textos y contenido, diseño gráfico, web y anuncios. Un solo equipo para que tu comunicación sea clara, constante y coherente en todos los canales.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contacto">Hablemos de tu proyecto</a>
+          <a class="btn btn-ghost" href="#casos">Ver casos</a>
+        </div>
+        <ul class="chips" aria-label="Áreas de trabajo">
+          <li>Redes sociales</li>
+          <li>Contenido</li>
+          <li>Diseño gráfico</li>
+          <li>Web</li>
+          <li>Anuncios</li>
+        </ul>
+      </div>
+      <aside class="panel" aria-label="Resumen de cómo trabaja el equipo">
+        <h3>Tu marca, en orden</h3>
+        <div class="bar md" aria-hidden="true"></div>
+        <div class="bar sm" aria-hidden="true"></div>
+        <div class="rowline"><span class="tick" aria-hidden="true">✓</span><span><b>Estrategia</b> antes de publicar</span></div>
+        <div class="rowline"><span class="tick" aria-hidden="true">✓</span><span><b>Contenido</b> con identidad propia</span></div>
+        <div class="rowline"><span class="tick" aria-hidden="true">✓</span><span><b>Web</b> preparada para convertir</span></div>
+        <div class="rowline"><span class="tick" aria-hidden="true">✓</span><span><b>Medición</b> para decidir con criterio</span></div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Servicios</h2>
+        <p>Cinco áreas que funcionan juntas. Podemos llevarlas todas o solo la que necesitas.</p>
+      </div>
+      <div class="grid g-auto">
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M4 12a8 8 0 0 1 8-8M20 12a8 8 0 0 1-8 8"/><path d="M2.5 12a9.5 9.5 0 0 1 9.5-9.5M21.5 12a9.5 9.5 0 0 1-9.5 9.5"/></svg></div>
+          <h3>Redes sociales</h3>
+          <p>Planificación, publicación y comunidad. Elegimos formatos y frecuencia según el público de cada plataforma.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 10h12M4 15h16M4 20h8"/></svg></div>
+          <h3>Textos y contenido</h3>
+          <p>Copies, guiones, artículos y descripciones con la voz de tu marca y las palabras que busca tu cliente.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8"/></svg></div>
+          <h3>Diseño gráfico</h3>
+          <p>Identidad visual, plantillas y piezas para redes, web y campañas, con criterios de marca compartidos.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 18v2M16 18v2"/></svg></div>
+          <h3>Web y landing pages</h3>
+          <p>Webs rápidas, responsive y bien estructuradas, pensadas para informar y para que el visitante dé el paso.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 4-7 5 5"/><path d="M3 21h18"/></svg></div>
+          <h3>Anuncios</h3>
+          <p>Campañas en Meta y Google con creatividades, segmentación y medición. Se ajustan con datos, no por intuición.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section id="casos" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Casos</h2>
+        <p>Proyectos por sector y ciudad. Cada caso resume qué hicimos y qué área cubrimos.</p>
+      </div>
+      <div class="grid g-4">
+        <article class="card case">
+          <div class="meta"><span class="tag blue">Clínica dental</span><span class="tag">Valencia</span></div>
+          <h3>Captación de pacientes por tratamiento</h3>
+          <ul>
+            <li>Plan de contenidos por especialidad y dudas frecuentes del paciente.</li>
+            <li>Piezas gráficas y vídeo con la identidad de la clínica.</li>
+            <li>Anuncios en Meta y Google y landing de solicitud de cita.</li>
+            <li>Seguimiento de solicitudes y ajuste de campañas.</li>
+          </ul>
+          <div class="foot">
+            <span class="pend">[PENDIENTE: datos reales]</span>
+            <p class="pend-note">Resultado pendiente de validar con el cliente antes de publicar.</p>
+          </div>
+        </article>
+        <article class="card case">
+          <div class="meta"><span class="tag blue">Restauración</span><span class="tag">Madrid</span></div>
+          <h3>Más mesas reservadas desde redes</h3>
+          <ul>
+            <li>Fotografía y vídeo de carta, sala y equipo.</li>
+            <li>Calendario de publicaciones con promociones y novedades.</li>
+            <li>Campañas de reserva por zona y respuesta a reseñas.</li>
+            <li>Contenido para celebraciones y grupos.</li>
+          </ul>
+          <div class="foot">
+            <span class="pend">[PENDIENTE: datos reales]</span>
+            <p class="pend-note">Resultado pendiente de validar con el cliente antes de publicar.</p>
+          </div>
+        </article>
+        <article class="card case">
+          <div class="meta"><span class="tag blue">Ecommerce</span><span class="tag">Sevilla</span></div>
+          <h3>Tienda online con mejor recorrido de compra</h3>
+          <ul>
+            <li>Revisión de fichas de producto y landing de campaña.</li>
+            <li>Anuncios de adquisición y remarketing.</li>
+            <li>Flujos de email para carrito y recuperación.</li>
+            <li>Analítica configurada para medir cada paso.</li>
+          </ul>
+          <div class="foot">
+            <span class="pend">[PENDIENTE: datos reales]</span>
+            <p class="pend-note">Resultado pendiente de validar con el cliente antes de publicar.</p>
+          </div>
+        </article>
+        <article class="card case">
+          <div class="meta"><span class="tag blue">Inmobiliaria</span><span class="tag">Málaga</span></div>
+          <h3>Promociones con solicitudes cualificadas</h3>
+          <ul>
+            <li>Landing por promoción con planos, galería y formulario.</li>
+            <li>Anuncios por zona y segmentación por interés.</li>
+            <li>Creatividades de inmueble y recorridos en vídeo.</li>
+            <li>Gestión de solicitudes y aviso al equipo comercial.</li>
+          </ul>
+          <div class="foot">
+            <span class="pend">[PENDIENTE: datos reales]</span>
+            <p class="pend-note">Resultado pendiente de validar con el cliente antes de publicar.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Cómo trabajamos</h2>
+        <p>Un proceso claro, con entregas definidas y sin sorpresas.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3>Escuchamos</h3><p>Entendemos el negocio, el público y el punto de partida de la marca.</p></div>
+        <div class="step"><span class="num">02</span><h3>Planificamos</h3><p>Definimos objetivos, mensajes y canales, y acordamos prioridades.</p></div>
+        <div class="step"><span class="num">03</span><h3>Producimos</h3><p>Textos, diseño, web y anuncios salen con criterios de marca comunes.</p></div>
+        <div class="step"><span class="num">04</span><h3>Medimos</h3><p>Revisamos resultados y ajustamos lo que no funciona.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact-grid">
+          <div>
+            <h2>Cuéntanos qué necesitas</h2>
+            <p>Escríbenos y te decimos cómo lo abordaríamos, sin compromiso. Si ya tienes web o redes en marcha, las revisamos antes de responder.</p>
+            <p style="margin-bottom:0">Trabajamos con negocios de toda España, con reuniones en remoto y presenciales cuando el proyecto lo requiere.</p>
+          </div>
+          <div class="cbox">
+            <div class="citem">
+              <span class="lbl">Teléfono</span>
+              <span class="val pend">[PENDIENTE: teléfono real]</span>
+            </div>
+            <div class="citem">
+              <span class="lbl">Correo</span>
+              <span class="val pend">[PENDIENTE: correo de contacto]</span>
+            </div>
+            <div class="citem">
+              <span class="lbl">Domicilio fiscal</span>
+              <span class="val pend">[PENDIENTE: domicilio fiscal]</span>
+            </div>
+            <p class="pend-note" style="color:#94A3B8;margin-top:14px">Datos de contacto pendientes de confirmación. Se publicarán en cuanto estén disponibles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><h2>Preguntas frecuentes</h2></div>
+      <details>
+        <summary>¿Con qué tipo de negocios trabajáis?</summary>
+        <p>Con pymes, comercios, clínicas, restauración, inmobiliarias y marcas que quieren ordenar su comunicación digital. También con agencias que necesitan apoyo de producción.</p>
+      </details>
+      <details>
+        <summary>¿Podéis llevar solo una parte del proyecto?</summary>
+        <p>Sí. Puedes contratar solo redes, solo web, solo anuncios o una combinación. Lo habitual es empezar por lo que más urge y ampliar después.</p>
+      </details>
+      <details>
+        <summary>¿Cómo empieza una colaboración?</summary>
+        <p>Con una conversación para entender el negocio y una propuesta con alcance, entregables y plazos. Nada se publica sin tu aprobación.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="INFLUWEB, inicio" style="margin-bottom:14px"><span class="dot" aria-hidden="true"></span>influweb<span class="tld">.es</span></a>
+        <p class="about">Agencia de marketing online. Redes sociales, textos y contenido, diseño gráfico, web y anuncios para marcas de toda España.</p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#aviso-legal">Aviso legal</a></li>
+          <li><a href="#aviso-legal">Privacidad</a></li>
+          <li><a href="#aviso-legal">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <div class="citem"><span class="lbl">Teléfono</span><span class="val pend">[PENDIENTE: teléfono real]</span></div>
+        <div class="citem"><span class="lbl">Correo</span><span class="val pend">[PENDIENTE: correo de contacto]</span></div>
+        <div class="citem"><span class="lbl">Domicilio fiscal</span><span class="val pend">[PENDIENTE: domicilio fiscal]</span></div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year">2026</span> INFLUWEB. Todos los derechos reservados.</span>
+      <span>Mercado: España</span>
+    </div>
+  </div>
+</footer>
+
+<section class="legal" id="aviso-legal" aria-labelledby="aviso-title">
+  <div class="wrap">
+    <h2 id="aviso-title">Aviso legal</h2>
+    <p>Titular del sitio web: INFLUWEB. Domicilio fiscal: <span class="pend">[PENDIENTE: domicilio fiscal]</span>. Contacto: <span class="pend">[PENDIENTE: teléfono real]</span> · <span class="pend">[PENDIENTE: correo de contacto]</span>.</p>
+    <p>El texto completo del aviso legal, la política de privacidad y la política de cookies está pendiente de revisión y se publicará en este mismo apartado.</p>
+    <ul>
+      <li>Las fichas de los casos describen el servicio prestado. Los resultados de cada caso están pendientes de validación con el cliente y no se publican cifras hasta confirmarlas.</li>
+      <li>La información de esta web puede actualizarse sin aviso previo.</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  if(burger&&nav){
+    burger.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+      burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');}
+    });
+  }
+  var y=document.getElementById('year');
+  if(y){y.textContent=new Date().getFullYear();}
+  document.querySelectorAll('details').forEach(function(d){
+    d.addEventListener('toggle',function(){
+      if(!d.open)return;
+      document.querySelectorAll('details').forEach(function(o){if(o!==d)o.open=false;});
+    });
+  });
+})();
+</script>
+</body>
+</html>
