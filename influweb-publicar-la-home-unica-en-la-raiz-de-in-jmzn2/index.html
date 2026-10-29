@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Influweb — Campañas potenciadas por IA | Marketing en una sola plataforma</title>
+<meta name="description" content="Influweb reúne análisis de competencia, estrategia, calendario de contenido, generación de piezas y colaboración con creadores en una sola plataforma con IA. Agenda una demo.">
+<link rel="canonical" href="https://influweb.es/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2563EB">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Influweb">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:title" content="Influweb — Tu próximo equipo de marketing empieza acá">
+<meta property="og:description" content="Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca. Todo desde una sola plataforma.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563EB'/%3E%3Cpath d='M24 18v28M32 18v28M40 18v28' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Influweb","url":"https://influweb.es/","email":"empresa@influweb.ai","description":"Plataforma de marketing con inteligencia artificial: análisis competitivo, estrategia, calendario de contenido, generación de piezas y campañas con creadores.","sameAs":["https://www.linkedin.com/company/influwebai"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Qué es Influweb?","acceptedAnswer":{"@type":"Answer","text":"Una plataforma de marketing con inteligencia artificial que reúne el análisis de tu competencia, la estrategia, el calendario de contenido, la generación de piezas y la colaboración con creadores en un solo flujo de trabajo."}},
+{"@type":"Question","name":"¿Qué puedo hacer como empresa?","acceptedAnswer":{"@type":"Answer","text":"Ver qué publica tu competencia, convertirlo en una estrategia, bajarla a un calendario y generar las piezas de tu marca. Cuando quieras amplificar, publicas una campaña y los creadores postulan."}},
+{"@type":"Question","name":"¿Qué puedo hacer como creador?","acceptedAnswer":{"@type":"Answer","text":"Descubrir campañas compatibles con tu perfil, postular en segundos y coordinar por chat con la marca desde el móvil."}},
+{"@type":"Question","name":"¿Cuándo estará disponible?","acceptedAnswer":{"@type":"Answer","text":"Ya está disponible: puedes crear tu cuenta hoy y agendar una demo para verla en vivo."}},
+{"@type":"Question","name":"¿Necesitas ayuda o soporte?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos a empresa@influweb.ai y te responde alguien del equipo."}}]}
+</script>
+<style>
+:root{--blue:#2563EB;--blue-dark:#1D4ED8;--blue-soft:#EFF4FF;--ink:#0B1220;--ink-2:#1F2A3D;--muted:#5A6779;--line:#E4E9F2;--bg:#FFFFFF;--bg-soft:#F6F8FC;--radius:18px;--shadow:0 1px 2px rgba(11,18,32,.05),0 12px 32px -12px rgba(11,18,32,.16);--max:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+h1{font-size:clamp(2.1rem,5.2vw,3.7rem);font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:-.03em}
+h3{font-size:1.15rem}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+.section{padding:88px 0}
+.section--soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);border:1px solid #D9E4FF;padding:6px 12px;border-radius:999px}
+.lead{color:var(--muted);font-size:1.06rem;max-width:62ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:12px;top:12px}
+:focus-visible{outline:3px solid #93B4FF;outline-offset:2px;border-radius:8px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.header.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(11,18,32,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.16rem;letter-spacing:-.03em;color:var(--ink)}
+.brand .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(150deg,#3B82F6,#1D4ED8);display:grid;place-items:center;box-shadow:0 6px 16px -8px rgba(37,99,235,.9)}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{color:var(--ink-2);font-size:.94rem;font-weight:500;padding:9px 12px;border-radius:9px}
+.nav-links a:hover{background:var(--blue-soft);color:var(--blue-dark)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:11px;align-items:center;justify-content:center;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.95rem;padding:12px 20px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s,color .15s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px -14px rgba(37,99,235,.95)}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:#C9D6F5;color:var(--blue-dark)}
+.btn-light{background:#fff;color:var(--blue-dark)}
+.btn-light:hover{background:#EAF0FF}
+.btn-lg{padding:15px 26px;font-size:1rem}
+.btn-block{width:100%}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 0;background:radial-gradient(1100px 480px at 82% -8%,#E7EFFF 0%,rgba(231,239,255,0) 62%),radial-gradient(700px 380px at 0% 0%,#F1F5FF 0%,rgba(241,245,255,0) 60%)}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:52px;align-items:center}
+.hero h1{margin:18px 0 18px;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--blue);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.14em;background:#D7E3FF;z-index:-1;border-radius:3px}
+.hero .lead{font-size:1.12rem;max-width:46ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 22px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:.9rem}
+.hero-proof span{display:inline-flex;align-items:center;gap:7px}
+.hero-proof svg{flex:none;color:var(--blue)}
+
+/* Hero mock */
+.mock{position:relative}
+.mock-card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 40px 80px -46px rgba(11,18,32,.55),0 2px 6px rgba(11,18,32,.05);padding:16px}
+.mock-top{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 14px}
+.dots{display:flex;gap:6px}
+.dots i{width:8px;height:8px;border-radius:50%;background:#DCE3EF;display:block}
+.mock-tag{font-size:.72rem;font-weight:600;color:var(--blue-dark);background:var(--blue-soft);padding:4px 10px;border-radius:999px}
+.mock-body{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:16px}
+.mock-row{display:flex;align-items:flex-end;gap:10px;height:120px;padding:0 4px}
+.mock-row i{flex:1;background:linear-gradient(180deg,#93B4FF,#2563EB);border-radius:7px 7px 3px 3px;display:block;animation:grow .9s ease both}
+.mock-row i:nth-child(2){animation-delay:.08s}.mock-row i:nth-child(3){animation-delay:.16s}.mock-row i:nth-child(4){animation-delay:.24s}.mock-row i:nth-child(5){animation-delay:.32s}.mock-row i:nth-child(6){animation-delay:.4s}
+.mock-row i.g{background:#DCE6FA}
+@keyframes grow{from{transform:scaleY(.15);transform-origin:bottom;opacity:.4}to{transform:scaleY(1);opacity:1}}
+.mock-meta{display:flex;align-items:baseline;justify-content:space-between;margin-top:14px}
+.mock-meta strong{font-size:1.5rem;letter-spacing:-.03em}
+.mock-meta small{color:var(--muted);font-size:.78rem}
+.mock-list{margin-top:14px;display:grid;gap:8px}
+.mock-item{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-size:.82rem;color:var(--ink-2)}
+.mock-item b{width:26px;height:26px;border-radius:8px;background:var(--blue-soft);color:var(--blue-dark);display:grid;place-items:center;font-size:.7rem;font-weight:700;flex:none}
+.mock-item span{margin-left:auto;font-size:.7rem;font-weight:600;color:#0F9D6B;background:#E9F9F1;padding:3px 8px;border-radius:999px}
+.mock-float{position:absolute;right:-14px;bottom:-22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600}
+.mock-float .pill{width:9px;height:9px;border-radius:50%;background:#0F9D6B;box-shadow:0 0 0 4px #E9F9F1}
+
+/* Marquee / strip */
+.strip{border-top:1px solid var(--line);margin-top:64px;background:#fff}
+.strip-inner{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center;justify-content:center;padding:22px 0;color:var(--muted);font-size:.86rem;font-weight:500}
+.strip-inner b{color:var(--ink);font-weight:600}
+
+/* Steps */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;position:relative;transition:border-color .2s,box-shadow .2s,transform .2s}
+.step:hover{border-color:#C9D6F5;box-shadow:var(--shadow);transform:translateY(-3px)}
+.step .num{font-size:.78rem;font-weight:700;color:var(--blue);letter-spacing:.06em}
+.step h3{margin:10px 0 8px;font-size:1.02rem}
+.step p{font-size:.9rem;color:var(--muted)}
+.step::after{content:"";position:absolute;top:34px;right:-8px;width:8px;height:1px;background:var(--line)}
+.step:last-child::after{display:none}
+
+/* Platform tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:36px 0 26px;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px;width:fit-content}
+.tab{border:0;background:transparent;font:inherit;font-size:.9rem;font-weight:600;color:var(--muted);padding:10px 16px;border-radius:9px;cursor:pointer;transition:.18s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--blue);color:#fff;box-shadow:0 8px 18px -12px rgba(37,99,235,.9)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px}
+.panel.is-active{display:grid;animation:fade .3s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.panel h3{font-size:1.5rem;letter-spacing:-.025em;margin-bottom:10px}
+.panel>div>p{color:var(--muted)}
+.checks{margin-top:18px;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;font-size:.94rem;color:var(--ink-2)}
+.checks svg{flex:none;margin-top:4px;color:var(--blue)}
+.visual{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:250px;display:grid;gap:9px;align-content:center}
+.v-row{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;display:flex;align-items:center;gap:10px;font-size:.84rem;color:var(--ink-2)}
+.v-row .bar{height:6px;border-radius:99px;background:#E6EDFB;flex:1;overflow:hidden}
+.v-row .bar i{display:block;height:100%;background:var(--blue);border-radius:99px}
+.v-row .chip{font-size:.68rem;font-weight:600;color:var(--blue-dark);background:var(--blue-soft);padding:3px 8px;border-radius:99px;white-space:nowrap}
+.v-row.strong{background:#0B1220;border-color:#0B1220;color:#fff}
+.v-row.strong .chip{background:rgba(255,255,255,.14);color:#fff}
+.v-title{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 2px 4px}
+
+/* Creators dark */
+.dark{background:radial-gradient(900px 420px at 88% 6%,#132347 0%,rgba(19,35,71,0) 60%),#0B1220;color:#fff}
+.dark .lead,.dark p{color:#A9B6C9}
+.dark .eyebrow{background:rgba(37,99,235,.18);border-color:rgba(37,99,235,.35);color:#BBD1FF}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feature-list{display:grid;gap:18px;margin-top:28px}
+.feature{display:flex;gap:14px}
+.feature .ico{width:40px;height:40px;border-radius:11px;background:rgba(37,99,235,.16);border:1px solid rgba(37,99,235,.32);display:grid;place-items:center;flex:none;color:#8FB4FF}
+.feature h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.feature p{font-size:.92rem;color:#A9B6C9}
+.phone{width:min(300px,100%);margin:0 auto;background:#111B2E;border:1px solid #23324D;border-radius:34px;padding:14px;box-shadow:0 50px 80px -40px rgba(0,0,0,.9)}
+.phone-screen{background:#F6F8FC;border-radius:24px;padding:16px;color:var(--ink)}
+.phone-status{display:flex;justify-content:space-between;font-size:.65rem;color:var(--muted);font-weight:600;padding:2px 4px 12px}
+.phone-screen h4{font-size:.95rem;letter-spacing:-.02em;margin-bottom:10px}
+.p-campaign{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:9px}
+.p-campaign b{font-size:.82rem;display:block}
+.p-campaign small{color:var(--muted);font-size:.72rem}
+.p-campaign .cta{margin-top:9px;font-size:.72rem;font-weight:600;color:#fff;background:var(--blue);text-align:center;padding:7px;border-radius:8px}
+.p-chat{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;font-size:.72rem;color:var(--muted)}
+.p-bubble{background:var(--blue-soft);color:#1E3A8A;padding:7px 9px;border-radius:9px;margin-top:7px;font-size:.72rem;font-weight:500}
+
+/* Cards */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:#C9D6F5;box-shadow:var(--shadow);transform:translateY(-3px)}
+.card .ico{width:42px;height:42px;border-radius:12px;background:var(--blue-soft);color:var(--blue-dark);display:grid;place-items:center;margin-bottom:14px}
+.card h3{font-size:1.02rem;margin-bottom:6px}
+.card p{font-size:.9rem;color:var(--muted)}
+.tool{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.tool h3{font-size:.96rem;margin-bottom:6px}
+.tool p{font-size:.85rem;color:var(--muted)}
+.tool .n{font-size:.7rem;font-weight:700;color:var(--blue);letter-spacing:.1em}
+
+/* CTA + form */
+.cta-band{background:linear-gradient(135deg,#1D4ED8 0%,#2563EB 48%,#3B82F6 100%);color:#fff;border-radius:26px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;box-shadow:0 40px 80px -50px rgba(29,78,216,.9)}
+.cta-band h2{color:#fff}
+.cta-band p{color:#DCE7FF}
+.cta-band ul{margin-top:20px;display:grid;gap:10px;font-size:.94rem;color:#EDF3FF}
+.cta-band li{display:flex;gap:9px}
+.cta-band svg{flex:none;margin-top:4px}
+.form-card{background:#fff;border-radius:18px;padding:26px;color:var(--ink);box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}
+.form-card h3{font-size:1.1rem;margin-bottom:4px}
+.form-card>p{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:var(--ink-2)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:.9rem;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#FBFCFE;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.16);background:#fff}
+.field textarea{resize:vertical;min-height:74px}
+.consent{display:flex;gap:9px;font-size:.78rem;color:var(--muted);align-items:flex-start;margin:4px 0 14px}
+.consent input{width:16px;height:16px;flex:none;margin-top:2px;accent-color:var(--blue)}
+.form-note{font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center}
+
+/* FAQ */
+.faq{max-width:820px;margin:40px auto 0;display:grid;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 20px;transition:border-color .2s}
+details[open]{border-color:#C9D6F5;box-shadow:var(--shadow)}
+summary{list-style:none;cursor:pointer;font-weight:600;font-size:1rem;padding:18px 40px 18px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.4rem;font-weight:400;color:var(--blue);line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);font-size:.93rem;padding:0 0 18px}
+
+/* Footer */
+.footer{background:#fff;border-top:1px solid var(--line);padding:56px 0 26px;margin-top:0}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px}
+.f-brand p{color:var(--muted);font-size:.9rem;margin-top:14px;max-width:34ch}
+.f-col h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:14px}
+.f-col a,.f-col span{display:block;color:var(--ink-2);font-size:.9rem;padding:4px 0}
+.f-col a:hover{color:var(--blue)}
+.f-bottom{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:var(--muted);font-size:.82rem}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.mock-row i{animation:none}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media(max-width:980px){
+.hero-grid,.split,.cta-band{grid-template-columns:1fr}
+.hero-grid{gap:44px}
+.steps{grid-template-columns:repeat(2,1fr)}
+.step::after{display:none}
+.cards-3{grid-template-columns:1fr 1fr}
+.cards-4{grid-template-columns:1fr 1fr}
+.panel{grid-template-columns:1fr;padding:26px}
+.f-grid{grid-template-columns:1fr 1fr}
+.cta-band{padding:32px}
+.hero h1{max-width:20ch}
+.mock-float{right:8px}
+}
+@media(max-width:760px){
+.nav-links{position:fixed;inset:70px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:12px 18px 20px;gap:2px;transform:translateY(-130%);transition:transform .25s ease;box-shadow:0 24px 40px -30px rgba(11,18,32,.6)}
+.nav-links.open{transform:none}
+.nav-links a{padding:13px 8px;font-size:1rem}
+.burger{display:inline-flex}
+.nav-cta .btn-ghost{display:none}
+.section{padding:64px 0}
+.steps,.cards-3,.cards-4,.grid-2,.f-grid{grid-template-columns:1fr}
+.tabs{width:100%;overflow:auto;flex-wrap:nowrap}
+.tab{white-space:nowrap}
+.cta-band{padding:26px;border-radius:20px}
+.footer{padding-top:44px}
+body{font-size:16px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Influweb, inicio">
+      <span class="mark" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M8 5v14M12 5v14M16 5v14"/></svg>
+      </span>
+      influ<span>web</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#creadores">Creadores</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="mailto:empresa@influweb.ai">Escríbenos</a>
+      <a class="btn btn-primary" href="#demo">Agenda una demo</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+          Campañas potenciadas por IA
+        </span>
+        <h1>Tu próximo <em>equipo de marketing</em> empieza acá</h1>
+        <p class="lead">Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca. Todo desde una sola plataforma.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#demo">Agenda una demo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#como-funciona">Ver cómo funciona</a>
+        </div>
+        <div class="hero-proof">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Demo de 20 minutos</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Sin compromiso</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Ya disponible</span>
+        </div>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="mock-card">
+          <div class="mock-top">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span class="mock-tag">Campaña · Marca</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-row">
+              <i class="g" style="height:38%"></i><i style="height:56%"></i><i class="g" style="height:44%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:92%"></i>
+            </div>
+            <div class="mock-meta">
+              <div><strong>+38%</strong><br><small>Alcance estimado · últimas 4 semanas</small></div>
+            </div>
+            <div class="mock-list">
+              <div class="mock-item"><b>3</b>Contenidos en revisión<span>Esta semana</span></div>
+              <div class="mock-item"><b>5</b>Creadores postulando<span>2 nuevos</span></div>
+              <div class="mock-item"><b>IA</b>Campaña asistida lista<span>Lista</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mock-float"><span class="pill"></span>Todo en un solo flujo</div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <span><b>Análisis de mercado</b></span><span>Competencia</span><span>Tendencias</span><span>Estrategia</span><span>Calendario</span><span>Copies y guiones</span><span>Piezas gráficas</span><span><b>Creadores</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section" id="como-funciona">
+    <div class="wrap">
+      <div class="reveal" style="max-width:720px">
+        <span class="eyebrow">Cómo funciona</span>
+        <h2 style="margin:16px 0 14px">De la idea a la campaña en cinco pasos</h2>
+        <p class="lead">El mismo flujo que seguiría un equipo de marketing, pero ordenado y en un solo lugar.</p>
+      </div>
+      <div class="steps">
+        <article class="step reveal"><div class="num">01</div><h3>Entendemos tu mercado</h3><p>Analizamos tu negocio, competencia, presencia digital y tendencias para detectar oportunidades reales.</p></article>
+        <article class="step reveal"><div class="num">02</div><h3>Construimos tu estrategia</h3><p>Definimos objetivos, posicionamiento, pilares de comunicación y audiencias orientadas al crecimiento.</p></article>
+        <article class="step reveal"><div class="num">03</div><h3>Creamos contigo</h3><p>Piezas gráficas alineadas a tu identidad, copies, ideas y guiones pensados para cumplir tus objetivos.</p></article>
+        <article class="step reveal"><div class="num">04</div><h3>Planificamos tus redes</h3><p>Transformamos la estrategia en un plan concreto: qué comunicar, cuándo hacerlo y con qué objetivo.</p></article>
+        <article class="step reveal"><div class="num">05</div><h3>Amplificamos con creadores</h3><p>Creamos campañas, generamos briefs y conectamos con creadores para llegar a nuevas audiencias.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATAFORMA -->
+  <section class="section section--soft" id="plataforma">
+    <div class="wrap">
+      <div class="reveal" style="max-width:720px">
+        <span class="eyebrow">Una sola plataforma</span>
+        <h2 style="margin:16px 0 14px">Todo en un mismo lugar</h2>
+        <p class="lead">Análisis competitivo, estrategia, calendario, piezas y creadores. Sin saltar entre cinco herramientas.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Módulos de la plataforma">
+        <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">Análisis competitivo</button>
+        <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1">Estrategia</button>
+        <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1">Calendario</button>
+        <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1">Generador de piezas</button>
+        <button class="tab" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1">Creator</button>
+      </div>
+
+      <div class="panel is-active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <div>
+          <h3>Descubre qué está haciendo tu competencia</h3>
+          <p>Identifica a tus competidores, analiza sus estrategias de comunicación y recibe recomendaciones para diferenciarte.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Seguimiento de perfiles y formatos que mejor funcionan en tu sector.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Comparativa de tono, frecuencia y pilares de contenido.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Recomendaciones concretas para destacar.</li>
+          </ul>
+        </div>
+        <div class="visual">
+          <div class="v-title">Comparativa de marca</div>
+          <div class="v-row">Competidor A<span class="bar"><i style="width:82%"></i></span></div>
+          <div class="v-row">Competidor B<span class="bar"><i style="width:64%"></i></span></div>
+          <div class="v-row strong">Tu marca<span class="bar"><i style="width:91%;background:#8FB4FF"></i></span><span class="chip">Oportunidad</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+        <div>
+          <h3>Convierte información en una estrategia concreta</h3>
+          <p>Diseña una estrategia de marketing a medida, basada en tus objetivos, tu marca y las tendencias actuales del mercado.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Objetivos, posicionamiento y audiencias definidas.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Pilares de comunicación claros para todo el equipo.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hoja de ruta para los próximos meses.</li>
+          </ul>
+        </div>
+        <div class="visual">
+          <div class="v-title">Estrategia de marca</div>
+          <div class="v-row">Objetivo<span class="chip">Alcance + ventas</span></div>
+          <div class="v-row">Audiencia<span class="chip">2 perfiles</span></div>
+          <div class="v-row">Pilar 01 · Educación<span class="bar"><i style="width:70%"></i></span></div>
+          <div class="v-row">Pilar 02 · Prueba social<span class="bar"><i style="width:55%"></i></span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+        <div>
+          <h3>De la estrategia a un plan de contenido</h3>
+          <p>Organiza tus campañas en un calendario claro donde ves fechas de entrega, estados y próximas acciones en un solo lugar.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Qué se publica, cuándo y con qué objetivo.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Estados de cada pieza: idea, en revisión, aprobada, publicada.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Vista compartida para marca, equipo y creadores.</li>
+          </ul>
+        </div>
+        <div class="visual">
+          <div class="v-title">Semana en curso</div>
+          <div class="v-row">Lun · Reel<span class="chip">Aprobada</span></div>
+          <div class="v-row">Mié · Carrusel<span class="chip">En revisión</span></div>
+          <div class="v-row">Vie · Story<span class="chip">Idea</span></div>
+          <div class="v-row">Dom · UGC creador<span class="chip">Publicada</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+        <div>
+          <h3>Crea contenido alineado a tu marca</h3>
+          <p>Genera piezas visuales, copies y guiones a partir de texto, adaptados a cada formato y a tu identidad de marca.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ideas de contenido basadas en tu nicho y en tendencias.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Guiones de vídeo y copies con hashtags por plataforma.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Feedback automático con sugerencias de mejora.</li>
+          </ul>
+        </div>
+        <div class="visual">
+          <div class="v-title">Del brief a la pieza</div>
+          <div class="v-row">Brief<span class="bar"><i style="width:100%"></i></span></div>
+          <div class="v-row">Guión de vídeo<span class="bar"><i style="width:88%"></i></span></div>
+          <div class="v-row">Copy + hashtags<span class="bar"><i style="width:74%"></i></span></div>
+          <div class="v-row strong">Pieza gráfica lista<span class="chip">Exportar</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-5" role="tabpanel" aria-labelledby="tab-5" hidden>
+        <div>
+          <h3>Amplifica con personas reales</h3>
+          <p>Publica tu campaña, recibe postulaciones de creadores compatibles y coordina todo desde la misma cuenta.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Briefs claros para cada colaboración.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Postulaciones y chat dentro de la plataforma.</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Historial y estado de cada campaña.</li>
+          </ul>
+        </div>
+        <div class="visual">
+          <div class="v-title">Campaña activa</div>
+          <div class="v-row">Brief publicado<span class="chip">Activo</span></div>
+          <div class="v-row">12 postulaciones<span class="bar"><i style="width:80%"></i></span></div>
+          <div class="v-row">3 seleccionados<span class="bar"><i style="width:35%"></i></span></div>
+          <div class="v-row strong">Contenido entregado<span class="chip">Completado</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREADORES -->
+  <section class="section dark" id="creadores">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Para creadores</span>
+        <h2 style="margin:16px 0 14px;color:#fff">Postula a campañas y gestiona tu trabajo desde el móvil</h2>
+        <p class="lead">La app de Influweb es para ti, creador de contenido. Descubre campañas compatibles con tu perfil, postula en segundos y coordina tus colaboraciones con marcas sin salir del teléfono.</p>
+        <div class="feature-list">
+          <div class="feature">
+            <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></div>
+            <div><h3>Notificaciones en tiempo real</h3><p>Entérate al instante de nuevas campañas disponibles y del estado de tus postulaciones.</p></div>
+          </div>
+          <div class="feature">
+            <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9 9 0 01-3.8-.9L3 21l1.9-5.1a8.4 8.4 0 01-.9-3.9 8.5 8.5 0 018.5-8.5 8.4 8.4 0 018.5 8.5z"/></svg></div>
+            <div><h3>Chat en tiempo real</h3><p>Coordina directamente con las marcas, sin salir de la app.</p></div>
+          </div>
+          <div class="feature">
+            <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+            <div><h3>Postula en segundos</h3><p>Un perfil claro y tus mejores contenidos: las marcas ven por qué encajas en su campaña.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:28px"><a class="btn btn-light btn-lg" href="#demo">Quiero sumarme como creador</a></div>
+      </div>
+      <div class="reveal">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen">
+            <div class="phone-status"><span>9:41</span><span>Influweb · App</span></div>
+            <h4>Campañas para ti</h4>
+            <div class="p-campaign"><b>Marca de belleza · Reel</b><small>Presupuesto definido · 2 semanas</small><div class="cta">Postular</div></div>
+            <div class="p-campaign"><b>Retail · 3 stories</b><small>Match con tu nicho</small><div class="cta" style="background:#EFF4FF;color:#1D4ED8">Postular</div></div>
+            <div class="p-chat">
+              <b style="color:#0B1220;font-size:.76rem">Chat con la marca</b>
+              <div class="p-bubble">Brief aprobado, coordinamos entrega el viernes.</div>
+              <div class="p-bubble" style="background:#E9F9F1;color:#0F7A52">Postulación enviada ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal center" style="max-width:760px;margin:0 auto">
+        <span class="eyebrow">Para quién es</span>
+        <h2 style="margin:16px 0 14px">Una plataforma para cualquier negocio que quiera crecer</h2>
+        <p class="lead">Si comunicas, vendes o creas contenido, aquí tienes un lugar donde ordenar el trabajo y ganar tiempo.</p>
+      </div>
+      <div class="cards-4">
+        <article class="card reveal"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><h3>Emprendedores y Pymes</h3><p>Construye una estrategia profesional sin necesidad de contratar un equipo de marketing completo.</p></article>
+        <article class="card reveal"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg></div><h3>Marcas en crecimiento</h3><p>Escala la creación de contenido, ordena procesos y trabaja con mayor eficiencia.</p></article>
+        <article class="card reveal"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 20a6 6 0 0112 0M15.5 20a5 5 0 016.4-3.4"/></svg></div><h3>Agencias</h3><p>Gestiona múltiples clientes desde una sola plataforma y optimiza el trabajo de tu equipo.</p></article>
+        <article class="card reveal"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M11 18.5h2"/></svg></div><h3>Creadores</h3><p>Accede a oportunidades de colaboración y trabaja con marcas de manera simple y profesional.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS -->
+  <section class="section section--soft" id="herramientas">
+    <div class="wrap">
+      <div class="reveal" style="max-width:720px">
+        <span class="eyebrow">Herramientas</span>
+        <h2 style="margin:16px 0 14px">Nueve utilidades, un solo flujo</h2>
+        <p class="lead">Conectadas entre sí para que la campaña avance de principio a fin sin copiar y pegar entre pestañas.</p>
+      </div>
+      <div class="cards-3" style="gap:16px">
+        <article class="tool reveal"><div class="n">01</div><h3>Planificación de contenido</h3><p>Calendario con fechas de entrega, estados y próximas acciones en un solo lugar.</p></article>
+        <article class="tool reveal"><div class="n">02</div><h3>Análisis de mercado</h3><p>Identifica a tus competidores, analiza sus estrategias y recibe recomendaciones para diferenciarte.</p></article>
+        <article class="tool reveal"><div class="n">03</div><h3>Ideas de contenido</h3><p>Sugerencias creativas basadas en tu nicho y en tendencias actuales.</p></article>
+        <article class="tool reveal"><div class="n">04</div><h3>Guiones de vídeo</h3><p>Guiones adaptados a tu audiencia, formato y plataforma.</p></article>
+        <article class="tool reveal"><div class="n">05</div><h3>Copywriting</h3><p>Textos, descripciones y hashtags optimizados para alcance y engagement.</p></article>
+        <article class="tool reveal"><div class="n">06</div><h3>Generador de imágenes</h3><p>Piezas visuales a partir de texto, adaptadas a cada formato y a tu identidad de marca.</p></article>
+        <article class="tool reveal"><div class="n">07</div><h3>Feedback automático</h3><p>Análisis de tu contenido con sugerencias de mejora y evaluación de calidad e impacto.</p></article>
+        <article class="tool reveal"><div class="n">08</div><h3>Estrategias de marketing</h3><p>Una estrategia a medida según tus objetivos, tu marca y las tendencias del mercado.</p></article>
+        <article class="tool reveal"><div class="n">09</div><h3>Campaña asistida</h3><p>Crea tu campaña de principio a fin en minutos con ayuda de IA.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="section" id="demo">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <span class="eyebrow" style="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.32);color:#fff">Ya está disponible</span>
+          <h2 style="margin:16px 0 14px">Crea tu cuenta y arma tu primera campaña</h2>
+          <p>Si prefieres que te la mostremos, agendamos una demo y la revisamos en vivo, con tu marca delante.</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Demo personalizada de 20 minutos, sin compromiso.</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Revisamos tu marca y tu competencia antes de la llamada.</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Recibes la invitación por correo con el enlace de la reunión.</li>
+          </ul>
+          <p style="margin-top:22px;font-size:.94rem">¿Prefieres escribirlo? <a href="mailto:empresa@influweb.ai" style="color:#fff;text-decoration:underline">empresa@influweb.ai</a></p>
+        </div>
+
+        <div class="form-card">
+          <h3>Pide tu demo</h3>
+          <p>Cuéntanos un poco y te respondemos en menos de 24 h laborables.</p>
+          <form id="demoForm" novalidate>
+            <div class="field"><label for="nombre">Nombre y apellido *</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="email">Correo de trabajo *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="telefono">Teléfono (opcional)</label><input id="telefono" name="telefono" type="tel" autocomplete="tel"></div>
+            <div class="field">
+              <label for="perfil">Tipo de perfil *</label>
+              <select id="perfil" name="perfil" required>
+                <option value="">Seleccionar…</option>
+                <option>Empresa</option>
+                <option>Marca en crecimiento</option>
+                <option>Agencia</option>
+                <option>Creador</option>
+              </select>
+            </div>
+            <div class="field"><label for="mensaje">¿Qué buscas en Influweb? *</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+            <label class="consent" for="consent"><input id="consent" type="checkbox" required><span>He leído y acepto el tratamiento de mis datos para recibir la demo y comunicaciones relacionadas.</span></label>
+            <button class="btn btn-primary btn-block" type="submit">Enviar solicitud</button>
+            <div class="form-note" id="formNote" role="status" aria-live="polite">Se abrirá tu cliente de correo con los datos ya cargados.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="padding-top:24px">
+    <div class="wrap">
+      <div class="reveal center" style="max-width:620px;margin:0 auto">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 style="margin:16px 0 0">Lo que suelen preguntarnos</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>¿Qué es Influweb?</summary><p>Una plataforma de marketing con inteligencia artificial que reúne en un mismo lugar el análisis de tu competencia, la estrategia, el calendario de contenido, la generación de las piezas y la colaboración con creadores. En vez de saltar entre cinco herramientas, armas la campaña de principio a fin en un solo flujo.</p></details>
+        <details><summary>¿Qué puedo hacer como empresa?</summary><p>Ver qué está publicando tu competencia, convertir eso en una estrategia concreta, bajarla a un calendario de contenido y generar las piezas alineadas a tu marca. Cuando quieras amplificar, publicas una campaña y los creadores postulan; coordinas con ellos desde la misma cuenta.</p></details>
+        <details><summary>¿Qué puedo hacer como creador?</summary><p>Desde tu teléfono: descubrir campañas compatibles con tu perfil, postular en segundos y coordinar por chat directamente con la marca. Las notificaciones te avisan cuando aparece una campaña nueva o cambia el estado de tu postulación.</p></details>
+        <details><summary>¿Cuándo estará disponible?</summary><p>Ya está disponible y puedes crear tu cuenta hoy. Agenda una demo y te la mostramos en vivo.</p></details>
+        <details><summary>¿Necesitas ayuda o soporte?</summary><p>Escríbenos a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a> y te responde alguien del equipo. Si prefieres verlo con calma y en vivo, agenda una demo y lo revisamos juntos.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="/" aria-label="Influweb, inicio">
+          <span class="mark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M8 5v14M12 5v14M16 5v14"/></svg></span>
+          influ<span>web</span>
+        </a>
+        <p>Campañas potenciadas por IA. Estrategia, contenido, planificación y creadores en una sola plataforma.</p>
+      </div>
+      <div class="f-col">
+        <h4>Producto</h4>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#plataforma">Plataforma</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#creadores">Para creadores</a>
+      </div>
+      <div class="f-col">
+        <h4>Empresa</h4>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#demo">Agenda una demo</a>
+        <a href="mailto:empresa@influweb.ai">Contacto</a>
+      </div>
+      <div class="f-col">
+        <h4>Contacto</h4>
+        <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>
+        <span>Marketing online, contenido y campañas con IA.</span>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Influweb. Todos los derechos reservados.</span>
+      <span>Hecho para equipos de marketing que quieren ir más rápido.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var header=document.getElementById('header');
+  var burger=document.getElementById('burger');
+  var navLinks=document.getElementById('navLinks');
+
+  function onScroll(){ header.classList.toggle('is-stuck', window.scrollY>8); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  if(burger){
+    burger.addEventListener('click', function(){
+      var open=navLinks.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open?'true':'false');
+      burger.setAttribute('aria-label', open?'Cerrar menú':'Abrir menú');
+    });
+    navLinks.addEventListener('click', function(e){
+      if(e.target.tagName==='A'){ navLinks.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+    });
+  }
+
+  /* Tabs */
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function select(index, focus){
+    tabs.forEach(function(t,i){
+      var on=i===index;
+      t.setAttribute('aria-selected', on?'true':'false');
+      t.tabIndex = on?0:-1;
+      var panel=document.getElementById(t.getAttribute('aria-controls'));
+      panel.classList.toggle('is-active', on);
+      if(on){ panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden',''); }
+    });
+    if(focus){ tabs[index].focus(); }
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click', function(){ select(i,false); });
+    t.addEventListener('keydown', function(e){
+      var k=e.key, n=null;
+      if(k==='ArrowRight'||k==='ArrowDown') n=(i+1)%tabs.length;
+      if(k==='ArrowLeft'||k==='ArrowUp') n=(i-1+tabs.length)%tabs.length;
+      if(k==='Home') n=0;
+      if(k==='End') n=tabs.length-1;
+      if(n!==null){ e.preventDefault(); select(n,true); }
+    });
+  });
+
+  /* Reveal */
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    items.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i,6)*40)+'ms'; io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Form -> mailto (sin backend) */
+  var form=document.getElementById('demoForm');
+  var note=document.getElementById('formNote');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre=form.nombre.value.trim();
+      var email=form.email.value.trim();
+      var perfil=form.perfil.value;
+      var mensaje=form.mensaje.value.trim();
+      var ok=true;
+      [form.nombre,form.email,form.perfil,form.mensaje,form.consent].forEach(function(f){ f.style.borderColor=''; });
+      if(!nombre){ form.nombre.style.borderColor='#DC2626'; ok=false; }
+      if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)){ form.email.style.borderColor='#DC2626'; ok=false; }
+      if(!perfil){ form.perfil.style.borderColor='#DC2626'; ok=false; }
+      if(!mensaje){ form.mensaje.style.borderColor='#DC2626'; ok=false; }
+      if(!form.consent.checked){ ok=false; }
+      if(!ok){
+        note.textContent='Revisa los campos marcados para poder enviar la solicitud.';
+        note.style.color='#B91C1C';
+        return;
+      }
+      var body='Nombre: '+nombre+'\nCorreo: '+email+'\nTeléfono: '+(form.telefono.value.trim()||'-')+'\nPerfil: '+perfil+'\n\nQué busca en Influweb:\n'+mensaje;
+      note.textContent='Abriendo tu correo con la solicitud lista para enviar…';
+      note.style.color='#0F7A52';
+      window.location.href='mailto:empresa@influweb.ai?subject='+encodeURIComponent('Solicitud de demo · '+nombre)+'&body='+encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+</body>
+</html>
