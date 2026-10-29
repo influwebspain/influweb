@@ -1,0 +1,73 @@
+/* ==========================================================================
+   INFLUWEB · tokens.css
+   Sistema de diseño (capa visual) · v1.0
+   Solo variables: no pinta ningún elemento por sí mismo.
+   Prefijo --iw- para no colisionar con plugins ni con el tema.
+   ========================================================================== */
+
+:root {
+  /* --- Color · marca ---------------------------------------------------- */
+  --iw-primary: #2563EB;
+  --iw-primary-hover: #1D4ED8;
+  --iw-primary-soft: #EFF6FF;
+  --iw-primary-border: #DBEAFE;
+
+  /* --- Color · texto y superficies -------------------------------------- */
+  --iw-ink: #0F172A;        /* titulares */
+  --iw-body: #475569;       /* cuerpo */
+  --iw-muted: #64748B;      /* secundario / metadatos */
+  --iw-page: #F8FAFC;       /* fondo de página */
+  --iw-surface: #FFFFFF;    /* tarjetas y bloques */
+  --iw-line: #E2E8F0;       /* bordes */
+  --iw-line-soft: #EEF2F7;
+  --iw-footer-bg: #0F172A;
+  --iw-footer-text: #CBD5E1;
+  --iw-footer-muted: #94A3B8;
+
+  /* --- Estados (solo UI de formulario, no contenido) -------------------- */
+  --iw-danger: #DC2626;
+  --iw-danger-ink: #B91C1C;
+  --iw-danger-ring: rgba(220, 38, 38, .12);
+  --iw-ok: #047857;
+  --iw-ok-soft: #ECFDF5;
+
+  /* --- Foco: azul al 20 % ---------------------------------------------- */
+  --iw-ring: rgba(37, 99, 235, .2);
+
+  /* --- Tipografía ------------------------------------------------------- */
+  --iw-font-head: 'Sora', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --iw-font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --iw-w-head: 600;
+  --iw-w-body: 400;
+  --iw-w-medium: 500;
+  --iw-w-semi: 600;
+
+  /* --- Radios ----------------------------------------------------------- */
+  --iw-radius-sm: 12px;
+  --iw-radius-md: 16px;
+  --iw-radius-pill: 999px;
+
+  /* --- Métricas de layout ---------------------------------------------- */
+  --iw-header-h: 72px;      /* alto de header */
+  --iw-input-h: 48px;       /* alto de inputs */
+  --iw-max: 1160px;
+  --iw-gutter: 24px;
+  --iw-section-y: 88px;
+
+  /* --- Sombras ---------------------------------------------------------- */
+  --iw-shadow-1: 0 1px 2px rgba(15, 23, 42, .04), 0 1px 3px rgba(15, 23, 42, .06);
+  --iw-shadow-2: 0 10px 30px -12px rgba(15, 23, 42, .18);
+  --iw-shadow-3: 0 24px 60px -24px rgba(15, 23, 42, .28);
+  --iw-shadow-btn: 0 8px 20px -10px rgba(37, 99, 235, .7);
+
+  /* --- Movimiento ------------------------------------------------------- */
+  --iw-ease: cubic-bezier(.22, .61, .36, 1);
+  --iw-fast: .18s;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --iw-gutter: 18px;
+    --iw-section-y: 64px;
+  }
+}

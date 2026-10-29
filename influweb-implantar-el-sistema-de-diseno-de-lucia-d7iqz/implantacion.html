@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Implantación del sistema de diseño · influweb.es</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/influweb-web.css">
+<style>
+  .iw-doc h2 { font-size: 26px; margin-top: 42px; }
+  .iw-doc h3 { font-size: 18px; margin-top: 26px; }
+  .iw-doc ol, .iw-doc ul { padding-left: 22px; list-style: decimal; }
+  .iw-doc ul { list-style: disc; }
+  .iw-doc li { margin-bottom: 8px; font-size: 15.5px; }
+  .iw-doc pre { background: #0F172A; color: #E2E8F0; border-radius: 12px; padding: 18px; overflow-x: auto; font-size: 13px; line-height: 1.6; }
+  .iw-doc pre code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .iw-doc table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 14px 0; }
+  .iw-doc th, .iw-doc td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--iw-line); vertical-align: top; }
+  .iw-doc th { color: var(--iw-ink); font-weight: 600; background: #F8FAFC; }
+  .iw-doc code { background: var(--iw-primary-soft); color: #1E40AF; padding: 1px 6px; border-radius: 5px; font-size: .92em; }
+  .iw-note { border-left: 4px solid var(--iw-primary); background: var(--iw-primary-soft); padding: 14px 18px; border-radius: 0 12px 12px 0; font-size: 15px; margin: 18px 0; }
+  .iw-warn { border-left-color: #F59E0B; background: #FFFBEB; }
+  .iw-doc .iw-sec { padding: 40px 0; }
+</style>
+</head>
+<body class="iw-scope">
+
+<header class="iw-head">
+  <div class="iw-wrap iw-head__in">
+    <a class="iw-brand" href="index.html">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#2563EB"/><path d="M9.4 22.6V10.2h2.7v12.4H9.4Zm4.4 0V10.2h2.5l.2 1.7c.5-1.2 1.6-1.9 3-1.9 2.1 0 3.3 1.4 3.3 3.8v8.8h-2.7v-8.2c0-1.2-.5-1.9-1.6-1.9s-1.9.8-1.9 2.2v7.9h-2.8Z" fill="#fff"/></svg>
+      <span>influ <b>web</b></span>
+    </a>
+    <div class="iw-head__cta" style="margin-left:auto">
+      <a class="iw-btn iw-btn--ghost iw-btn--sm" href="index.html">Ver muestra</a>
+      <a class="iw-btn iw-btn--primary iw-btn--sm" href="index.html#demo">Agenda una demo</a>
+    </div>
+  </div>
+</header>
+
+<main class="iw-wrap iw-doc" style="max-width:900px;padding-top:40px;padding-bottom:80px">
+
+  <span class="iw-kicker">Runbook · interno</span>
+  <h1 style="font-size:clamp(28px,4vw,40px)">Implantación del sistema de diseño en influweb.es</h1>
+  <p class="iw-lead">Capa visual de Lucía aplicada sobre la web en producción, sin rediseñar ni tocar contenido. Este documento es el registro de ejecución y el manual de reversión. <strong>No se publica en producción hasta el visto bueno de Rafael.</strong></p>
+
+  <div class="iw-note iw-warn">
+    <strong>Estado:</strong> capa construida y validada en local (muestra <a href="index.html">index.html</a>). El enqueue en WordPress se aplica en la web real y se prueba con la checklist de abajo; las capturas se adjuntan en la tarea con los nombres indicados.
+  </div>
+
+  <h2>1. Archivos de la entrega</h2>
+  <table>
+    <tr><th>Archivo</th><th>Qué es</th></tr>
+    <tr><td><code>assets/css/tokens.css</code></td><td>Variables del sistema (color, tipografía, radios, alturas, sombras). Prefijo <code>--iw-</code>.</td></tr>
+    <tr><td><code>assets/css/influweb-web.css</code></td><td>Componentes. Todo cuelga de <code>.iw-scope</code>: no hay una sola regla global.</td></tr>
+    <tr><td><code>assets/img/logo-influweb.svg</code></td><td>Logo en vectorial, mismo texto y orden (<em>influ web</em>), sin cambio de marca.</td></tr>
+    <tr><td><code>index.html</code></td><td>Muestra de referencia con la capa aplicada sobre el contenido actual de influweb.es (textos literales).</td></tr>
+  </table>
+
+  <h2>2. Pasos ejecutados en el tema</h2>
+  <p>Todo va en un único archivo de tema (hijo o snippet propia) y se activa/desactiva desde un solo punto.</p>
+
+  <h3>2.1 Enqueue solo en el frontend</h3>
+  <pre><code>&lt;?php
+/**
+ * INFLUWEB · capa visual (sistema de diseño)
+ * Archivo: assets/css/tokens.css y assets/css/influweb-web.css dentro del tema.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+    if ( is_admin() || wp_doing_ajax() || is_customize_preview() && false ) {
+        return; // nunca en admin
+    }
+    $dir = get_stylesheet_directory();
+    $uri = get_stylesheet_directory_uri();
+
+    wp_enqueue_style(
+        'iw-tokens',
+        $uri . '/assets/css/tokens.css',
+        [],
+        filemtime( $dir . '/assets/css/tokens.css' )
+    );
+    wp_enqueue_style(
+        'iw-web',
+        $uri . '/assets/css/influweb-web.css',
+        [ 'iw-tokens' ],                              // tokens primero
+        filemtime( $dir . '/assets/css/influweb-web.css' )
+    );
+}, 20 );
+</code></pre>
+
+  <h3>2.2 Clase <code>iw-scope</code> al body</h3>
+  <pre><code>add_filter( 'body_class', function ( $classes ) {
+    if ( ! is_admin() ) {
+        $classes[] = 'iw-scope';
+    }
+    return $classes;
+} );
+</code></pre>
+  <p>Requiere que <code>header.php</code> use <code>&lt;body &lt;?php body_class(); ?&gt;&gt;</code>. Si el tema no lo usa, se añade esa llamada (una línea) y se revisa el resto de clases del tema para no romper estilos existentes.</p>
+
+  <h3>2.3 Logo PNG → SVG</h3>
+  <p>Se sustituye el PNG del logo por <code>logo-influweb.svg</code> manteniendo texto y orden. Dos caminos, en este orden de preferencia:</p>
+  <ol>
+    <li>Por el Personalizador/Apariencia del tema: subir el SVG y guardar. Un paso, 100 % reversible.</li>
+    <li>Si el tema lleva el logo en la plantilla: filtrar el HTML del logo con la misma ruta del SVG, sin tocar el <code>alt</code>.</li>
+  </ol>
+  <p>El SVG necesita estar permitido en medios (si el sitio restringe SVG, se sube por FTP a <code>assets/img/</code> y se referencia por ruta).</p>
+
+  <h2>3. Verificación antes de publicar</h2>
+  <table>
+    <tr><th>#</th><th>Comprobación</th><th>Resultado esperado</th><th>Captura</th></tr>
+    <tr><td>1</td><td>Admin de WordPress</td><td>Sin cambios: ni fuentes, ni botones azules, ni layout distinto. <code>is_admin()</code> bloquea la carga.</td><td><code>01-admin-antes.png</code> / <code>01-admin-despues.png</code></td></tr>
+    <tr><td>2</td><td>Editor de bloques</td><td>Idéntico. No entra ni <code>tokens.css</code> ni <code>iw-web.css</code> en el iframe del editor.</td><td><code>02-editor.png</code></td></tr>
+    <tr><td>3</td><td>Páginas con shortcodes de plugins (formularios, cookies, avisos legales)</td><td>Sin herencia de estilos: los componentes de plugin no llevan <code>.iw-scope</code> por delante salvo los inputs, que se alinean a 48 px de alto a propósito.</td><td><code>03-plugins.png</code></td></tr>
+    <tr><td>4</td><td>Plugins en frontend con su propia tipografía</td><td>Se revisa una a una; si alguna se descuadra, se excluye su shortcode con una clase y se documenta.</td><td><code>04-plugin-afectado.png</code></td></tr>
+  </table>
+
+  <h2>4. QA funcional de la muestra</h2>
+  <table>
+    <tr><th>Elemento</th><th>Cómo se prueba</th><th>Correcto si…</th></tr>
+    <tr><td>Formulario de demo</td><td>Enviar vacío; luego con email mal escrito; luego correcto.</td><td>Campos en rojo con mensaje bajo el campo y foco en el primero con error; al enviar bien, aviso verde y formulario limpio.</td></tr>
+    <tr><td>Estado de error</td><td>Salir de un campo obligatorio vacío (blur).</td><td>Borde rojo y mensaje solo en ese campo; desaparece al corregir.</td></tr>
+    <tr><td>Acordeón FAQ</td><td>Abrir/cerrar las 5 preguntas.</td><td>Se abre una, el icono gira, no se solapan; funciona sin JS (es <code>details</code>).</td></tr>
+    <tr><td>Pestañas</td><td>Click y flechas ← → con teclado.</td><td>Cambia el panel, <code>aria-selected</code> correcto, una sola pestaña en el tab order.</td></tr>
+    <tr><td>Header sticky en móvil</td><td>Scroll en 390 px + abrir menú.</td><td>Header de 72 px fijo arriba, menú desplegable bajo el header, se cierra al pulsar un enlace.</td></tr>
+    <tr><td>Banner de cookies</td><td>Abrir preferencias desde el pie.</td><td>Aparece y se cierra; la botonería es la de producción, <strong>sin tocar</strong> (pendiente de validación de Elena).</td></tr>
+  </table>
+
+  <h2>5. Capturas a adjuntar</h2>
+  <p>Estas capturas se toman sobre la web ya con la capa cargada, mismo viewport en antes y después (1440×900 escritorio, 390×844 móvil), y se adjuntan en la tarea con este nombre exacto:</p>
+  <ul>
+    <li><strong>Antes:</strong> <code>antes-01-hero.png</code>, <code>antes-02-pasos.png</code>, <code>antes-03-plataforma.png</code>, <code>antes-04-creadores.png</code>, <code>antes-05-demo.png</code>, <code>antes-06-faq.png</code>, <code>antes-07-footer.png</code></li>
+    <li><strong>Después:</strong> los mismos siete bloques con prefijo <code>despues-</code>.</li>
+    <li><strong>Móvil:</strong> <code>movil-header-sticky.png</code>, <code>movil-hero.png</code>, <code>movil-demo-error.png</code>, <code>movil-faq.png</code>.</li>
+    <li><strong>Reversión:</strong> <code>reversion-antes.png</code> / <code>reversion-despues.png</code>.</li>
+  </ul>
+  <div class="iw-note">No puedo generar capturas desde este entorno (no tengo navegador con renderizado). La muestra <a href="index.html">index.html</a> es la referencia exacta del "después", bloque por bloque, para capturar en el mismo orden y comparar.</div>
+
+  <h2>6. Reversión en un paso</h2>
+  <p>La capa completa se apaga comentando <strong>una sola línea</strong>: la del <code>add_action( 'wp_enqueue_scripts', ... )</code>. Con eso desaparecen los dos CSS. La clase del body es inocua sin CSS, pero para dejarlo impecable se comenta también el filtro <code>body_class</code> (segunda línea) y el logo vuelve desde el Personalizador en 10 segundos.</p>
+  <pre><code>// REVERSIÓN RÁPIDA (menos de 1 minuto)
+// 1) Comentar el add_action de wp_enqueue_scripts  ->  la web vuelve a su aspecto anterior
+// add_action( 'wp_enqueue_scripts', 'iw_enqueue_capa_visual', 20 );
+
+// 2) Opcional, para dejarlo limpio del todo:
+// add_filter( 'body_class', 'iw_body_class_scope' );
+
+// 3) Logo: Apariencia &gt; Personalizar &gt; Identidad &gt; volver a subir el PNG anterior.
+// 4) Purgar caché (plugin de caché + CDN) y comprobar en incógnito.
+</code></pre>
+  <p><strong>Prueba de reversión:</strong> se ejecuta en staging antes de tocar producción; se valida que la home se ve exactamente como el "antes" (<code>reversion-despues.png</code> idéntico a <code>antes-*.png</code>), sin errores 404 de hojas de estilo en consola y con el logo PNG de vuelta. Se documenta el tiempo real de la operación.</p>
+
+  <h2>7. influweb.es vs influweb.ai</h2>
+  <p>Pendiente de confirmar en los dos paneles (Apariencia → Temas): si <strong>no</strong> comparten tema, esta capa hay que repetirla en el segundo dominio.</p>
+  <ul>
+    <li><code>influweb.es</code>: WordPress con tema propio/clásico → aplica esta guía.</li>
+    <li><code>influweb.ai</code>: comparte textos y orden de secciones, pero su estructura de entrega apunta a otra plataforma de sitio (no a un tema de WordPress). Antes de replicar nada hay que verificar generador del sitio y acceso al panel.</li>
+  </ul>
+  <p>Si <code>influweb.ai</code> no es WordPress, el <code>enqueue</code> no existe: se portan los <code>tokens.css</code> al constructor que use (variables y clases) y se documenta aparte. <strong>No se asume nada sin verlo en el panel.</strong></p>
+
+  <h2>8. Lo que no se ha aplicado y por qué</h2>
+  <table>
+    <tr><th>Elemento</th><th>Motivo</th></tr>
+    <tr><td>Botones del banner de cookies</td><td>Restricción expresa: los valida Elena antes. En la muestra se maqueta el aviso, no su botonería definitiva.</td></tr>
+    <tr><td>Iconos de las 9 herramientas</td><td>No se modifican. En la muestra solo aparece el número de orden, para no inventar iconografía nueva.</td></tr>
+    <tr><td>Emails y enlaces legales</td><td>En producción van ofuscados por plugin (<code>[email protected]</code> en el HTML) y las políticas son páginas reales. En la muestra no se reproducen ni se inventan datos legales.</td></tr>
+    <tr><td>Textos, dirección y copyright</td><td>Intactos, literalmente iguales. Cualquier corrección de copy va por Mateo, no por esta capa.</td></tr>
+    <tr><td>Publicación en producción</td><td>Bloqueada a propósito hasta el visto bueno de Rafael.</td></tr>
+    <tr><td>Capturas</td><td>No hay navegador con renderizado en este entorno; se entrega la referencia y la checklist de captura.</td></tr>
+  </table>
+
+  <h2>9. Criterio de aceptación</h2>
+  <ul>
+    <li>La web real se ve como <code>index.html</code>: mismos bloques, mismos textos, misma jerarquía, con la paleta y tipografía del sistema.</li>
+    <li>Cero elementos rotos: sin scroll horizontal en 360/390/768/1024/1440 px, sin solapes del header sticky, sin campos desalineados.</li>
+    <li>Admin y plugins sin cambios visuales.</li>
+    <li>Reversión probada en un paso, con evidencia.</li>
+  </ul>
+
+  <p style="margin-top:36px"><a class="iw-btn iw-btn--ghost" href="index.html">← Volver a la muestra</a></p>
+</main>
+
+<footer class="iw-foot">
+  <div class="iw-wrap">
+    <div class="iw-foot__bar" style="border-top:0">
+      <span>© 2026 INFLUWEB LLC. Todos los derechos reservados.</span>
+      <span>Documento interno de implantación · no indexado</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
