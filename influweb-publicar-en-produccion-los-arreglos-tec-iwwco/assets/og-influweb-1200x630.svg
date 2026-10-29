@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Influweb — Campañas potenciadas por IA">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1730"/>
+      <stop offset="0.55" stop-color="#122A55"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#93C5FD"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#93C5FD" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#93C5FD" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="40" r="420" fill="url(#glow)"/>
+  <circle cx="120" cy="620" r="300" fill="url(#glow)" opacity="0.45"/>
+
+  <!-- Marca -->
+  <g transform="translate(80,74)">
+    <rect width="56" height="56" rx="15" fill="#2563EB"/>
+    <g fill="none" stroke="#fff" stroke-width="4.6" stroke-linecap="round">
+      <path d="M14 41V27"/>
+      <path d="M24 41V17"/>
+      <path d="M34 41v-8"/>
+      <path d="M44 41V22"/>
+    </g>
+    <text x="76" y="39" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" letter-spacing="-0.8">influ<tspan fill="#93C5FD">web</tspan></text>
+  </g>
+
+  <!-- Titular -->
+  <text x="80" y="286" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" fill="#FFFFFF" letter-spacing="-2.2">Campañas potenciadas</text>
+  <text x="80" y="364" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" fill="#FFFFFF" letter-spacing="-2.2">por IA</text>
+
+  <rect x="80" y="404" width="72" height="6" rx="3" fill="#60A5FA"/>
+
+  <text x="80" y="462" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27" font-weight="400" fill="#C3D2EC">Estrategia, contenido, calendario y creadores</text>
+  <text x="80" y="500" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27" font-weight="400" fill="#C3D2EC">en una sola plataforma.</text>
+
+  <!-- Gráfica -->
+  <g transform="translate(700,300)">
+    <path d="M0 190 L60 168 L120 176 L180 130 L240 140 L300 96 L360 104 L420 52 L420 190 Z" fill="url(#fill)"/>
+    <path d="M0 190 L60 168 L120 176 L180 130 L240 140 L300 96 L360 104 L420 52" fill="none" stroke="url(#line)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="420" cy="52" r="9" fill="#FFFFFF"/>
+    <circle cx="420" cy="52" r="18" fill="#FFFFFF" opacity="0.22"/>
+    <text x="0" y="242" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#93C5FD">influweb.es</text>
+  </g>
+</svg>
