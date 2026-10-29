@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Influweb — Campañas potenciadas por IA | Marketing y creadores en una plataforma</title>
+<meta name="description" content="Influweb reúne análisis de competencia, estrategia, calendario de contenido, generación de piezas y colaboración con creadores en una sola plataforma con IA.">
+<link rel="canonical" href="https://influweb.es/">
+<meta name="theme-color" content="#2563EB">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Influweb">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:title" content="Influweb — Tu próximo equipo de marketing empieza acá">
+<meta property="og:description" content="Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca. Todo desde una sola plataforma.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Ctext x='16' y='22' font-family='Arial,Helvetica,sans-serif' font-size='14' font-weight='700' fill='%23ffffff' text-anchor='middle'%3Eiw%3C/text%3E%3C/svg%3E">
+<!--
+  ============================================================================
+  INFLUWEB · home única en la raíz de influweb.es
+  Archivo autónomo: CSS y JS incluidos. Cero dependencias de carpetas locales,
+  cero fetch de JSON, cero referencias a ./carpeta, data/posts/ ni similares.
+  Todo lo que necesita está en este archivo, así que ningún script de build
+  tiene que recorrer directorios con fs para publicarlo.
+  ---------------------------------------------------------------------------
+  PENDIENTES MARCADOS EN ESTE ARCHIVO (buscar "PLACEHOLDER"):
+   - PLACEHOLDER LEGAL: texto de Política de privacidad, Política de cookies y
+     Términos y condiciones (los aporta Elena).
+   - PLACEHOLDER FISCAL: razón social, CIF y domicilio fiscal en España
+     (los aporta Rafael / Elena). No se ha inventado ningún dato.
+  ============================================================================
+-->
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --blue:#2563EB;--blue-dark:#1D4ED8;--blue-deep:#1E40AF;--blue-50:#EFF4FF;--blue-100:#DBE6FF;
+  --ink:#0B1220;--ink-2:#27364B;--muted:#5A6B85;
+  --bg:#F7F9FC;--card:#FFFFFF;--line:#E3E9F2;
+  --r:18px;--max:1140px;
+  --shadow-sm:0 1px 2px rgba(11,18,32,.05);
+  --shadow:0 18px 40px -24px rgba(11,18,32,.35);
+  --shadow-lg:0 30px 70px -30px rgba(11,18,32,.45);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.no-scroll{overflow:hidden}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{max-width:100%}
+a{color:var(--blue-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0 0 .6em;line-height:1.15;letter-spacing:-.021em}
+h1{font-size:clamp(2.05rem,4.5vw,3.35rem);font-weight:800}
+h2{font-size:clamp(1.55rem,2.9vw,2.3rem);font-weight:750}
+h3{font-size:1.06rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul{margin:0 0 1em;padding-left:1.15rem}
+strong{font-weight:700}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:#fff;color:var(--ink);padding:.7rem 1rem;border-radius:0 0 12px 0;font-weight:650}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.section{padding:clamp(2.8rem,6vw,5rem) 0}
+.section--tight{padding-top:clamp(1.5rem,3vw,2.5rem)}
+.section-head{max-width:720px;margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+.section-head p{color:var(--muted);font-size:1.03rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.45rem;background:var(--blue-50);color:var(--blue-deep);border:1px solid var(--blue-100);border-radius:999px;padding:.32rem .8rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1.1rem}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.82rem 1.3rem;border-radius:999px;font:inherit;font-size:.95rem;font-weight:650;border:1px solid transparent;cursor:pointer;text-decoration:none!important;transition:background .18s,transform .18s,box-shadow .18s,border-color .18s}
+.btn--primary{background:var(--blue);color:#fff;box-shadow:0 12px 26px -14px rgba(37,99,235,.95)}
+.btn--primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{background:var(--blue-50);border-color:#C7D6F5}
+.btn--light{background:#fff;color:var(--blue-deep)}
+.btn--light:hover{background:#EAF1FF}
+.btn--sm{padding:.55rem 1rem;font-size:.88rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-sm)}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(247,249,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:1.2rem;min-height:66px}
+.logo{display:inline-flex;align-items:center;gap:.55rem;color:var(--ink);font-weight:800;font-size:1.12rem;letter-spacing:-.03em;text-decoration:none!important}
+.logo__mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(140deg,#3B82F6,#2563EB);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:800;letter-spacing:-.04em}
+.logo__text em{font-style:normal;color:var(--blue)}
+.nav{display:flex;align-items:center;gap:1.15rem;margin-left:auto}
+.nav a{color:var(--ink-2);font-size:.92rem;font-weight:550}
+.nav a:hover{color:var(--blue);text-decoration:none}
+.nav a.nav__mail{color:var(--muted);font-size:.86rem}
+.nav .nav__cta{color:#fff;font-weight:650}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:4px}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:980px){
+  .burger{display:flex}
+  .nav{position:absolute;top:66px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:.15rem;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);padding:.7rem 20px 1.1rem}
+  .nav.is-open{display:flex}
+  .nav a{padding:.7rem .2rem;font-size:1rem}
+  .nav .nav__cta{margin-top:.5rem}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:clamp(2.4rem,6vw,4.6rem) 0 clamp(2.4rem,5vw,4rem)}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto -10%;height:560px;background:
+  radial-gradient(38% 55% at 22% 30%,rgba(37,99,235,.16),transparent 70%),
+  radial-gradient(30% 45% at 78% 12%,rgba(96,165,250,.20),transparent 72%);
+  pointer-events:none}
+.hero__grid{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(2rem,5vw,3.6rem);align-items:center}
+.hero h1 span{color:var(--blue)}
+.hero__lead{font-size:clamp(1.03rem,1.6vw,1.18rem);color:var(--ink-2);max-width:38ch}
+.hero__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0 1.5rem}
+.hero__tags{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:0}
+.hero__tags li{font-size:.8rem;font-weight:600;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:.3rem .72rem}
+@media (max-width:900px){.hero__grid{grid-template-columns:1fr}}
+
+/* app mock */
+.app{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-lg);padding:16px;position:relative}
+.app::after{content:"";position:absolute;inset:auto -14px -18px 30px;height:40px;background:radial-gradient(closest-side,rgba(37,99,235,.18),transparent);filter:blur(12px);z-index:-1}
+.app__top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.app__chip{font-size:.72rem;font-weight:700;color:var(--muted);background:#F3F6FC;border-radius:8px;padding:.28rem .55rem;letter-spacing:.02em}
+.app__delta{font-size:.74rem;font-weight:800;color:#0F7A4E;background:#E7F7EF;border-radius:999px;padding:.26rem .6rem}
+.app__label{font-size:.78rem;color:var(--muted);margin:0 0 .5rem}
+.bars{display:flex;align-items:flex-end;gap:7px;height:92px;padding:0 0 .4rem}
+.bars span{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#93B9FB,#2563EB)}
+.bars span:nth-child(1){height:44%}.bars span:nth-child(2){height:62%}.bars span:nth-child(3){height:52%}
+.bars span:nth-child(4){height:78%}.bars span:nth-child(5){height:66%}.bars span:nth-child(6){height:100%}
+.app__rows{list-style:none;margin:.9rem 0 0;padding:0;display:grid;gap:.5rem}
+.app__rows li{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--ink-2);background:#F8FAFE;border:1px solid #EDF2FA;border-radius:11px;padding:.5rem .65rem}
+.app__rows b{font-weight:700;color:var(--ink)}
+.app__dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex:none}
+.app__dot--amber{background:#F59E0B}
+.app__dot--green{background:#10B981}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;list-style:none;margin:0;padding:0;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.15rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .2s,transform .2s,box-shadow .2s}
+.step:hover{border-color:#C7D6F5;transform:translateY(-2px);box-shadow:var(--shadow)}
+.step__n{font-size:.78rem;font-weight:800;color:var(--blue);letter-spacing:.08em}
+.step h3{margin:0;font-size:1rem}
+.step p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.55}
+
+/* ---------- tabs / platform ---------- */
+.platform{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-sm);padding:clamp(.8rem,2vw,1.2rem)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;padding:6px;background:#F1F5FC;border:1px solid var(--line);border-radius:14px}
+.tab{appearance:none;border:0;background:transparent;padding:.58rem .85rem;border-radius:10px;font:inherit;font-size:.87rem;font-weight:650;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:var(--shadow-sm)}
+.panel{display:none;padding:clamp(1.1rem,3vw,1.9rem) .3rem .3rem}
+.panel.is-active{display:block}
+.panel h3{font-size:clamp(1.1rem,2vw,1.45rem)}
+.panel p{color:var(--muted);max-width:62ch}
+.ticks{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.5rem}
+.ticks li{position:relative;padding-left:1.7rem;font-size:.93rem;color:var(--ink-2);line-height:1.5}
+.ticks li::before{content:"";position:absolute;left:0;top:.28em;width:15px;height:15px;border-radius:50%;background:var(--blue-50);border:1px solid #C7D6F5}
+.ticks li::after{content:"";position:absolute;left:5px;top:.53em;width:5px;height:8px;border:solid var(--blue);border-width:0 2px 2px 0;transform:rotate(45deg)}
+[hidden]{display:none!important}
+
+/* ---------- creadores ---------- */
+.creadores{background:linear-gradient(140deg,#2563EB 0%,#1D4ED8 55%,#1E40AF 100%);color:#fff;border-radius:26px;padding:clamp(1.6rem,4vw,3rem);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;box-shadow:0 30px 60px -34px rgba(29,78,216,.8)}
+.creadores h2{color:#fff}
+.creadores .eyebrow{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.28);color:#fff}
+.creadores p{color:#DCE7FF}
+.creadores .ticks li{color:#fff}
+.creadores .ticks li::before{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+.creadores .ticks li::after{border-color:#fff}
+.creadores .ticks strong{display:block;color:#fff}
+.creadores .ticks span{display:block;font-size:.88rem;color:#DCE7FF}
+.phone{background:#fff;border-radius:22px;padding:14px;color:var(--ink);box-shadow:0 24px 50px -26px rgba(3,10,30,.7);max-width:320px;justify-self:center;width:100%}
+.phone__bar{width:52px;height:5px;border-radius:99px;background:#E3E9F2;margin:0 auto 12px}
+.phone h3{font-size:.86rem;margin:0 0 .7rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
+.phone ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.phone li{display:flex;gap:.6rem;align-items:center;font-size:.83rem;background:#F8FAFE;border:1px solid #EDF2FA;border-radius:11px;padding:.55rem .6rem;line-height:1.35}
+.phone .badge{margin-left:auto;font-size:.68rem;font-weight:800;color:var(--blue-deep);background:var(--blue-50);border-radius:999px;padding:.18rem .45rem;white-space:nowrap}
+@media (max-width:900px){.creadores{grid-template-columns:1fr}}
+
+/* ---------- audiences ---------- */
+.aud{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:14px}
+.aud article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+.aud h3{font-size:.98rem;margin:.7rem 0 .35rem}
+.aud p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.ico-badge{width:38px;height:38px;border-radius:11px;background:var(--blue-50);color:var(--blue);display:grid;place-items:center;border:1px solid var(--blue-100)}
+
+/* ---------- tools ---------- */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}
+.tool{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.2rem;transition:border-color .2s,box-shadow .2s,transform .2s}
+.tool:hover{border-color:#C7D6F5;box-shadow:var(--shadow);transform:translateY(-2px)}
+.tool h3{font-size:.97rem;margin:.75rem 0 .4rem}
+.tool p{font-size:.89rem;color:var(--muted);margin:0;line-height:1.55}
+.ico{width:20px;height:20px;display:block}
+
+/* ---------- demo / form ---------- */
+.demo-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(1.8rem,4vw,3rem);align-items:start}
+@media (max-width:920px){.demo-grid{grid-template-columns:1fr}}
+.contact-line{display:flex;align-items:center;gap:.55rem;font-size:.95rem;margin:.5rem 0 .9rem;flex-wrap:wrap}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(1.1rem,3vw,1.8rem);box-shadow:var(--shadow)}
+.form-card h3{font-size:1.1rem;margin-bottom:.25rem}
+.form-card .sub{font-size:.87rem;color:var(--muted);margin-bottom:1.1rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:620px){.grid-2{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.85rem}
+label{font-size:.83rem;font-weight:650;color:var(--ink-2)}
+input,select,textarea{font:inherit;font-size:.95rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:.68rem .8rem;width:100%;transition:border-color .15s,box-shadow .15s}
+input::placeholder,textarea::placeholder{color:#94A3B8}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+textarea{resize:vertical;min-height:96px}
+.field--check{flex-direction:row;align-items:flex-start;gap:.6rem;margin:1rem 0 1.1rem}
+.field--check input{width:18px;height:18px;margin-top:.2rem;flex:none;accent-color:var(--blue)}
+.field--check label{font-weight:450;font-size:.85rem;color:var(--ink-2);line-height:1.5}
+.linklike{background:none;border:0;padding:0;margin:0;font:inherit;color:var(--blue-dark);text-decoration:underline;cursor:pointer;text-align:left}
+.linklike:hover{color:var(--blue-deep)}
+.form-status{margin-top:.9rem;font-size:.87rem;color:#0F7A4E;background:#E7F7EF;border:1px solid #BFEBD6;border-radius:12px;padding:.65rem .8rem}
+.form-foot{font-size:.78rem;color:var(--muted);margin-top:.7rem}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:.6rem;max-width:860px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 1.1rem}
+.faq details[open]{border-color:#C7D6F5;box-shadow:var(--shadow-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:1rem 0;font-weight:650;font-size:.98rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.25rem;line-height:1;color:var(--blue);font-weight:700;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 0 1.1rem;color:var(--muted);font-size:.94rem;max-width:72ch}
+
+/* ---------- footer ---------- */
+.footer{background:#fff;border-top:1px solid var(--line);padding:clamp(2.4rem,5vw,3.4rem) 0 1.4rem;margin-top:clamp(1.5rem,4vw,3rem)}
+.footer__grid{display:grid;grid-template-columns:1.5fr .8fr .9fr 1.1fr;gap:clamp(1.4rem,3vw,2.4rem)}
+@media (max-width:880px){.footer__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.footer__grid{grid-template-columns:1fr}}
+.footer h4{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 .8rem;font-weight:750}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.footer li{font-size:.9rem;color:var(--ink-2)}
+.footer a{color:var(--ink-2)}
+.footer a:hover{color:var(--blue)}
+.footer__claim{font-size:.9rem;color:var(--muted);max-width:34ch;margin-top:.7rem}
+.footer__mail{font-weight:650;color:var(--blue-dark);word-break:break-word}
+.footer__meta{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between;margin-top:clamp(1.6rem,3vw,2.2rem);padding-top:1.1rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.footer__meta .legal-note{max-width:56ch}
+
+/* ---------- modals ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:none;padding:16px}
+.modal.is-open{display:flex;align-items:center;justify-content:center}
+.modal__backdrop{position:absolute;inset:0;width:100%;height:100%;background:rgba(11,18,32,.55);backdrop-filter:blur(3px);border:0;padding:0;cursor:pointer}
+.modal__dialog{position:relative;background:#fff;border-radius:18px;width:100%;max-width:720px;max-height:min(86vh,780px);display:flex;flex-direction:column;box-shadow:0 40px 90px -24px rgba(11,18,32,.65);animation:pop .18s ease-out}
+.modal__dialog:focus{outline:none}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+.modal__head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.1rem 1.3rem;border-bottom:1px solid var(--line)}
+.modal__head h2{font-size:1.15rem;margin:0}
+.modal__x{flex:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink-2);font-size:1.25rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.modal__x:hover{background:var(--blue-50);border-color:#C7D6F5;color:var(--blue-deep)}
+.modal__body{padding:1.2rem 1.3rem 1.8rem;overflow:auto;font-size:.93rem;color:var(--ink-2)}
+.modal__body h3{font-size:.98rem;margin:1.3rem 0 .4rem}
+.modal__body h3:first-child{margin-top:0}
+.modal__body ul{color:var(--ink-2)}
+.ph{border:1px dashed #9DBCF3;background:var(--blue-50);border-radius:12px;padding:.9rem 1rem;color:#16327A;font-size:.89rem;margin:0 0 1rem}
+.ph strong{color:#0E2358}
+.todo{list-style:none;padding:0;margin:.3rem 0 1rem;display:grid;gap:.35rem}
+.todo li{font-size:.87rem;color:var(--muted);padding-left:1.1rem;position:relative}
+.todo li::before{content:"·";position:absolute;left:.25rem;font-weight:800;color:var(--blue)}
+.modal__foot{margin-top:1.4rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+
+/* ---------- cookies ---------- */
+.cookies{position:fixed;z-index:90;left:16px;right:16px;bottom:16px;max-width:940px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 60px -22px rgba(11,18,32,.55);padding:1rem 1.1rem;display:flex;flex-wrap:wrap;gap:.9rem 1.2rem;align-items:center;justify-content:space-between}
+.cookies p{margin:0;font-size:.86rem;color:var(--ink-2);max-width:60ch}
+.cookies__actions{display:flex;flex-wrap:wrap;gap:.5rem}
+@media (max-width:560px){.cookies{left:10px;right:10px;bottom:10px;padding:.9rem}}
+.noscript-note{background:#FFF8E6;border:1px solid #F5D68A;color:#5B4300;border-radius:12px;padding:.8rem 1rem;font-size:.88rem;margin:1rem 0 0}
+</style>
+</head>
+<body>
+<!--email_off-->
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap header__in">
+    <a class="logo" href="#top" aria-label="Influweb, ir al inicio">
+      <span class="logo__mark" aria-hidden="true">iw</span>
+      <span class="logo__text">influ<em>web</em></span>
+    </a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#plataforma">Plataforma</a>
+      <a href="#creadores">Creadores</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a class="nav__mail" href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="#demo">Agenda una demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <span id="top"></span>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Campañas potenciadas por IA</p>
+        <h1 id="hero-title">Tu próximo equipo de marketing <span>empieza acá</span></h1>
+        <p class="hero__lead">Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca. Todo desde una sola plataforma.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#demo">Agenda una demo</a>
+          <a class="btn btn--ghost" href="mailto:empresa@influweb.ai">Escríbenos</a>
+        </div>
+        <ul class="hero__tags" aria-label="Qué incluye">
+          <li>Análisis de mercado</li>
+          <li>Estrategia</li>
+          <li>Calendario</li>
+          <li>Piezas</li>
+          <li>Creadores</li>
+        </ul>
+      </div>
+
+      <div class="app" role="img" aria-label="Vista de la plataforma: campaña con alcance estimado al alza, contenidos en revisión y creadores postulando">
+        <div class="app__top">
+          <span class="app__chip">Campaña · Marca</span>
+          <span class="app__delta">+38% alcance</span>
+        </div>
+        <p class="app__label">Rendimiento estimado de las últimas 4 semanas</p>
+        <div class="bars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <ul class="app__rows">
+          <li><span class="app__dot app__dot--amber" aria-hidden="true"></span><b>3 contenidos</b> en revisión esta semana</li>
+          <li><span class="app__dot" aria-hidden="true"></span><b>5 creadores</b> postulando · 2 nuevos</li>
+          <li><span class="app__dot app__dot--green" aria-hidden="true"></span>Campaña asistida por IA · <b>lista</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section" aria-labelledby="como-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="como-title">De la idea a la campaña en cinco pasos</h2>
+        <p>El mismo flujo que seguiría un equipo de marketing, pero ordenado y en un solo lugar.</p>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="step__n">01</span><h3>Entendemos tu mercado</h3><p>Analizamos tu negocio, competencia, presencia digital y tendencias para detectar oportunidades reales.</p></li>
+        <li class="step"><span class="step__n">02</span><h3>Construimos tu estrategia</h3><p>Definimos objetivos, posicionamiento, pilares de comunicación y audiencias orientadas al crecimiento.</p></li>
+        <li class="step"><span class="step__n">03</span><h3>Creamos contigo</h3><p>Piezas gráficas alineadas a tu identidad, copies, ideas, guiones y contenido pensado para cumplir objetivos.</p></li>
+        <li class="step"><span class="step__n">04</span><h3>Planificamos tus redes</h3><p>Transformamos la estrategia en un plan concreto: qué comunicar, cuándo hacerlo y con qué objetivo.</p></li>
+        <li class="step"><span class="step__n">05</span><h3>Amplifica con creadores</h3><p>Creamos campañas, generamos briefs y conectamos con creadores para llevar tu marca a nuevas audiencias.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PLATAFORMA -->
+  <section class="section section--tight" id="plataforma" aria-labelledby="plataforma-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="plataforma-title">Todo en una misma plataforma</h2>
+        <p>Análisis competitivo, estrategia, calendario, piezas y creadores. Sin saltar entre cinco herramientas.</p>
+      </div>
+
+      <div class="platform">
+        <div class="tabs" role="tablist" aria-label="Módulos de la plataforma">
+          <button class="tab" role="tab" id="tab-analisis" aria-controls="panel-analisis" aria-selected="true" tabindex="0">Análisis competitivo</button>
+          <button class="tab" role="tab" id="tab-estrategia" aria-controls="panel-estrategia" aria-selected="false" tabindex="-1">Estrategia</button>
+          <button class="tab" role="tab" id="tab-calendario" aria-controls="panel-calendario" aria-selected="false" tabindex="-1">Calendario</button>
+          <button class="tab" role="tab" id="tab-piezas" aria-controls="panel-piezas" aria-selected="false" tabindex="-1">Generador de piezas</button>
+          <button class="tab" role="tab" id="tab-creator" aria-controls="panel-creator" aria-selected="false" tabindex="-1">Creator</button>
+        </div>
+
+        <div class="panel is-active" role="tabpanel" id="panel-analisis" aria-labelledby="tab-analisis" tabindex="0">
+          <h3>Descubre qué está haciendo tu competencia</h3>
+          <p>Identifica a tus competidores, analiza sus estrategias de comunicación y recibe recomendaciones concretas para diferenciarte.</p>
+          <ul class="ticks">
+            <li>Seguimiento de los perfiles y formatos que mejor funcionan en tu sector.</li>
+            <li>Comparativa de tono, frecuencia y pilares de contenido.</li>
+            <li>Recomendaciones accionables para destacar.</li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-estrategia" aria-labelledby="tab-estrategia" tabindex="0" hidden>
+          <h3>Convierte información en una estrategia concreta</h3>
+          <p>Diseña una estrategia de marketing a medida, basada en tus objetivos, tu marca y las tendencias actuales del mercado.</p>
+          <ul class="ticks">
+            <li>Objetivos, posicionamiento y audiencias definidas.</li>
+            <li>Pilares de comunicación claros para todo el equipo.</li>
+            <li>Hoja de ruta para los próximos meses.</li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-calendario" aria-labelledby="tab-calendario" tabindex="0" hidden>
+          <h3>De la estrategia a un plan de contenido</h3>
+          <p>Organiza tus campañas en un calendario claro donde ves fechas de entrega, estados y próximas acciones en un solo lugar.</p>
+          <ul class="ticks">
+            <li>Qué se publica, cuándo y con qué objetivo.</li>
+            <li>Estado de cada pieza: idea, en revisión, aprobada, publicada.</li>
+            <li>Vista compartida para marca, equipo y creadores.</li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-piezas" aria-labelledby="tab-piezas" tabindex="0" hidden>
+          <h3>Crea contenido alineado a tu marca</h3>
+          <p>Genera piezas visuales, copies y guiones a partir de texto, adaptados a cada formato y a tu identidad de marca.</p>
+          <ul class="ticks">
+            <li>Ideas de contenido basadas en tu nicho y en tendencias.</li>
+            <li>Guiones de vídeo y copies con hashtags por plataforma.</li>
+            <li>Feedback automático con sugerencias de mejora.</li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-creator" aria-labelledby="tab-creator" tabindex="0" hidden>
+          <h3>Amplifica con personas reales</h3>
+          <p>Publica tu campaña, recibe postulaciones de creadores compatibles y coordina todo desde la misma cuenta.</p>
+          <ul class="ticks">
+            <li>Briefs claros para cada colaboración.</li>
+            <li>Postulaciones y chat dentro de la plataforma.</li>
+            <li>Historial y estado de cada campaña.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREADORES -->
+  <section class="section section--tight" id="creadores" aria-labelledby="creadores-title">
+    <div class="wrap">
+      <div class="creadores">
+        <div>
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Para creadores</p>
+          <h2 id="creadores-title">Postula a campañas y gestiona tu trabajo desde el móvil</h2>
+          <p>La app de Influweb es para ti, creador de contenido. Descubre campañas compatibles con tu perfil, postula en segundos y gestiona tus colaboraciones con marcas sin salir de tu celular.</p>
+          <ul class="ticks">
+            <li><strong>Notificaciones en tiempo real</strong><span>Entérate al instante de nuevas campañas y del estado de tus postulaciones.</span></li>
+            <li><strong>Chat en tiempo real</strong><span>Coordina directamente con las marcas, sin salir de la app.</span></li>
+            <li><strong>Postula en segundos</strong><span>Un perfil claro y tus mejores contenidos: las marcas ven por qué encajas.</span></li>
+          </ul>
+        </div>
+        <div class="phone" role="img" aria-label="Ejemplo de la app del creador: campañas compatibles, chat con la marca y postulación enviada">
+          <div class="phone__bar" aria-hidden="true"></div>
+          <h3>Campañas para ti</h3>
+          <ul>
+            <li><span>Marca de belleza · Reel</span><span class="badge">Nueva</span></li>
+            <li><span>Retail · 3 stories</span><span class="badge">Encaja</span></li>
+            <li><span>Chat con la marca</span><span class="badge">2</span></li>
+            <li><span>Postulación enviada</span><span class="badge">Enviada</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="section" id="usuarios" aria-labelledby="aud-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="aud-title">Una plataforma para cualquier negocio que quiera crecer</h2>
+        <p>Si comunicas, vendes o creas contenido, aquí tienes un lugar donde ordenar el trabajo y ganar tiempo.</p>
+      </div>
+      <div class="aud">
+        <article>
+          <span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3>Emprendedores y pymes</h3>
+          <p>Construye una estrategia profesional sin necesidad de contratar un equipo de marketing completo.</p>
+        </article>
+        <article>
+          <span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7z"/></svg></span>
+          <h3>Marcas en crecimiento</h3>
+          <p>Escala la creación de contenido, organiza procesos y trabaja con mayor eficiencia.</p>
+        </article>
+        <article>
+          <span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.2 1.3-4 3-4s3 1.8 3 4"/></svg></span>
+          <h3>Agencias</h3>
+          <p>Gestiona múltiples clientes desde una sola plataforma y optimiza el trabajo de tu equipo.</p>
+        </article>
+        <article>
+          <span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 18h6M12 7v5"/></svg></span>
+          <h3>Creadores</h3>
+          <p>Accede a oportunidades de colaboración y trabaja con marcas de manera simple y profesional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS -->
+  <section class="section section--tight" id="herramientas" aria-labelledby="tools-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="tools-title">Herramientas de Influweb</h2>
+        <p>Nueve utilidades conectadas entre sí para que la campaña avance de principio a fin.</p>
+      </div>
+      <div class="tools">
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span><h3>Planificación de contenido</h3><p>Organiza tus campañas en un calendario con fechas de entrega, estados y próximas acciones en un solo lugar.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg></span><h3>Análisis de mercado</h3><p>Identifica a tus competidores, analiza sus estrategias de comunicación y recibe recomendaciones para diferenciarte.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5V16H8v-2.5A6 6 0 0 1 12 3z"/></svg></span><h3>Generación de ideas</h3><p>Descubre ideas creativas basadas en tu nicho y en las tendencias actuales de tu sector.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M17 9h4M3 15h4M17 15h4"/></svg></span><h3>Guiones de vídeo</h3><p>Genera guiones adaptados a tu audiencia, formato y plataforma, listos para grabar.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L18 10l-4-4L4 16v4z"/><path d="M14 6l4 4"/></svg></span><h3>Copywriting</h3><p>Textos, descripciones y hashtags optimizados para cada plataforma, enfocados en alcance y engagement.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span><h3>Generador de imágenes</h3><p>Crea piezas visuales a partir de texto, adaptadas a cada formato y alineadas a tu identidad de marca.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span><h3>Feedback automático</h3><p>Análisis de tu contenido con sugerencias de mejora, detección de errores y evaluación de calidad e impacto.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Estrategias de marketing</h3><p>Diseña una estrategia a medida según tus objetivos, tu marca y las tendencias actuales del mercado.</p></article>
+        <article class="tool"><span class="ico-badge" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.3l5-.7L12 3z"/></svg></span><h3>Campaña asistida</h3><p>Crea tu campaña de principio a fin en minutos con ayuda de IA, sin salir del flujo.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO / FORMULARIO -->
+  <section class="section" id="demo" aria-labelledby="demo-title">
+    <div class="wrap demo-grid">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Ya está disponible</p>
+        <h2 id="demo-title">Pide tu demo</h2>
+        <p style="color:var(--muted)">Crea tu cuenta y arma tu primera campaña, o agenda una demo y te la mostramos en vivo. Te respondemos en menos de 24&nbsp;h laborables.</p>
+        <ul class="ticks">
+          <li>Demo personalizada de 20 minutos, sin compromiso.</li>
+          <li>Revisamos tu marca y tu competencia antes de la llamada.</li>
+          <li>Te confirmamos por correo con el enlace de la reunión.</li>
+        </ul>
+        <p class="contact-line">O escríbenos directamente a <a class="footer__mail" href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></p>
+      </div>
+
+      <div class="form-card">
+        <h3>Cuéntanos un poco</h3>
+        <p class="sub">Los campos con * son obligatorios.</p>
+        <form id="demo-form" action="mailto:empresa@influweb.ai" method="post" enctype="text/plain" novalidate>
+          <div class="grid-2">
+            <div class="field">
+              <label for="nombre">Nombre y apellido *</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label for="correo">Correo de trabajo *</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" required placeholder="nombre@empresa.com">
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="+34 600 000 000">
+            </div>
+            <div class="field">
+              <label for="perfil">Tipo de perfil *</label>
+              <select id="perfil" name="perfil" required>
+                <option value="">Seleccionar…</option>
+                <option value="Empresa">Empresa</option>
+                <option value="Creador">Creador</option>
+                <option value="Agencia">Agencia</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mensaje">¿Qué buscas en Influweb? *</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos tu marca, tu objetivo y qué necesitas"></textarea>
+          </div>
+          <div class="field field--check">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">He leído y acepto la <button type="button" class="linklike" data-modal-open="modal-privacidad">política de privacidad</button> y el uso de cookies descrito en la <button type="button" class="linklike" data-modal-open="modal-cookies">política de cookies</button>.</label>
+          </div>
+          <button class="btn btn--primary" type="submit" style="width:100%">Enviar solicitud</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+          <p class="form-foot">También puedes escribirnos a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tight" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="faq-title">Lo que suelen preguntarnos</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>¿Qué es Influweb?</summary>
+          <div class="a">Una plataforma de marketing con inteligencia artificial que reúne en un mismo lugar el análisis de tu competencia, la estrategia, el calendario de contenido, la generación de piezas y la colaboración con creadores. En vez de saltar entre cinco herramientas, armas la campaña de principio a fin en un solo flujo.</div>
+        </details>
+        <details>
+          <summary>¿Qué puedo hacer como empresa?</summary>
+          <div class="a">Ver qué está publicando tu competencia, convertir eso en una estrategia concreta, bajarla a un calendario de contenido y generar las piezas alineadas a tu marca. Cuando quieras amplificar, publicas una campaña y los creadores postulan; coordinas con ellos desde la misma cuenta.</div>
+        </details>
+        <details>
+          <summary>¿Qué puedo hacer como creador?</summary>
+          <div class="a">Desde tu celular: descubrir campañas compatibles con tu perfil, postular en segundos y coordinar por chat directamente con la marca. Las notificaciones te avisan cuando aparece una campaña nueva o cambia el estado de tu postulación.</div>
+        </details>
+        <details>
+          <summary>¿Cuándo estará disponible?</summary>
+          <div class="a">Ya está disponible y puedes crear tu cuenta hoy. Agenda una demo y te la mostramos en vivo.</div>
+        </details>
+        <details>
+          <summary>¿Necesitas ayuda o soporte?</summary>
+          <div class="a">Escríbenos a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a> y te responde alguien del equipo. Si prefieres verlo con calma y en vivo, agenda una demo y lo revisamos juntos.</div>
+        </details>
+      </div>
+      <noscript><p class="noscript-note">Tienes JavaScript desactivado: el menú móvil y las ventanas de textos legales necesitan JavaScript. Puedes solicitar los textos legales escribiendo a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p></noscript>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" aria-labelledby="footer-title">
+  <div class="wrap">
+    <h2 id="footer-title" class="logo" style="font-size:1.05rem;margin-bottom:.4rem">influ<em style="font-style:normal;color:var(--blue)">web</em></h2>
+    <div class="footer__grid" style="margin-top:1.2rem">
+      <div>
+        <p class="footer__claim">Campañas potenciadas por IA. Estrategia, contenido, planificación y creadores en una sola plataforma.</p>
+        <!-- PLACEHOLDER FISCAL (Rafael / Elena): si se quiere mostrar razón social y domicilio en el pie, añadir aquí:
+             "<p>Razón social · CIF · Domicilio fiscal, España</p>". No se ha inventado ningún dato. -->
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#plataforma">Plataforma</a></li>
+          <li><a href="#usuarios">Para quién es</a></li>
+          <li><a href="#creadores">Creadores</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#demo">Agenda una demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><button type="button" class="linklike" data-modal-open="modal-privacidad">Política de privacidad</button></li>
+          <li><button type="button" class="linklike" data-modal-open="modal-cookies">Política de cookies</button></li>
+          <li><button type="button" class="linklike" data-modal-open="modal-terminos">Términos y condiciones</button></li>
+          <li><button type="button" class="linklike" data-cookie-prefs>Preferencias de cookies</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a class="footer__mail" href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></li>
+          <li>España · Atención online</li>
+          <li>Horario de atención: lunes a viernes, 9:00–18:00 (CET)</li>
+        </ul>
+        <!-- PLACEHOLDER FISCAL (Rafael / Elena): domicilio social en España y CIF pendientes de confirmar.
+             Antes se publicaba "5200 Waterford District Dr Ste 120, Miami, FL 33126, United States": eliminado. -->
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p style="margin:0">© 2026 Influweb. Todos los derechos reservados.</p>
+      <p class="legal-note" style="margin:0">Marca operada desde España. <!-- PLACEHOLDER FISCAL: sustituir "Influweb" por la razón social completa, p. ej. "Influweb S.L." con su CIF. --></p>
+      <button type="button" class="linklike" data-cookie-prefs>Preferencias de cookies</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================== MODALES LEGALES ====================== -->
+<!--
+  Legales en modal, sin rutas ni URLs nuevas.
+  Los textos definitivos los aporta Elena (Legal). Los contenedores están listos:
+  sustituir el bloque <p class="ph"> por el texto final dentro de .modal__body.
+-->
+
+<div class="modal" id="modal-privacidad" aria-hidden="true">
+  <button type="button" class="modal__backdrop" data-modal-close tabindex="-1" aria-label="Cerrar"></button>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="t-privacidad" aria-describedby="d-privacidad" tabindex="-1">
+    <div class="modal__head">
+      <h2 id="t-privacidad">Política de privacidad</h2>
+      <button type="button" class="modal__x" data-modal-close aria-label="Cerrar Política de privacidad">✕</button>
+    </div>
+    <div class="modal__body" id="d-privacidad">
+      <p class="ph"><strong>PLACEHOLDER LEGAL — pendiente de Elena.</strong> Este contenedor está preparado para recibir el texto definitivo de la Política de privacidad (RGPD y LOPDGDD). No se publica texto legal inventado.</p>
+      <!-- PLACEHOLDER LEGAL: Elena — insertar aquí el texto de la Política de privacidad -->
+      <h3>Contenido que debe cubrir este texto</h3>
+      <ul class="todo">
+        <li>Responsable del tratamiento: razón social, CIF y domicilio en España.</li>
+        <li>Finalidades y bases jurídicas (solicitud de demo, contacto, alta en la plataforma).</li>
+        <li>Plazos de conservación y destinatarios o encargados del tratamiento.</li>
+        <li>Derechos de las personas y vía para ejercerlos, incluida la reclamación ante la AEPD.</li>
+        <li>Transferencias internacionales, si las hubiera, y medidas de seguridad.</li>
+      </ul>
+      <p class="modal__foot">Última actualización: pendiente. Para cualquier consulta sobre datos personales: <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-cookies" aria-hidden="true">
+  <button type="button" class="modal__backdrop" data-modal-close tabindex="-1" aria-label="Cerrar"></button>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="t-cookies" aria-describedby="d-cookies" tabindex="-1">
+    <div class="modal__head">
+      <h2 id="t-cookies">Política de cookies</h2>
+      <button type="button" class="modal__x" data-modal-close aria-label="Cerrar Política de cookies">✕</button>
+    </div>
+    <div class="modal__body" id="d-cookies">
+      <p class="ph"><strong>PLACEHOLDER LEGAL — pendiente de Elena.</strong> Falta el inventario de cookies y el texto definitivo. Hasta entonces, esta home solo guarda en tu navegador tu elección de consentimiento y no carga cookies de terceros por sí misma.</p>
+      <!-- PLACEHOLDER LEGAL: Elena — insertar inventario de cookies (nombre, titular, finalidad, duración) -->
+      <h3>Contenido que debe cubrir este texto</h3>
+      <ul class="todo">
+        <li>Cookies necesarias y su función.</li>
+        <li>Cookies analíticas o publicitarias de terceros, con su duración.</li>
+        <li>Cómo aceptar, rechazar o retirar el consentimiento.</li>
+        <li>Cómo cambiar la elección desde el enlace "Preferencias de cookies".</li>
+      </ul>
+      <p class="modal__foot">Puedes cambiar tu elección cuando quieras desde <button type="button" class="linklike" data-cookie-prefs data-modal-close>Preferencias de cookies</button>. Contacto: <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-terminos" aria-hidden="true">
+  <button type="button" class="modal__backdrop" data-modal-close tabindex="-1" aria-label="Cerrar"></button>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="t-terminos" aria-describedby="d-terminos" tabindex="-1">
+    <div class="modal__head">
+      <h2 id="t-terminos">Términos y condiciones</h2>
+      <button type="button" class="modal__x" data-modal-close aria-label="Cerrar Términos y condiciones">✕</button>
+    </div>
+    <div class="modal__body" id="d-terminos">
+      <p class="ph"><strong>PLACEHOLDER LEGAL — pendiente de Elena.</strong> Contenedor preparado para los términos de uso del sitio y de la plataforma. No se publica texto inventado.</p>
+      <!-- PLACEHOLDER LEGAL: Elena — insertar aquí los Términos y condiciones -->
+      <h3>Contenido que debe cubrir este texto</h3>
+      <ul class="todo">
+        <li>Titular del sitio y datos de contacto.</li>
+        <li>Condiciones de uso y limitaciones de responsabilidad.</li>
+        <li>Reglas de las campañas y relación entre marcas y creadores.</li>
+        <li>Propiedad intelectual y resolución de conflictos.</li>
+      </ul>
+      <p class="modal__foot">Para cualquier duda sobre estos términos: <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== AVISO DE COOKIES ====================== -->
+<div class="cookies" id="cookies" role="dialog" aria-modal="false" aria-labelledby="cookies-title" aria-describedby="cookies-text" hidden>
+  <p id="cookies-text"><strong id="cookies-title">Cookies.</strong> Usamos cookies propias necesarias para que la web funcione y, si das tu consentimiento, de terceros para analizar el tráfico y mejorar tu experiencia. Más información en la <button type="button" class="linklike" data-modal-open="modal-cookies">política de cookies</button>.</p>
+  <div class="cookies__actions">
+    <button type="button" class="btn btn--ghost btn--sm" data-consent="necesarias">Solo necesarias</button>
+    <button type="button" class="btn btn--primary btn--sm" data-consent="todas">Aceptar todas</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- menú móvil ---------- */
+  var burger = document.getElementById("burger");
+  var nav = document.getElementById("nav");
+  function closeNav() {
+    if (!nav || !burger) return;
+    nav.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Abrir menú");
+  }
+  if (burger && nav) {
+    burger.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    });
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) closeNav();
+    });
+  }
+
+  /* ---------- pestañas de la plataforma ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var sel = t === tab;
+      t.setAttribute("aria-selected", sel ? "true" : "false");
+      t.tabIndex = sel ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) {
+        panel.classList.toggle("is-active", sel);
+        if (sel) { panel.removeAttribute("hidden"); } else { panel.setAttribute("hidden", ""); }
+      }
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () { selectTab(tab); });
+    tab.addEventListener("keydown", function (e) {
+      var next = null;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") next = tabs[(i + 1) % tabs.length];
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === "Home") next = tabs[0];
+      else if (e.key === "End") next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); selectTab(next); next.focus(); }
+    });
+  });
+
+  /* ---------- modales legales (foco gestionado, sin cambiar la URL) ---------- */
+  var activeModal = null;
+  var lastTrigger = null;
+
+  function focusables(root) {
+    return Array.prototype.slice
+      .call(root.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+      .filter(function (el) { return el.offsetWidth > 0 || el.offsetHeight > 0; });
+  }
+
+  function openModal(id, trigger) {
+    var m = document.getElementById(id);
+    if (!m) return;
+    if (activeModal) closeModal(false);
+    lastTrigger = trigger || document.activeElement;
+    m.classList.add("is-open");
+    m.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("no-scroll");
+    activeModal = m;
+    var dialog = m.querySelector(".modal__dialog");
+    if (dialog) dialog.focus();
+  }
+
+  function closeModal(restore) {
+    if (!activeModal) return;
+    var m = activeModal;
+    m.classList.remove("is-open");
+    m.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("no-scroll");
+    activeModal = null;
+    if (restore !== false && lastTrigger && typeof lastTrigger.focus === "function") {
+      lastTrigger.focus();
+    }
+    lastTrigger = null;
+  }
+
+  document.addEventListener("click", function (e) {
+    var opener = e.target.closest("[data-modal-open]");
+    if (opener) {
+      e.preventDefault();
+      openModal(opener.getAttribute("data-modal-open"), opener);
+      return;
+    }
+    var closer = e.target.closest("[data-modal-close]");
+    if (closer && activeModal) {
+      e.preventDefault();
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (!activeModal) return;
+    if (e.key === "Escape") { e.preventDefault(); closeModal(); return; }
+    if (e.key !== "Tab") return;
+    var list = focusables(activeModal);
+    if (!list.length) { e.preventDefault(); return; }
+    var first = list[0];
+    var last = list[list.length - 1];
+    var dialog = activeModal.querySelector(".modal__dialog");
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  });
+
+  /* ---------- consentimiento de cookies ---------- */
+  var KEY = "influweb-cookies";
+  var banner = document.getElementById("cookies");
+  function readPref() { try { return localStorage.getItem(KEY); } catch (err) { return null; } }
+  function savePref(v) { try { localStorage.setItem(KEY, v); } catch (err) {} }
+  function showBanner() { if (banner) banner.hidden = false; }
+  function hideBanner() { if (banner) banner.hidden = true; }
+
+  if (banner && !readPref()) {
+    window.setTimeout(showBanner, 800);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-consent]"), function (b) {
+    b.addEventListener("click", function () {
+      savePref(b.getAttribute("data-consent"));
+      hideBanner();
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-cookie-prefs]"), function (b) {
+    b.addEventListener("click", function (e) {
+      e.preventDefault();
+      showBanner();
+      if (banner && banner.querySelector("[data-consent]")) banner.querySelector("[data-consent]").focus();
+    });
+  });
+
+  /* ---------- formulario: validación y entrega por correo ---------- */
+  var form = document.getElementById("demo-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var status = document.getElementById("form-status");
+      if (!form.checkValidity()) {
+        if (typeof form.reportValidity === "function") form.reportValidity();
+        return;
+      }
+      var data = new FormData(form);
+      var body =
+        "Nombre: " + (data.get("nombre") || "") + "\n" +
+        "Correo: " + (data.get("correo") || "") + "\n" +
+        "Telefono: " + (data.get("telefono") || "-") + "\n" +
+        "Perfil: " + (data.get("perfil") || "") + "\n\n" +
+        "Mensaje:\n" + (data.get("mensaje") || "");
+      var subject = "Solicitud de demo · Influweb";
+      status.hidden = false;
+      status.textContent = "Hemos preparado el correo en tu cliente de email. Si no se abre, escríbenos a empresa@influweb.ai.";
+      window.location.href = "mailto:empresa@influweb.ai?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+<!--/email_off-->
+</body>
+</html>
