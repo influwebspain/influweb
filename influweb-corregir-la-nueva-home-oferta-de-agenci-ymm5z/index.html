@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diseño web para clínicas y profesionales | Influweb · Valencia y España</title>
+<meta name="description" content="Diseño web desde 690 € + IVA, mantenimiento 49 €/mes + IVA y automatizaciones con IA desde 300 € + IVA para clínicas y profesionales de Valencia y toda España. Tarifas claras y sin sorpresas.">
+<link rel="canonical" href="https://influweb.es/">
+<meta name="theme-color" content="#2563EB">
+<meta name="robots" content="index,follow">
+
+<!-- IMAGEN PARA COMPARTIR · [PENDIENTE] Lucía entrega el archivo definitivo.
+     Archivo esperado: og-influweb.jpg · 1200 x 630 px · junto a este index.html -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Influweb">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:title" content="Diseño web para clínicas y profesionales | Influweb">
+<meta property="og:description" content="Webs rápidas y orientadas a conversión desde 690 € + IVA. Mantenimiento 49 €/mes + IVA y automatizaciones con IA desde 300 € + IVA. Valencia y toda España.">
+<meta property="og:image" content="https://influweb.es/og-influweb.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Influweb · Diseño web y automatización para clínicas y profesionales">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diseño web para clínicas y profesionales | Influweb">
+<meta name="twitter:description" content="Webs rápidas y orientadas a conversión desde 690 € + IVA. Valencia y toda España.">
+<meta name="twitter:image" content="https://influweb.es/og-influweb.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563EB'/%3E%3Cpath d='M22 19h6v26h-6zM34 19h6v10.6c1.8-1.6 4-2.4 6.4-2.4 5.2 0 8.6 3.6 8.6 9.2V45h-6v-8.1c0-3.1-1.6-4.9-4.3-4.9-2.7 0-4.7 1.9-4.7 5.2V45h-6z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --blue:#2563EB;--blue-700:#1D4ED8;--blue-900:#14307A;--blue-50:#EFF4FF;--blue-100:#DCE6FF;
+  --ink:#0B1220;--ink-2:#26313F;--muted:#5B6878;--line:#E3E8F1;--line-2:#EDF1F7;
+  --bg:#F7F9FC;--white:#fff;--red:#B42318;
+  --r:14px;--r-lg:20px;--shadow:0 1px 2px rgba(11,18,32,.04),0 14px 34px -18px rgba(11,18,32,.28);
+  --max:1140px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0 0 14px;font-weight:700}
+h1{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+h2{font-size:clamp(1.65rem,3vw,2.35rem)}
+h3{font-size:1.12rem;margin-bottom:8px}
+p{margin:0 0 16px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;border-radius:0 0 10px 0;z-index:99}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid #93B4FF;outline-offset:2px}
+section{scroll-margin-top:86px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.lead{font-size:1.06rem;color:var(--muted);max-width:62ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.97rem;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease;font-family:inherit}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn--primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px -10px rgba(37,99,235,.7)}
+.btn--primary:hover{background:var(--blue-700)}
+.btn--ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:#C9D4E6}
+.btn--outline{background:transparent;color:var(--blue);border-color:#BFD0F5}
+.btn--outline:hover{background:var(--blue-50)}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.75;cursor:not-allowed;transform:none}
+
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;gap:18px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px;flex:0 0 auto}
+.nav{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav a{color:var(--ink-2);font-size:.94rem;font-weight:500}
+.nav a:hover{color:var(--blue);text-decoration:none}
+.header-cta{margin-left:6px}
+.nav-toggle{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;cursor:pointer;line-height:0}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
+
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(760px 420px at 88% -10%,#E2EBFF 0%,rgba(226,235,255,0) 70%),
+  radial-gradient(620px 380px at 0% 8%,#F1F6FF 0%,rgba(241,246,255,0) 65%),#fff;
+  border-bottom:1px solid var(--line-2)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 72px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--ink-2);margin-bottom:18px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(37,99,235,.14)}
+.hl{color:var(--blue)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.86rem;color:var(--muted);padding:0;margin:0;list-style:none}
+.hero-meta li{display:flex;align-items:center;gap:7px}
+.check{width:15px;height:15px;flex:0 0 auto;color:var(--blue)}
+
+.mock{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:0 30px 60px -30px rgba(11,18,32,.35)}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line-2)}
+.mock-bar i{width:8px;height:8px;border-radius:50%;background:#D8E0EC;display:block}
+.mock-bar em{margin-left:10px;font-style:normal;font-size:.72rem;color:#93A0B4;background:#F4F7FB;border-radius:6px;padding:3px 10px;flex:1}
+.mock-screen{padding:16px}
+.mock-nav{display:flex;align-items:center;gap:8px;margin-bottom:22px}
+.mock-nav b{font-size:.72rem;color:var(--blue-900)}
+.mock-nav i{height:5px;width:26px;background:#E7ECF5;border-radius:3px;display:block}
+.mock-nav i:nth-of-type(2){width:20px}
+.mock-nav span{margin-left:auto;font-size:.62rem;color:#fff;background:var(--blue);padding:4px 9px;border-radius:999px}
+.mock-h1{height:13px;width:82%;background:#16233A;border-radius:4px;margin-bottom:9px}
+.mock-h2{height:13px;width:56%;background:#16233A;border-radius:4px;margin-bottom:14px}
+.mock-p{height:6px;width:88%;background:#E4EAF4;border-radius:3px;margin-bottom:7px}
+.mock-p.s{width:64%}
+.mock-cta{display:inline-block;margin-top:10px;font-size:.7rem;color:#fff;background:var(--blue);padding:7px 16px;border-radius:8px}
+.mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.mock-cards div{height:44px;background:linear-gradient(180deg,#F3F7FF,#EAF1FE);border:1px solid #E4ECFA;border-radius:8px}
+.mock-float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 30px -18px rgba(11,18,32,.5);padding:9px 13px;display:flex;flex-direction:column;line-height:1.15}
+.mock-float strong{font-size:1rem;color:var(--blue)}
+.mock-float span{font-size:.66rem;color:var(--muted)}
+.mock-float--a{top:-16px;right:-10px}
+.mock-float--b{bottom:-18px;left:-14px}
+
+.strip{background:var(--blue-900);color:#fff}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:22px 20px;border-left:1px solid rgba(255,255,255,.12)}
+.strip-item:first-child{border-left:0;padding-left:0}
+.strip-item strong{display:block;font-size:1.15rem}
+.strip-item span{font-size:.8rem;color:#B9C7E6}
+
+.sec{padding:74px 0}
+.sec--bg{background:var(--bg);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.sec-head{max-width:720px;margin-bottom:38px}
+.sec-head.center{margin-left:auto;margin-right:auto}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -28px rgba(11,18,32,.4)}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--blue-50);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex:0 0 auto}
+.ico svg{width:22px;height:22px}
+.card > p.sub{font-size:.9rem;color:var(--muted)}
+.card ul{margin:0 0 20px;padding:0;list-style:none}
+.card ul li{position:relative;padding-left:22px;font-size:.9rem;color:var(--ink-2);margin-bottom:7px}
+.card ul li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:3px;background:var(--blue-100);border:1px solid #B9CCF8}
+.card .more{margin-top:auto;font-weight:600;font-size:.9rem}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;padding:0;list-style:none}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:.86rem;color:var(--ink-2)}
+
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow)}
+.price--featured{border:2px solid var(--blue);box-shadow:0 30px 60px -34px rgba(37,99,235,.55)}
+.price .tag{position:absolute;top:-13px;left:24px;background:var(--blue);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.price .kicker{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:6px}
+.price .amount{display:flex;align-items:flex-start;gap:6px;margin:10px 0 2px;line-height:1}
+.price .amount b{font-size:2.5rem;letter-spacing:-.04em}
+.price .amount span{font-size:.9rem;color:var(--muted);padding-top:8px}
+.price .note{font-size:.82rem;color:var(--muted);margin:0 0 18px}
+.price hr{border:0;border-top:1px solid var(--line-2);margin:0 0 18px;width:100%}
+.price ul{margin:0 0 22px;padding:0;list-style:none;flex:1}
+.price li{position:relative;padding-left:24px;font-size:.89rem;margin-bottom:9px;color:var(--ink-2)}
+.price li::before{content:"\2713";position:absolute;left:0;color:var(--blue);font-weight:800;font-size:.85rem}
+.fine{font-size:.82rem;color:var(--muted);margin-top:18px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.mini b{display:block;font-size:.9rem;margin-bottom:2px}
+.mini span{font-size:.78rem;color:var(--muted);line-height:1.4;display:block}
+.reasons{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.reasons li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.reasons b{display:block;font-size:.92rem}
+.reasons span{font-size:.82rem;color:var(--muted)}
+.reasons .ico{width:32px;height:32px;margin:0;border-radius:9px}
+.reasons .ico svg{width:16px;height:16px}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.step::before{counter-increment:s;content:"0" counter(s);display:inline-block;font-weight:800;color:var(--blue);font-size:.85rem;letter-spacing:.06em;margin-bottom:10px}
+.step h3{font-size:1rem;margin-bottom:6px}
+.step p{font-size:.85rem;color:var(--muted);margin:0}
+
+.platform{background:#0B1220;color:#E7EDF8;border-radius:var(--r-lg);padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;position:relative;overflow:hidden}
+.platform::after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-120px;top:-140px;background:radial-gradient(circle,rgba(37,99,235,.55),rgba(37,99,235,0) 70%)}
+.platform h2{color:#fff;font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.platform p{color:#AAB8D0;font-size:.93rem}
+.platform .eyebrow{color:#8FB0FF}
+.platform ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;position:relative;z-index:1}
+.platform ul li{font-size:.88rem;color:#D5DFF2;padding-left:20px;position:relative}
+.platform ul li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.platform-note{margin:14px 0 0;font-size:.78rem;color:#93370D;background:#FFFAEB;border:1px dashed #FEDF89;border-radius:10px;padding:10px 12px;display:inline-block;position:relative;z-index:1}
+.pending-inline{font-size:.82rem;color:#93370D;background:#FFFAEB;border:1px dashed #FEDF89;border-radius:8px;padding:3px 9px;display:inline-block}
+a.pending-inline:hover{text-decoration:none;background:#FEF0C7}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.data-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:14px}
+.data-list li{font-size:.9rem;color:var(--ink-2)}
+.data-list>b,.data-list li>b{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;font-weight:700}
+.note-box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px 18px;font-size:.86rem;color:var(--ink-2)}
+
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;box-shadow:0 30px 60px -40px rgba(11,18,32,.5)}
+.field{margin-bottom:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px;color:var(--ink-2)}
+.req{color:var(--blue)}
+input,select,textarea{width:100%;font-family:inherit;font-size:.93rem;color:var(--ink);background:#fff;border:1px solid #CFD8E6;border-radius:10px;padding:11px 13px;transition:border-color .15s ease,box-shadow .15s ease}
+textarea{resize:vertical;min-height:96px}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.16);outline:none}
+.field.has-error input,.field.has-error select,.field.has-error textarea{border-color:#F04438;background:#FFFBFB}
+.err{display:none;color:var(--red);font-size:.78rem;margin:5px 0 0}
+.field.has-error .err{display:block}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);font-weight:400;margin-bottom:4px}
+.consent input{width:16px;height:16px;margin-top:3px;flex:0 0 auto;padding:0}
+.consent.has-error span{color:var(--red)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{font-size:.76rem;color:var(--muted);margin:12px 0 0;text-align:center}
+
+.form-status{display:flex;gap:11px;align-items:flex-start;border:1px solid;border-radius:12px;padding:13px 15px;font-size:.86rem;margin-bottom:18px;line-height:1.5}
+.form-status[hidden]{display:none}
+.form-status strong{display:block;margin-bottom:2px}
+.form-status--success{background:#ECFDF3;border-color:#A6F4C5;color:#05603A}
+.form-status--error{background:#FEF3F2;border-color:#FECDCA;color:#B42318}
+.form-status--pending{background:#FFFAEB;border-color:#FEDF89;color:#93370D}
+.form-status .ico{width:22px;height:22px;margin:0;border-radius:7px;background:transparent;color:inherit}
+.form-status .ico svg{width:18px;height:18px}
+
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+footer{background:#fff;border-top:1px solid var(--line);padding:52px 0 26px;font-size:.88rem;color:var(--muted)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px}
+.foot-grid h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-grid a{color:var(--ink-2)}
+.foot-brand p{font-size:.85rem;max-width:34ch}
+.foot-bottom{border-top:1px solid var(--line-2);padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:.78rem}
+
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.is-visible{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding:48px 0 60px}
+  .mock{max-width:520px;margin:0 auto}
+  .strip-grid{grid-template-columns:1fr 1fr}
+  .strip-item{border-left:0;padding:18px 0}
+  .strip-item:nth-child(even){padding-left:18px;border-left:1px solid rgba(255,255,255,.12)}
+  .cards,.prices{grid-template-columns:1fr 1fr}
+  .two-col,.contact-grid,.platform{grid-template-columns:1fr;gap:28px}
+  .steps{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav-toggle{display:inline-block}
+  .header-cta{display:none}
+  .nav{position:absolute;left:0;right:0;top:70px;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 18px;display:none;box-shadow:0 20px 30px -20px rgba(11,18,32,.35)}
+  .nav.is-open{display:flex}
+  .nav a{padding:12px 0;border-bottom:1px solid var(--line-2);font-size:1rem}
+  .cards,.prices,.steps{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .sec{padding:54px 0}
+  .platform{padding:26px 22px}
+  .mock-float--a{right:4px;top:-14px}
+  .mock-float--b{left:4px;bottom:-14px}
+  h1{font-size:clamp(1.95rem,8vw,2.6rem)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#contenido">Saltar al contenido principal</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Influweb, volver al inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#2563EB"/><path d="M22 19h6v26h-6zM34 19h6v10.6c1.8-1.6 4-2.4 6.4-2.4 5.2 0 8.6 3.6 8.6 9.2V45h-6v-8.1c0-3.1-1.6-4.9-4.3-4.9-2.7 0-4.7 1.9-4.7 5.2V45h-6z" fill="#fff"/></svg>
+      <span>influweb</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--primary header-cta" href="#contacto">Pedir propuesta</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span> Agencia de marketing online · Valencia y toda España</span>
+        <h1 id="hero-title">Diseño web que convierte visitas en <span class="hl">pacientes y clientes</span></h1>
+        <p class="lead">Creamos webs rápidas, claras y preparadas para captar citas. Diseño web desde <strong>690 € + IVA</strong>, mantenimiento desde <strong>49 €/mes + IVA</strong> y automatizaciones con IA desde <strong>300 € + IVA</strong>. Para clínicas y profesionales que quieren resultados, no solo una web bonita.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#tarifas">Ver tarifas y packs</a>
+          <a class="btn btn--ghost" href="#contacto">Solicitar propuesta</a>
+        </div>
+        <ul class="hero-meta">
+          <li><svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Presupuesto cerrado antes de empezar</li>
+          <li><svg class="check" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Respuesta en menos de 2 h laborables</li>
+        </ul>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><i></i><i></i><i></i><em>clinica-ejemplo.es</em></div>
+        <div class="mock-screen">
+          <div class="mock-nav"><b>Clínica Dental</b><i></i><i></i><span>Pedir cita</span></div>
+          <div class="mock-h1"></div>
+          <div class="mock-h2"></div>
+          <div class="mock-p"></div>
+          <div class="mock-p s"></div>
+          <div class="mock-cta">Reservar cita</div>
+          <div class="mock-cards"><div></div><div></div><div></div></div>
+        </div>
+        <div class="mock-float mock-float--a"><strong>95+</strong><span>PageSpeed</span></div>
+        <div class="mock-float mock-float--b"><strong>SEO local</strong><span>Google Maps</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE PRECIOS -->
+  <div class="strip">
+    <div class="wrap strip-grid">
+      <div class="strip-item"><strong>690 € + IVA</strong><span>Diseño web profesional</span></div>
+      <div class="strip-item"><strong>49 €/mes + IVA</strong><span>Mantenimiento y soporte</span></div>
+      <div class="strip-item"><strong>Desde 300 € + IVA</strong><span>Automatizaciones con IA</span></div>
+      <div class="strip-item"><strong>&lt; 2 h</strong><span>Respuesta en horario laborable</span></div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="sec" id="servicios" aria-labelledby="serv-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Servicios de agencia</span>
+        <h2 id="serv-title">Tu negocio online, bien montado desde el primer día</h2>
+        <p class="lead">No vendemos piezas sueltas: montamos la base digital que necesitas para que te encuentren, confíen y reserven. Web, mantenimiento y automatización trabajando juntos.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 8.5h19M6 6.2h.01M8.2 6.2h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 21h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Diseño web profesional</h3>
+          <p class="sub">Una web propia, rápida y pensada para que el visitante pida cita o te escriba.</p>
+          <ul>
+            <li>Diseño 100% personalizado a tu marca</li>
+            <li>SEO local y Google Maps</li>
+            <li>Integración con WhatsApp y formulario</li>
+            <li>RGPD y aviso legal incluidos</li>
+          </ul>
+          <a class="more" href="#tarifas">Desde 690 € + IVA &rarr;</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.8l7.5 3.1v6c0 4.2-3 8-7.5 9.3-4.5-1.3-7.5-5.1-7.5-9.3v-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 11.8l2.4 2.4 4.4-4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Mantenimiento y soporte</h3>
+          <p class="sub">Tu web actualizada, segura y disponible. Nos ocupamos de lo técnico por ti.</p>
+          <ul>
+            <li>Copias de seguridad diarias en la nube</li>
+            <li>Monitorización 24/7 y certificado SSL</li>
+            <li>Actualizaciones técnicas de seguridad</li>
+            <li>Soporte preferente en 24 h</li>
+          </ul>
+          <a class="more" href="#tarifas">49 €/mes + IVA &rarr;</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2.8L4.5 13.6h6l-1.5 7.6 8.5-11h-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Automatizaciones con IA</h3>
+          <p class="sub">Que la web trabaje sola: recibe leads, avisa al equipo y confirma citas sin manos.</p>
+          <ul>
+            <li>Recepción automática de leads vía Webhook</li>
+            <li>Integración con Google Sheets / CRM</li>
+            <li>Avisos inmediatos por email / WhatsApp</li>
+            <li>Recordatorios automáticos a pacientes</li>
+          </ul>
+          <a class="more" href="#tarifas">Desde 300 € + IVA &rarr;</a>
+        </article>
+      </div>
+
+      <div class="reveal">
+        <h3 style="margin-top:34px;font-size:.95rem;color:var(--ink-2)">También trabajamos</h3>
+        <ul class="chips">
+          <li>Redes sociales</li>
+          <li>Textos y contenido</li>
+          <li>Diseño gráfico</li>
+          <li>Anuncios en Google y Meta</li>
+          <li>SEO local</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFAS -->
+  <section class="sec sec--bg" id="tarifas" aria-labelledby="tar-title">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Tarifas claras</span>
+        <h2 id="tar-title">Precios que puedes leer sin letra pequeña</h2>
+        <p class="lead">Estos son los tres servicios que vende hoy influweb.es. Todos los importes son sin IVA; el IVA se aplica según la normativa vigente.</p>
+      </div>
+
+      <div class="prices">
+        <article class="price price--featured reveal">
+          <span class="tag">El más pedido</span>
+          <p class="kicker">Web Profesional Inicial</p>
+          <div class="amount"><b>690 €</b><span>+ IVA</span></div>
+          <p class="note">Pago único de lanzamiento</p>
+          <hr>
+          <ul>
+            <li>Diseño 100% personalizado a tu marca</li>
+            <li>Optimización SEO Local (Google Maps)</li>
+            <li>Velocidad ultra-rápida (Score 95+ PageSpeed)</li>
+            <li>Integración con WhatsApp y formulario</li>
+            <li>Cumplimiento RGPD y Aviso Legal</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="#contacto" data-servicio="Diseño web">Quiero mi web</a>
+        </article>
+
+        <article class="price reveal">
+          <p class="kicker">Mantenimiento &amp; Soporte</p>
+          <div class="amount"><b>49 €</b><span>/mes + IVA</span></div>
+          <p class="note">Tranquilidad para tu presencia online</p>
+          <hr>
+          <ul>
+            <li>Copias de seguridad diarias en la nube</li>
+            <li>Monitorización 24/7 y certificado SSL</li>
+            <li>Actualizaciones técnicas de seguridad</li>
+            <li>Soporte técnico preferente en 24 h</li>
+            <li>Cambios de contenido menores incluidos</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="#contacto" data-servicio="Mantenimiento">Añadir mantenimiento</a>
+        </article>
+
+        <article class="price reveal">
+          <p class="kicker">Automatizaciones con IA</p>
+          <div class="amount"><b>300 €</b><span>+ IVA</span></div>
+          <p class="note">Desde · alcance según complejidad</p>
+          <hr>
+          <ul>
+            <li>Recepción automática de leads vía Webhook</li>
+            <li>Integración con Google Sheets / CRM</li>
+            <li>Avisos inmediatos por Email / WhatsApp</li>
+            <li>Recordatorios automáticos a pacientes</li>
+            <li>Sincronización con n8n de alta disponibilidad</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="#contacto" data-servicio="Automatizaciones IA">Automatizar mi negocio</a>
+        </article>
+      </div>
+      <p class="fine center">Precios sin IVA. El importe final de las automatizaciones se cierra tras revisar el alcance. No hay costes ocultos ni cuotas de alta.</p>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="sec" id="para-quien" aria-labelledby="quien-title">
+    <div class="wrap two-col">
+      <div class="reveal">
+        <span class="eyebrow">Para quién trabajamos</span>
+        <h2 id="quien-title">Clínicas y profesionales de Valencia y toda España</h2>
+        <p class="lead">Si tu negocio vive de la confianza del paciente o del cliente, la web no es un adorno: es el primer mostrador. Trabajamos con negocios como el tuyo.</p>
+        <div class="mini-grid">
+          <div class="mini"><b>Clínicas dentales</b><span>Citas, tratamientos y confianza online.</span></div>
+          <div class="mini"><b>Fisioterapia</b><span>Reservas y especialidades claras.</span></div>
+          <div class="mini"><b>Estética y bienestar</b><span>Imagen cuidada y conversión.</span></div>
+          <div class="mini"><b>Psicología</b><span>Contacto discreto y cercano.</span></div>
+          <div class="mini"><b>Medicina privada</b><span>Autoridad y agenda ágil.</span></div>
+          <div class="mini"><b>Despachos profesionales</b><span>Servicios, casos y consulta.</span></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Por qué Influweb</span>
+        <h2 style="font-size:1.5rem">Menos intermediarios, más criterio</h2>
+        <ul class="reasons">
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V9.5L12 4l8 5.5V20" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <div><b>Hablas con quien diseña</b><span>Sin capas de cuenta ni proyectos que se pierden: decides con la persona que ejecuta.</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.8" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 13h4M8 16h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div><b>Diseño propio, no plantilla</b><span>Cada web se construye desde cero para tu marca, tu especialidad y tu paciente.</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2.8L4.5 13.6h6l-1.5 7.6 8.5-11h-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <div><b>Rápida de verdad</b><span>Objetivo de 95+ en PageSpeed y Core Web Vitals cuidados: carga antes de que el paciente se vaya.</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7.5 15.5l3.5-4 3 2.5 4-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><b>Medición desde el día uno</b><span>Analítica y captación de leads conectadas para saber qué funciona y qué no.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="sec sec--bg" id="proceso" aria-labelledby="proc-title">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2 id="proc-title">De la llamada a la web publicada, sin líos</h2>
+      </div>
+      <div class="steps">
+        <article class="step reveal"><h3>Llamada de 20 minutos</h3><p>Entendemos tu negocio, tu especialidad y qué quieres que haga la web.</p></article>
+        <article class="step reveal"><h3>Propuesta cerrada</h3><p>Alcance y precio por escrito antes de empezar. Sin extras a mitad de proyecto.</p></article>
+        <article class="step reveal"><h3>Diseño y contenidos</h3><p>Diseñamos, escribimos y montamos. Tú revisas y apruebas, sin tecnicismos.</p></article>
+        <article class="step reveal"><h3>Publicación y entrega</h3><p>Web en marcha con dominio, SSL, RGPD y analítica lista. Y soporte si lo necesitas.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATAFORMA · BLOQUE SECUNDARIO
+       [PENDIENTE: DECISIÓN DE RAFAEL] Recoge el discurso de influweb.ai.
+       Se conserva como sección secundaria; si Rafael no lo confirma, se retira. -->
+  <section class="sec" id="plataforma" aria-labelledby="plat-title">
+    <div class="wrap">
+      <div class="platform reveal">
+        <div>
+          <span class="eyebrow">Además, estamos construyendo</span>
+          <h2 id="plat-title">Influweb.ai, la plataforma de marketing con IA</h2>
+          <p>Para quien quiere llevar el contenido y la captación más lejos, trabajamos en una plataforma propia que reúne análisis competitivo, calendario editorial, generación de piezas y gestión de creadores.</p>
+          <button class="btn btn--ghost" type="button" id="demoBtn" data-demo aria-disabled="true">Reservar demo <span aria-hidden="true">&rarr;</span></button>
+          <p class="platform-note" id="demoNote">[PENDIENTE: enlace de reserva de demo] Se activa cuando Rafael confirme la cuenta.</p>
+        </div>
+        <ul>
+          <li>Análisis competitivo de tu sector</li>
+          <li>Calendario de contenido mensual</li>
+          <li>Generación de piezas a partir de tu marca</li>
+          <li>Red de creadores para producirlas</li>
+          <li>Demo gratuita de la plataforma</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sec sec--bg" id="contacto" aria-labelledby="cont-title">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Hablemos</span>
+        <h2 id="cont-title">Cuéntanos qué necesitas</h2>
+        <p class="lead">Déjanos tus datos y te respondemos en menos de 2 horas laborables con una propuesta clara: qué haríamos, cuándo y cuánto cuesta.</p>
+
+        <ul class="data-list">
+          <li><b>Email</b><a href="#contacto" class="pending-inline" data-contact-email>[PENDIENTE: email que confirme Rafael]</a></li>
+          <li><b>Teléfono</b><span class="pending-inline">[PENDIENTE]</span></li>
+          <li><b>Horario de atención</b>Lunes a viernes, 9:00 a 18:00 (hora peninsular)</li>
+          <li><b>Zona de trabajo</b>Valencia y toda España · proyectos online</li>
+        </ul>
+
+        <div class="note-box">
+          <strong>Antes de publicar:</strong> faltan por confirmar el email de contacto, el teléfono y los datos fiscales (razón social, NIF y dirección fiscal). Este espacio se completa en cuanto Rafael los valide.
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form id="leadForm" novalidate>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite" hidden></div>
+
+          <div class="row">
+            <div class="field">
+              <label for="nombre">Nombre y apellidos <span class="req" aria-hidden="true">*</span></label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-required="true">
+              <p class="err" id="err-nombre">Escribe tu nombre.</p>
+            </div>
+            <div class="field">
+              <label for="negocio">Negocio o clínica <span class="req" aria-hidden="true">*</span></label>
+              <input id="negocio" name="negocio" type="text" autocomplete="organization" required aria-required="true">
+              <p class="err" id="err-negocio">Indica el nombre de tu negocio.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true">
+              <p class="err" id="err-email">Introduce un email válido.</p>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Opcional">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="servicio">Servicio que te interesa <span class="req" aria-hidden="true">*</span></label>
+              <select id="servicio" name="servicio" required aria-required="true">
+                <option value="">Elige una opción</option>
+                <option value="Diseño web">Diseño web · 690 € + IVA</option>
+                <option value="Mantenimiento">Mantenimiento · 49 €/mes + IVA</option>
+                <option value="Automatizaciones IA">Automatizaciones IA · desde 300 € + IVA</option>
+                <option value="Web + mantenimiento">Web + mantenimiento</option>
+                <option value="Otros servicios">Redes, contenido, diseño o anuncios</option>
+              </select>
+              <p class="err" id="err-servicio">Selecciona un servicio.</p>
+            </div>
+            <div class="field">
+              <label for="sector">Sector</label>
+              <select id="sector" name="sector">
+                <option value="">Elige una opción</option>
+                <option>Clínica dental</option>
+                <option>Fisioterapia</option>
+                <option>Estética y bienestar</option>
+                <option>Psicología</option>
+                <option>Medicina privada</option>
+                <option>Despacho profesional</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">¿Qué tienes en mente?</label>
+            <textarea id="mensaje" name="mensaje" maxlength="1200" placeholder="Por ejemplo: quiero renovar la web de mi clínica y poder recibir citas por WhatsApp."></textarea>
+          </div>
+
+          <label class="consent" id="consentWrap" for="rgpd">
+            <input id="rgpd" name="rgpd" type="checkbox" required aria-required="true" aria-describedby="err-rgpd">
+            <span>He leído y acepto la <a href="politica-de-privacidad.html">política de privacidad</a> y el tratamiento de mis datos para que me contactéis. <span class="req" aria-hidden="true">*</span></span>
+          </label>
+          <p class="err" id="err-rgpd" style="margin-bottom:16px">Debes aceptar la política de privacidad.</p>
+
+          <div class="hp" aria-hidden="true">
+            <label for="empresa_hp">No rellenar</label>
+            <input id="empresa_hp" name="empresa_hp" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit" id="submitBtn">Enviar solicitud</button>
+          <p class="form-foot">[PENDIENTE: conexión al endpoint que defina Álex]</p>
+          <noscript><p class="form-foot">Activa JavaScript para enviar el formulario o escríbenos por email.</p></noscript>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" style="margin-bottom:10px">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#2563EB"/><path d="M22 19h6v26h-6zM34 19h6v10.6c1.8-1.6 4-2.4 6.4-2.4 5.2 0 8.6 3.6 8.6 9.2V45h-6v-8.1c0-3.1-1.6-4.9-4.3-4.9-2.7 0-4.7 1.9-4.7 5.2V45h-6z" fill="#fff"/></svg>
+          <span>influweb</span>
+        </a>
+        <p>Agencia de marketing online. Diseño web, mantenimiento y automatizaciones con IA para clínicas y profesionales.</p>
+        <p style="font-size:.8rem;margin:0">Valencia · Toda España</p>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="#tarifas">Diseño web · 690 € + IVA</a></li>
+          <li><a href="#tarifas">Mantenimiento · 49 €/mes + IVA</a></li>
+          <li><a href="#tarifas">Automatizaciones IA · desde 300 € + IVA</a></li>
+          <li><a href="#servicios">Redes, contenido y anuncios</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-de-cookies.html">Política de cookies</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="#contacto" class="pending-inline" data-contact-email>[PENDIENTE: email]</a></li>
+          <li><span class="pending-inline">[PENDIENTE: teléfono]</span></li>
+          <li><a href="#contacto">Pedir propuesta</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Influweb · <span class="pending-inline">[PENDIENTE: razón social · NIF · dirección fiscal]</span></span>
+      <span>Diseño web, mantenimiento y automatización con IA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  document.documentElement.classList.add('js');
+
+  /* ===========================================================
+     CONFIGURACIÓN PENDIENTE — un único punto de cambio
+     FORM_ENDPOINT: [PENDIENTE] URL del endpoint que defina Álex
+     DEMO_URL:      [PENDIENTE] cuenta de reserva que confirme Rafael
+     CONTACT_EMAIL: [PENDIENTE] email que confirme Rafael
+     =========================================================== */
+  var FORM_ENDPOINT = '';
+  var DEMO_URL = '';
+  var CONTACT_EMAIL = '';
+
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* Menú móvil */
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* Demo: pendiente hasta confirmación de Rafael */
+  var demoBtn = document.getElementById('demoBtn');
+  var demoNote = document.getElementById('demoNote');
+  if (demoBtn) {
+    if (DEMO_URL) {
+      demoBtn.dataset.demoReady = '1';
+      demoBtn.removeAttribute('aria-disabled');
+      if (demoNote) demoNote.hidden = true;
+    }
+    demoBtn.addEventListener('click', function(){
+      if (DEMO_URL) { window.open(DEMO_URL, '_blank', 'noopener'); return; }
+      var contact = document.getElementById('contacto');
+      if (contact) contact.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  }
+
+  /* Email de contacto cuando exista */
+  if (CONTACT_EMAIL) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-contact-email]'), function(el){
+      el.textContent = CONTACT_EMAIL;
+      el.setAttribute('href', 'mailto:' + CONTACT_EMAIL);
+      el.classList.remove('pending-inline');
+    });
+  }
+
+  /* Preselección de servicio desde las tarjetas */
+  var servicio = document.getElementById('servicio');
+  Array.prototype.forEach.call(document.querySelectorAll('[data-servicio]'), function(link){
+    link.addEventListener('click', function(){
+      if (servicio) servicio.value = link.getAttribute('data-servicio');
+    });
+  });
+
+  /* Aparición suave */
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('is-visible'); obs.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -40px 0px', threshold:.08 });
+    Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function(el){ obs.observe(el); });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* Formulario */
+  var form = document.getElementById('leadForm');
+  var status = document.getElementById('formStatus');
+  var submitBtn = document.getElementById('submitBtn');
+  var consentWrap = document.getElementById('consentWrap');
+  var consent = document.getElementById('rgpd');
+
+  var ICONS = {
+    success:'<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.8"/><path d="M7.8 12.3l2.7 2.7 5.7-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    error:'<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.2l9 16.3H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9.5v4.2M12 16.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    pending:'<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  };
+
+  function setStatus(kind, title, message){
+    if (!status) return;
+    status.hidden = false;
+    status.className = 'form-status form-status--' + kind;
+    status.innerHTML = '<span class="ico">' + (ICONS[kind] || ICONS.error) + '</span>' +
+      '<div><strong></strong><span class="msg"></span></div>';
+    status.querySelector('strong').textContent = title;
+    status.querySelector('.msg').textContent = message;
+  }
+
+  function hideStatus(){ if (status) { status.hidden = true; status.innerHTML = ''; } }
+
+  function fieldOf(id){ return document.getElementById(id).closest('.field'); }
+
+  function setError(id, on){
+    var wrap = fieldOf(id);
+    var input = document.getElementById(id);
+    if (!wrap || !input) return;
+    wrap.classList.toggle('has-error', on);
+    if (on) { input.setAttribute('aria-invalid','true'); }
+    else { input.removeAttribute('aria-invalid'); }
+  }
+
+  function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(v); }
+
+  if (form) {
+    ['nombre','negocio','email','servicio'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('input', function(){ setError(id, false); });
+      el.addEventListener('change', function(){ setError(id, false); });
+    });
+    if (consent) {
+      consent.addEventListener('change', function(){
+        if (consentWrap) consentWrap.classList.toggle('has-error', !consent.checked);
+      });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      hideStatus();
+
+      var nombre = document.getElementById('nombre').value.trim();
+      var negocio = document.getElementById('negocio').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var servicioVal = servicio ? servicio.value : '';
+      var consentOK = !!(consent && consent.checked);
+      var firstBad = null;
+
+      var checks = [
+        ['nombre', nombre.length >= 2],
+        ['negocio', negocio.length >= 2],
+        ['email', isEmail(email)],
+        ['servicio', servicioVal !== '']
+      ];
+
+      checks.forEach(function(c){
+        setError(c[0], !c[1]);
+        if (!c[1] && !firstBad) firstBad = c[0];
+      });
+
+      if (consentWrap) consentWrap.classList.toggle('has-error', !consentOK);
+      if (!consentOK && !firstBad) firstBad = 'rgpd';
+
+      if (firstBad) {
+        setStatus('error', 'Revisa los datos', 'Hay campos obligatorios sin completar o con formato incorrecto. Corrígelos y vuelve a enviar.');
+        var target = document.getElementById(firstBad);
+        if (target) target.focus();
+        return;
+      }
+
+      if (!FORM_ENDPOINT) {
+        setStatus('pending', 'Formulario pendiente de conexión',
+          'La validación funciona, pero el envío aún no está activo: falta la URL del endpoint que define Álex. [PENDIENTE]');
+        return;
+      }
+
+      if (document.getElementById('empresa_hp').value !== '') {
+        setStatus('success', 'Solicitud enviada', 'Gracias. Te responderemos en menos de 2 horas laborables.');
+        form.reset();
+        return;
+      }
+
+      var payload = {
+        nombre: nombre,
+        negocio: negocio,
+        email: email,
+        telefono: document.getElementById('telefono').value.trim(),
+        servicio: servicioVal,
+        sector: document.getElementById('sector').value,
+        mensaje: document.getElementById('mensaje').value.trim(),
+        consentimiento: true,
+        origen: 'home-influweb',
+        pagina: location.href,
+        enviado_en: new Date().toISOString()
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy','true');
+      submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Enviando…';
+      setStatus('pending', 'Enviando tu solicitud…', 'Espera un momento, no cierres esta página.');
+
+      var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+      var timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 15000);
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined
+      }).then(function(res){
+        clearTimeout(timer);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        setStatus('success', 'Solicitud enviada', 'Gracias, ' + nombre.split(' ')[0] + '. Te responderemos en menos de 2 horas laborables al email que nos has dejado.');
+        form.reset();
+        Array.prototype.forEach.call(form.querySelectorAll('.field'), function(f){ f.classList.remove('has-error'); });
+        if (consentWrap) consentWrap.classList.remove('has-error');
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.textContent = 'Enviar solicitud';
+        if (status) status.scrollIntoView({ block:'center', behavior:'smooth' });
+      }).catch(function(err){
+        clearTimeout(timer);
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.textContent = 'Enviar solicitud';
+        setStatus('error', 'No hemos podido enviar tu solicitud',
+          err && err.name === 'AbortError'
+            ? 'La operación ha tardado demasiado. Revisa tu conexión e inténtalo de nuevo.'
+            : 'Revisa tu conexión e inténtalo de nuevo. Si el problema continúa, escríbenos por email.');
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
