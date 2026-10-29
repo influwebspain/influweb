@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ============================================================
+  INFLUWEB · Home única (influweb.es)
+  ============================================================
+  DATOS PENDIENTES DE CONFIRMACIÓN POR RAFAEL (NO INVENTAR).
+  Todos están marcados en el HTML con el atributo data-pendiente
+  y con comentarios PENDIENTE-1 / PENDIENTE-2 / PENDIENTE-3.
+
+  PENDIENTE-1 · Buzón de contacto -> hola@influweb.es
+    Aparece en 3 sitios:  (a) bloque de contacto, (b) pie, (c) JSON-LD
+    Buscar: data-pendiente="email"
+
+  PENDIENTE-2 · Horario de atención -> "Lunes a viernes, 9:00 – 18:00"
+    Aparece en 3 sitios:  (a) bloque de contacto, (b) pie, (c) JSON-LD
+    Buscar: data-pendiente="horario"
+
+  PENDIENTE-3 · Aviso legal -> razón social, NIF y domicilio fiscal
+    Texto actual genérico: "domicilio de actividad en España"
+    Aparecer en: modal "Aviso legal" (bloque titular) y JSON-LD (address)
+    Buscar: data-pendiente="fiscal"
+
+  Al recibir los datos: sustituir en los puntos marcados, borrar los
+  comentarios PENDIENTE-* y quitar los atributos data-pendiente.
+  ============================================================
+-->
+
+<title>INFLUWEB · Webs de alto rendimiento y automatización para tu negocio</title>
+<meta name="description" content="Diseño web, mantenimiento y automatizaciones con IA para clínicas, profesionales y negocios en Valencia y toda España. Webs rápidas, con SEO local y listas para convertir visitas en clientes.">
+<link rel="canonical" href="https://influweb.es/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563EB">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="INFLUWEB">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:title" content="INFLUWEB · Webs de alto rendimiento y automatización para tu negocio">
+<meta property="og:description" content="Diseño web, mantenimiento y automatizaciones con IA para clínicas, profesionales y negocios en Valencia y toda España.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563EB'/><path d='M18 44V20h6v24h-6zm13 0V20h6l7 12V20h6v24h-6l-7-12v12h-6z' fill='white'/></svg>">
+
+<style>
+:root{
+  --azul:#2563EB;
+  --azul-osc:#1D4ED8;
+  --azul-suave:#EFF4FF;
+  --tinta:#0B1220;
+  --texto:#334155;
+  --gris:#64748B;
+  --fondo:#F7F9FC;
+  --blanco:#FFFFFF;
+  --borde:#E2E8F0;
+  --radio:16px;
+  --sombra:0 1px 2px rgba(11,18,32,.04), 0 12px 28px -14px rgba(11,18,32,.18);
+  --max:1140px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--texto);
+  background:var(--fondo);
+  line-height:1.6;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,h4{color:var(--tinta);line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(2rem,4.6vw,3.35rem)}
+h2{font-size:clamp(1.55rem,3vw,2.3rem)}
+h3{font-size:1.12rem;letter-spacing:-.01em}
+p{margin:0 0 1rem}
+a{color:var(--azul);text-decoration:none}
+a:hover{text-decoration:underline}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:clamp(3.5rem,7vw,6rem) 0}
+.eyebrow{
+  display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--azul);margin-bottom:.9rem
+}
+.lead{font-size:1.08rem;color:var(--gris);max-width:64ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--azul);color:#fff;
+  padding:.7rem 1rem;z-index:200;border-radius:0 0 8px 0
+}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid #93B4FF;outline-offset:3px;border-radius:6px}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font:inherit;font-weight:700;font-size:.97rem;
+  padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid transparent;
+  cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease;
+  text-decoration:none
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--azul);color:#fff;box-shadow:0 10px 22px -12px rgba(37,99,235,.85)}
+.btn-primary:hover{background:var(--azul-osc)}
+.btn-ghost{background:#fff;color:var(--tinta);border-color:var(--borde)}
+.btn-ghost:hover{border-color:var(--azul);color:var(--azul)}
+.btn-sm{padding:.6rem 1.1rem;font-size:.9rem}
+
+/* ---------- Header ---------- */
+header.site{
+  position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);
+  backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--borde)
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:70px}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:900;color:var(--tinta);font-size:1.12rem;letter-spacing:-.03em}
+.brand:hover{text-decoration:none}
+.brand .dot{
+  width:30px;height:30px;border-radius:9px;background:var(--azul);
+  display:grid;place-items:center;color:#fff;font-size:.9rem;font-weight:900
+}
+.brand span{color:var(--azul)}
+.nav-links{display:flex;align-items:center;gap:1.6rem}
+.nav-links a{color:var(--texto);font-weight:600;font-size:.94rem}
+.nav-links a:hover{color:var(--azul);text-decoration:none}
+.burger{
+  display:none;background:#fff;border:1.5px solid var(--borde);border-radius:10px;
+  width:44px;height:44px;cursor:pointer;padding:0;place-items:center
+}
+.burger span{display:block;width:20px;height:2px;background:var(--tinta);position:relative}
+.burger span::before,.burger span::after{
+  content:"";position:absolute;left:0;width:20px;height:2px;background:var(--tinta)
+}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(3rem,6vw,5rem);
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(37,99,235,.13),transparent 65%),
+    radial-gradient(700px 380px at 0% 0%,rgba(37,99,235,.07),transparent 60%),
+    var(--blanco);
+  border-bottom:1px solid var(--borde)
+}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:var(--azul)}
+.hero .lead{font-size:clamp(1rem,1.6vw,1.16rem)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.7rem 0 1.4rem}
+.hero-nota{display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:var(--gris)}
+.hero-nota svg{flex:0 0 auto;color:var(--azul)}
+
+.panel{background:#fff;border:1px solid var(--borde);border-radius:22px;box-shadow:var(--sombra);padding:1.4rem}
+.panel-top{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;font-size:.8rem;font-weight:700;color:var(--gris);letter-spacing:.06em;text-transform:uppercase}
+.panel-top .pdot{width:9px;height:9px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.16)}
+.kpi{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.85rem 1rem;border-radius:12px;background:var(--fondo);margin-bottom:.55rem;
+  border:1px solid #EDF1F7
+}
+.kpi strong{color:var(--tinta);font-size:.95rem}
+.kpi em{font-style:normal;font-size:.8rem;font-weight:800;color:var(--azul);background:var(--azul-suave);padding:.25rem .6rem;border-radius:999px;white-space:nowrap}
+.panel-foot{margin:.9rem 0 0;font-size:.82rem;color:var(--gris)}
+
+/* ---------- Trust bar ---------- */
+.trust{background:#fff;border-bottom:1px solid var(--borde);padding:1.5rem 0}
+.trust ul{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 2.4rem}
+.trust li{display:flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:600;color:var(--texto)}
+.trust svg{color:var(--azul);flex:0 0 auto}
+
+/* ---------- Grids y tarjetas ---------- */
+.grid{display:grid;gap:1.1rem}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:#fff;border:1px solid var(--borde);border-radius:var(--radio);
+  padding:1.6rem;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sombra);border-color:#CBD9F2}
+.card p{margin:0;font-size:.94rem;color:var(--gris)}
+.icon{
+  width:44px;height:44px;border-radius:12px;background:var(--azul-suave);
+  display:grid;place-items:center;color:var(--azul);margin-bottom:1rem
+}
+.sec-alt{background:#fff;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+
+/* ---------- Precios ---------- */
+.price-card{display:flex;flex-direction:column;position:relative;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:1.8rem}
+.price-card.destacado{border:2px solid var(--azul);box-shadow:0 24px 48px -30px rgba(37,99,235,.7)}
+.badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--azul);color:#fff;font-size:.72rem;font-weight:800;
+  letter-spacing:.09em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;white-space:nowrap
+}
+.price-card h3{margin-bottom:.35rem}
+.price-card .sub{font-size:.9rem;color:var(--gris);margin-bottom:1.2rem;min-height:2.7em}
+.precio{font-size:2.15rem;font-weight:900;color:var(--tinta);letter-spacing:-.03em;line-height:1}
+.precio small{display:block;font-size:.8rem;font-weight:700;color:var(--gris);letter-spacing:0;margin-top:.4rem}
+.lista{display:grid;gap:.55rem;margin:1.3rem 0 1.6rem;font-size:.92rem}
+.lista li{display:flex;gap:.55rem;align-items:flex-start;color:var(--texto)}
+.lista svg{flex:0 0 auto;margin-top:4px;color:var(--azul)}
+.price-card .btn{margin-top:auto;width:100%}
+.precios-nota{font-size:.82rem;color:var(--gris);text-align:center;margin-top:1.6rem}
+
+/* ---------- Proceso ---------- */
+.paso{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:1.5rem;position:relative}
+.paso .num{
+  font-size:.8rem;font-weight:900;color:var(--azul);letter-spacing:.08em;
+  display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--azul-suave);margin-bottom:.9rem
+}
+.paso p{margin:0;font-size:.92rem;color:var(--gris)}
+
+/* ---------- Contacto ---------- */
+.contacto-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.6rem,4vw,3rem);align-items:start}
+.form{background:#fff;border:1px solid var(--borde);border-radius:22px;padding:clamp(1.3rem,3vw,2rem);box-shadow:var(--sombra)}
+.campo{margin-bottom:1rem}
+.campo label{display:block;font-size:.86rem;font-weight:700;color:var(--tinta);margin-bottom:.35rem}
+.campo input,.campo select,.campo textarea{
+  width:100%;font:inherit;font-size:.95rem;padding:.75rem .9rem;border:1.5px solid var(--borde);
+  border-radius:10px;background:#fff;color:var(--tinta);transition:border-color .15s ease,box-shadow .15s ease
+}
+.campo input:focus,.campo select:focus,.campo textarea:focus{
+  outline:none;border-color:var(--azul);box-shadow:0 0 0 3px rgba(37,99,235,.14)
+}
+.campo textarea{resize:vertical;min-height:110px}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-size:.82rem;color:var(--gris);margin:.4rem 0 1.2rem}
+.check input{margin-top:3px;width:17px;height:17px;flex:0 0 auto;accent-color:var(--azul)}
+.form .btn{width:100%}
+.form-msg{display:none;margin-top:1rem;font-size:.88rem;font-weight:600;padding:.8rem 1rem;border-radius:10px}
+.form-msg.ok{display:block;background:#ECFDF5;color:#047857;border:1px solid #A7F3D0}
+
+.datos{display:grid;gap:1rem}
+.dato{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid var(--borde);border-radius:14px;padding:1.1rem 1.2rem}
+.dato .icon{width:38px;height:38px;border-radius:10px;margin:0;flex:0 0 auto}
+.dato h4{margin:0 0 .15rem;font-size:.85rem;font-weight:800;color:var(--gris);letter-spacing:.06em;text-transform:uppercase}
+.dato p{margin:0;font-size:.96rem;color:var(--tinta);font-weight:600;word-break:break-word}
+.dato small{display:block;font-weight:500;color:var(--gris);font-size:.82rem;margin-top:.15rem}
+
+/* ---------- Footer ---------- */
+footer.site{background:#0B1220;color:#94A3B8;padding:clamp(2.6rem,5vw,4rem) 0 1.6rem;font-size:.92rem}
+footer.site h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:2rem}
+footer.site .brand{color:#fff;margin-bottom:.8rem}
+footer.site p{color:#94A3B8;font-size:.9rem;max-width:34ch}
+footer.site a{color:#CBD5E1}
+footer.site a:hover{color:#fff}
+footer.site li{margin-bottom:.55rem}
+.f-bottom{
+  border-top:1px solid #1E293B;margin-top:2.4rem;padding-top:1.4rem;
+  display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;justify-content:space-between;align-items:center;font-size:.84rem
+}
+.legal-links{display:flex;flex-wrap:wrap;gap:1.2rem}
+.link-btn{background:none;border:0;padding:0;font:inherit;font-size:.84rem;color:#CBD5E1;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.link-btn:hover{color:#fff}
+
+/* ---------- Modal ---------- */
+.modal{
+  position:fixed;inset:0;z-index:300;display:none;padding:20px;
+  background:rgba(11,18,32,.6);backdrop-filter:blur(3px);overflow-y:auto
+}
+.modal[open],.modal.abierto{display:block}
+.modal-caja{
+  background:#fff;max-width:760px;margin:6vh auto;border-radius:18px;padding:clamp(1.3rem,4vw,2.4rem);
+  position:relative;box-shadow:0 40px 80px -30px rgba(0,0,0,.5)
+}
+.modal-caja h3{font-size:1.35rem;margin-bottom:1rem}
+.modal-caja h4{font-size:.95rem;margin:1.4rem 0 .4rem}
+.modal-caja p,.modal-caja li{font-size:.9rem;color:var(--texto)}
+.modal-caja ul{padding-left:1.1rem;list-style:disc;margin:.4rem 0 1rem}
+.modal-caja li{margin-bottom:.35rem}
+.cerrar{
+  position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--borde);background:#fff;cursor:pointer;font-size:1.2rem;line-height:1;color:var(--tinta)
+}
+.cerrar:hover{background:var(--fondo)}
+body.bloqueo{overflow:hidden}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero-grid,.contacto-grid{grid-template-columns:1fr}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .g3{grid-template-columns:1fr}
+  .burger{display:grid}
+  .nav-links{
+    position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--borde);
+    flex-direction:column;align-items:stretch;gap:0;padding:.5rem 20px 1rem;display:none;
+    box-shadow:0 18px 30px -22px rgba(11,18,32,.4)
+  }
+  .nav-links.abierto{display:flex}
+  .nav-links a{padding:.85rem 0;border-bottom:1px solid #F1F5F9}
+  .nav-links a:last-child{border:0}
+  .nav-links .btn{margin-top:.8rem;justify-content:center}
+  .precios .price-card.destacado{order:-1}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .g4,.g2,.fila,.f-grid{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .f-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="INFLUWEB, inicio">
+      <span class="dot" aria-hidden="true">i</span>INFLU<span>WEB</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="nav-links" id="menu" aria-label="Menú principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#contacto" class="btn btn-primary btn-sm">Pedir presupuesto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Diseño web · Automatización · Valencia y toda España</span>
+        <h1>Webs de alto rendimiento y <em>automatización</em> para tu negocio</h1>
+        <p class="lead">Desarrollamos soluciones digitales que convierten visitas en clientes reales. Especialistas en clínicas, profesionales y negocios que necesitan una presencia online que funcione de verdad.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contacto">Pedir presupuesto</a>
+          <a class="btn btn-ghost" href="#precios">Ver precios</a>
+        </div>
+        <p class="hero-nota">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Respuesta en menos de 2 horas laborables · Sin permanencia en el diseño
+        </p>
+      </div>
+
+      <aside class="panel reveal" aria-label="Qué incluye una web INFLUWEB">
+        <div class="panel-top"><span class="pdot" aria-hidden="true"></span> Tu web, lista para publicar</div>
+        <div class="kpi"><strong>Diseño a medida</strong><em>100% marca</em></div>
+        <div class="kpi"><strong>Velocidad PageSpeed</strong><em>95+</em></div>
+        <div class="kpi"><strong>SEO local</strong><em>Google Maps</em></div>
+        <div class="kpi"><strong>RGPD y aviso legal</strong><em>Incluido</em></div>
+        <p class="panel-foot">Diseño, textos de estructura, formularios y WhatsApp integrados desde el primer día.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Pago único de lanzamiento</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sin plantillas genéricas</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Soporte en 24 h</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Trato directo, sin intermediarios</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:2.6rem">
+        <span class="eyebrow">Servicios</span>
+        <h2>Todo lo que necesita tu negocio para vender online</h2>
+        <p class="lead">De la web al primer lead automatizado. Trabajamos las piezas por separado o el sistema completo.</p>
+      </div>
+
+      <div class="grid g3">
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20M8 22h8M12 18v4"/></svg></div>
+          <h3>Diseño web a medida</h3>
+          <p>Webs rápidas, responsive y orientadas a conversión. Optimizadas para SEO local y listas para recibir visitas desde el primer día.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg></div>
+          <h3>Automatizaciones con IA</h3>
+          <p>Recepción de leads por webhook, alta en Google Sheets o CRM, avisos por email y WhatsApp y recordatorios automáticos de cita.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Mantenimiento y soporte</h3>
+          <p>Copias diarias, certificado SSL, actualizaciones de seguridad, monitorización 24/7 y cambios de contenido menores incluidos.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20.5l1.5-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg></div>
+          <h3>Redes sociales</h3>
+          <p>Gestión de perfiles, calendario de contenidos y publicación constante para que tu marca siga activa sin que tú tengas que estar.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+          <h3>Textos, contenido y SEO</h3>
+          <p>Textos que explican tu servicio con claridad, fichas de servicio y contenido pensado para posicionar en búsquedas locales.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M16 8a4 4 0 0 1 0 8"/><path d="M19 5a8 8 0 0 1 0 14"/></svg></div>
+          <h3>Anuncios y diseño gráfico</h3>
+          <p>Campañas en Meta y Google con creatividades coherentes con tu marca, para captar demanda mientras la web convierte.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="sec-alt precios" id="precios">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:3rem">
+        <span class="eyebrow">Tarifas</span>
+        <h2>Precios claros y sin sorpresas</h2>
+        <p class="lead">Paquetes diseñados para maximizar tu retorno de inversión desde el primer día.</p>
+      </div>
+
+      <div class="grid g3">
+        <article class="price-card destacado reveal">
+          <span class="badge">Más elegido</span>
+          <h3>Web Profesional Inicial</h3>
+          <p class="sub">Diseño exclusivo optimizado para conversión, SEO local y dispositivos móviles.</p>
+          <div class="precio">690 € <small>+ IVA · pago único de lanzamiento</small></div>
+          <ul class="lista">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Diseño 100% personalizado a tu marca</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Optimización SEO local (Google Maps)</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Velocidad ultra-rápida (95+ PageSpeed)</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Integración con WhatsApp y formulario</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Cumplimiento RGPD y aviso legal</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Quiero mi web</a>
+        </article>
+
+        <article class="price-card reveal">
+          <h3>Mantenimiento &amp; Soporte</h3>
+          <p class="sub">Tranquilidad absoluta para que tu presencia online nunca deje de funcionar.</p>
+          <div class="precio">49 € <small>/ mes + IVA</small></div>
+          <ul class="lista">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Copias de seguridad diarias en la nube</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Monitorización 24/7 y certificado SSL</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Actualizaciones técnicas de seguridad</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Soporte técnico preferente en 24 h</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Cambios de contenido menores incluidos</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Activar soporte</a>
+        </article>
+
+        <article class="price-card reveal">
+          <h3>Automatizaciones con IA</h3>
+          <p class="sub">Elimina tareas manuales y capta citas automáticamente con n8n y WhatsApp.</p>
+          <div class="precio">Desde 300 € <small>+ IVA · configuración según complejidad</small></div>
+          <ul class="lista">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Recepción automática de leads vía webhook</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Integración con Google Sheets / CRM</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Avisos inmediatos por email / WhatsApp</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Recordatorios automáticos a clientes</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sincronización con n8n de alta disponibilidad</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Automatizar mi negocio</a>
+        </article>
+      </div>
+
+      <p class="precios-nota">Presupuesto cerrado antes de empezar. IVA no incluido en los importes mostrados.</p>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:2.6rem">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>De la llamada a la web publicada</h2>
+        <p class="lead">Un proceso corto y sin reuniones de relleno: sabemos qué necesitamos de ti y cuándo lo vamos a entregar.</p>
+      </div>
+      <div class="grid g4">
+        <div class="paso reveal"><span class="num" aria-hidden="true">01</span><h3>Llamada inicial</h3><p>Vemos tu negocio, qué quieres conseguir y qué necesitas de verdad. Sin compromiso.</p></div>
+        <div class="paso reveal"><span class="num" aria-hidden="true">02</span><h3>Propuesta cerrada</h3><p>Alcance, precio y fechas por escrito. Apruebas y arrancamos con todo claro.</p></div>
+        <div class="paso reveal"><span class="num" aria-hidden="true">03</span><h3>Diseño y desarrollo</h3><p>Diseño a tu marca, revisión en móvil, formularios, WhatsApp y textos de estructura.</p></div>
+        <div class="paso reveal"><span class="num" aria-hidden="true">04</span><h3>Publicación y soporte</h3><p>Salimos a producción con SSL, SEO local y el mantenimiento que necesites después.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sec-alt" id="contacto">
+    <div class="wrap contacto-grid">
+      <div>
+        <span class="eyebrow">Contacto</span>
+        <h2>Inicia tu proyecto con INFLUWEB</h2>
+        <p class="lead" style="margin-bottom:2rem">Déjanos tus datos y nos pondremos en contacto contigo en menos de 2 horas laborables.</p>
+
+        <div class="datos">
+          <!-- PENDIENTE-1 · buzón por confirmar (sitio 1 de 3) -->
+          <div class="dato">
+            <div class="icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+            <div>
+              <h4>Email</h4>
+              <p data-pendiente="email"><a href="mailto:hola@influweb.es">hola@influweb.es</a></p>
+              <small>Para presupuestos y consultas</small>
+            </div>
+          </div>
+
+          <!-- PENDIENTE-2 · horario por confirmar (sitio 1 de 3) -->
+          <div class="dato">
+            <div class="icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div>
+              <h4>Horario</h4>
+              <p data-pendiente="horario">Lunes a viernes, 9:00 – 18:00</p>
+              <small>Respondemos por email fuera de ese horario</small>
+            </div>
+          </div>
+
+          <div class="dato">
+            <div class="icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h4>Zona de trabajo</h4>
+              <p>Valencia y toda España</p>
+              <small>Proyectos en remoto o presenciales</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form" id="form-contacto" novalidate>
+        <div class="fila">
+          <div class="campo">
+            <label for="nombre">Nombre y apellidos *</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="tel">Teléfono</label>
+            <input id="tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="servicio">¿Qué necesitas?</label>
+          <select id="servicio" name="servicio">
+            <option>Web profesional</option>
+            <option>Mantenimiento y soporte</option>
+            <option>Automatización con IA</option>
+            <option>Redes sociales y contenido</option>
+            <option>Anuncios y diseño gráfico</option>
+            <option>Otro / no lo tengo claro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Cuéntanos tu caso</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Tipo de negocio, objetivos y si ya tienes web."></textarea>
+        </div>
+        <label class="check" for="rgpd">
+          <input id="rgpd" name="rgpd" type="checkbox" required>
+          <span>He leído y acepto la <button type="button" class="link-btn" data-modal="privacidad" style="color:var(--azul)">política de privacidad</button> y el tratamiento de mis datos para que me contacten.</span>
+        </label>
+        <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="INFLUWEB, inicio"><span class="dot" aria-hidden="true">i</span>INFLU<span style="color:#60A5FA">WEB</span></a>
+        <p>Agencia de marketing online: webs que convierten, automatización con IA, contenido y anuncios para negocios de Valencia y toda España.</p>
+      </div>
+
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Diseño web</a></li>
+          <li><a href="#precios">Mantenimiento</a></li>
+          <li><a href="#precios">Automatizaciones con IA</a></li>
+          <li><a href="#servicios">Redes sociales</a></li>
+          <li><a href="#servicios">Anuncios</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <!-- PENDIENTE-1 · buzón por confirmar (sitio 2 de 3) -->
+          <li data-pendiente="email"><a href="mailto:hola@influweb.es">hola@influweb.es</a></li>
+          <!-- PENDIENTE-2 · horario por confirmar (sitio 2 de 3) -->
+          <li data-pendiente="horario">Lunes a viernes, 9:00 – 18:00</li>
+          <li>Valencia y toda España</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <span>&copy; <span id="year">2026</span> INFLUWEB · Todos los derechos reservados</span>
+      <div class="legal-links">
+        <button type="button" class="link-btn" data-modal="aviso">Aviso legal</button>
+        <button type="button" class="link-btn" data-modal="privacidad">Privacidad</button>
+        <button type="button" class="link-btn" data-modal="cookies">Cookies</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MODALES ==================== -->
+
+<div class="modal" id="modal-aviso" role="dialog" aria-modal="true" aria-labelledby="t-aviso">
+  <div class="modal-caja">
+    <button class="cerrar" type="button" aria-label="Cerrar">×</button>
+    <h3 id="t-aviso">Aviso legal</h3>
+
+    <h4>1. Datos del titular</h4>
+    <!-- PENDIENTE-3 · razón social, NIF y domicilio fiscal por confirmar -->
+    <!-- Sustituir el párrafo siguiente por: "En cumplimiento del artículo 10 de la Ley 34/2002 (LSSI-CE), se informa de que este sitio web es titularidad de [RAZÓN SOCIAL], con NIF [NIF] y domicilio fiscal en [DOMICILIO], [CP] [CIUDAD] ([PROVINCIA]). Correo de contacto: [BUZÓN]." -->
+    <p data-pendiente="fiscal">En cumplimiento del deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que el titular de este sitio web es <strong>INFLUWEB</strong>, con domicilio de actividad en España.</p>
+    <p><strong>Sitio web:</strong> influweb.es · <strong>Correo de contacto:</strong> <a href="mailto:hola@influweb.es">hola@influweb.es</a></p>
+
+    <h4>2. Objeto</h4>
+    <p>Este sitio web tiene carácter informativo y comercial: presenta los servicios de diseño web, mantenimiento, automatización, contenidos, redes sociales y publicidad online de INFLUWEB, y permite solicitar información o presupuesto.</p>
+
+    <h4>3. Condiciones de uso</h4>
+    <p>El acceso al sitio es gratuito y atribuye la condición de usuario. El usuario se compromete a utilizar los contenidos de forma diligente, lícita y sin vulnerar derechos de terceros ni la normativa aplicable.</p>
+
+    <h4>4. Propiedad intelectual e industrial</h4>
+    <p>Los textos, diseños, estructura, código fuente, marcas y demás contenidos del sitio son titularidad de INFLUWEB o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución o transformación sin autorización expresa.</p>
+
+    <h4>5. Exclusión de responsabilidad</h4>
+    <p>INFLUWEB no se responsabiliza de las interrupciones del servicio ajenas a su control, de los daños derivados de un uso inadecuado del sitio ni del contenido de webs de terceros enlazadas.</p>
+
+    <h4>6. Legislación aplicable</h4>
+    <p>La relación entre INFLUWEB y el usuario se rige por la legislación española vigente. Para cualquier controversia serán competentes los juzgados y tribunales que correspondan conforme a la normativa aplicable.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-labelledby="t-priv">
+  <div class="modal-caja">
+    <button class="cerrar" type="button" aria-label="Cerrar">×</button>
+    <h3 id="t-priv">Política de privacidad</h3>
+
+    <h4>1. Responsable del tratamiento</h4>
+    <p><strong>INFLUWEB</strong>, con domicilio de actividad en España. Correo de contacto: <a href="mailto:hola@influweb.es">hola@influweb.es</a>.</p>
+
+    <h4>2. Finalidad</h4>
+    <p>Los datos que nos facilitas a través del formulario de contacto se utilizan exclusivamente para responder a tu solicitud, elaborar un presupuesto si lo pides y mantener la comunicación comercial derivada de esa consulta.</p>
+
+    <h4>3. Base jurídica</h4>
+    <p>El consentimiento expreso que otorgas al marcar la casilla de aceptación (art. 6.1.a RGPD) y, en su caso, el interés legítimo en atender consultas comerciales (art. 6.1.f RGPD).</p>
+
+    <h4>4. Conservación</h4>
+    <p>Los datos se conservan durante el tiempo necesario para atender tu solicitud y, después, durante los plazos legalmente exigidos. Si no hay relación contractual, se eliminan cuando dejan de ser necesarios.</p>
+
+    <h4>5. Destinatarios</h4>
+    <p>No se ceden datos a terceros salvo obligación legal. Los proveedores tecnológicos que prestan servicios de alojamiento, correo o analítica actúan como encargados del tratamiento con contrato y garantías conforme al RGPD.</p>
+
+    <h4>6. Derechos</h4>
+    <ul>
+      <li>Acceder a tus datos personales.</li>
+      <li>Solicitar su rectificación o supresión.</li>
+      <li>Solicitar la limitación u oponerte al tratamiento.</li>
+      <li>Solicitar la portabilidad de tus datos.</li>
+      <li>Retirar el consentimiento en cualquier momento.</li>
+    </ul>
+    <p>Puedes ejercerlos escribiendo al correo de contacto indicado. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-cookies" role="dialog" aria-modal="true" aria-labelledby="t-cook">
+  <div class="modal-caja">
+    <button class="cerrar" type="button" aria-label="Cerrar">×</button>
+    <h3 id="t-cook">Política de cookies</h3>
+    <p>Esta web está diseñada para funcionar sin cookies publicitarias ni de seguimiento de terceros. La navegación no requiere instalar cookies para ver el contenido.</p>
+
+    <h4>Cookies técnicas</h4>
+    <p>Son necesarias para el funcionamiento básico del sitio y la seguridad de la navegación. No requieren consentimiento.</p>
+
+    <h4>Cookies de terceros</h4>
+    <p>Solo se instalarán cookies de terceros si en el futuro se incorporan herramientas de analítica o publicidad (por ejemplo, Google Analytics o Meta Pixel). En ese caso se mostrará un panel de consentimiento previo y esta página se actualizará.</p>
+
+    <h4>Cómo desactivarlas</h4>
+    <p>Puedes borrar o bloquear las cookies desde la configuración de tu navegador (Chrome, Safari, Firefox, Edge). Si bloqueas las cookies técnicas, algunas partes del sitio podrían no funcionar correctamente.</p>
+  </div>
+</div>
+
+<!-- ==================== JSON-LD ==================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://influweb.es/#organizacion",
+  "name": "INFLUWEB",
+  "url": "https://influweb.es/",
+  "description": "Agencia de marketing online especializada en diseño web, mantenimiento, automatizaciones con IA, contenidos y publicidad para negocios en Valencia y toda España.",
+  "email": "hola@influweb.es",
+  "areaServed": [
+    { "@type": "City", "name": "Valencia" },
+    { "@type": "Country", "name": "España" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "priceRange": "€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios web y automatización",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño web profesional" }, "price": "690", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento y soporte web" }, "price": "49", "priceCurrency": "EUR" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatizaciones con IA" }, "price": "300", "priceCurrency": "EUR" }
+    ]
+  }
+}
+</script>
+<!--
+  PENDIENTE-1 (sitio 3 de 3): en el JSON-LD, la propiedad "email" contiene
+  "hola@influweb.es". Sustituir si Rafael confirma otro buzón.
+  PENDIENTE-2 (sitio 3 de 3): en el JSON-LD, "openingHoursSpecification"
+  refleja Lunes a viernes de 09:00 a 18:00. Ajustar si el horario cambia.
+  PENDIENTE-3: en el JSON-LD, "address" solo lleva addressCountry "ES" a la
+  espera de razón social / NIF / domicilio fiscal. NO añadir calle inventada.
+-->
+
+<script>
+(function(){
+  "use strict";
+
+  /* Año dinámico */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* Menú móvil */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  if (burger && menu){
+    burger.addEventListener('click', function(){
+      var abierto = menu.classList.toggle('abierto');
+      burger.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+      burger.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    });
+    menu.addEventListener('click', function(e){
+      if (e.target.tagName === 'A'){
+        menu.classList.remove('abierto');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* Modales legales */
+  var ultimoFoco = null;
+  function cerrarModal(m){
+    m.classList.remove('abierto');
+    document.body.classList.remove('bloqueo');
+    if (ultimoFoco) ultimoFoco.focus();
+  }
+  function abrirModal(id){
+    var m = document.getElementById('modal-' + id);
+    if (!m) return;
+    ultimoFoco = document.activeElement;
+    m.classList.add('abierto');
+    document.body.classList.add('bloqueo');
+    var c = m.querySelector('.cerrar');
+    if (c) c.focus();
+  }
+  document.querySelectorAll('[data-modal]').forEach(function(b){
+    b.addEventListener('click', function(){ abrirModal(b.getAttribute('data-modal')); });
+  });
+  document.querySelectorAll('.modal').forEach(function(m){
+    m.addEventListener('click', function(e){ if (e.target === m) cerrarModal(m); });
+    var c = m.querySelector('.cerrar');
+    if (c) c.addEventListener('click', function(){ cerrarModal(m); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      var abierto = document.querySelector('.modal.abierto');
+      if (abierto) cerrarModal(abierto);
+    }
+  });
+
+  /* Formulario: validación + envío por email al buzón de contacto.
+     No hay backend: al enviar se abre el cliente de correo del usuario.
+     Si más adelante se conecta un endpoint, sustituir este bloque. */
+  var form = document.getElementById('form-contacto');
+  var msg = document.getElementById('form-msg');
+  if (form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre = form.nombre.value.trim();
+      var email = form.email.value.trim();
+      var rgpd = form.rgpd.checked;
+      msg.className = 'form-msg';
+      msg.textContent = '';
+
+      if (!nombre || !email || !rgpd){
+        msg.className = 'form-msg ok';
+        msg.style.background = '#FEF2F2';
+        msg.style.color = '#B91C1C';
+        msg.style.borderColor = '#FECACA';
+        msg.textContent = 'Revisa el nombre, el email y la aceptación de la política de privacidad.';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)){
+        msg.className = 'form-msg ok';
+        msg.style.background = '#FEF2F2';
+        msg.style.color = '#B91C1C';
+        msg.style.borderColor = '#FECACA';
+        msg.textContent = 'El email no parece válido.';
+        return;
+      }
+
+      var cuerpo = [
+        'Nombre: ' + nombre,
+        'Email: ' + email,
+        'Teléfono: ' + (form.telefono.value || '-'),
+        'Servicio: ' + form.servicio.value,
+        '',
+        'Mensaje:',
+        (form.mensaje.value || '-')
+      ].join('\n');
+
+      window.location.href = 'mailto:hola@influweb.es'
+        + '?subject=' + encodeURIComponent('Solicitud de presupuesto · ' + nombre)
+        + '&body=' + encodeURIComponent(cuerpo);
+
+      msg.className = 'form-msg ok';
+      msg.style.background = '';
+      msg.style.color = '';
+      msg.style.borderColor = '';
+      msg.textContent = 'Se ha abierto tu programa de correo con la solicitud lista para enviar.';
+    });
+  }
+
+  /* Reveal on scroll */
+  var elems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && elems.length){
+    var io = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('vis'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+    elems.forEach(function(el){ io.observe(el); });
+  } else {
+    elems.forEach(function(el){ el.classList.add('vis'); });
+  }
+})();
+</script>
+</body>
+</html>
