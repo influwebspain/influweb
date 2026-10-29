@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Influweb — Agencia de marketing online en España | Estrategia, contenido y anuncios</title>
+<meta name="description" content="Agencia de marketing online en Valencia para toda España: estrategia, redes sociales, contenido, diseño web, landing pages y publicidad en Meta y Google Ads. Presupuesto en euros, sin permanencia.">
+<link rel="canonical" href="https://influweb.es/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2563EB">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Influweb">
+<meta property="og:title" content="Influweb — Tu próximo equipo de marketing empieza aquí">
+<meta property="og:description" content="Estrategia, contenido, diseño y anuncios para marcas de toda España. Una sola agencia, un solo flujo de trabajo.">
+<meta property="og:url" content="https://influweb.es/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563EB'/%3E%3Cpath d='M20 44V20h6v24h-6Zm12 0V20h6v24h-6Zm12 0V20h6v24h-6Z' fill='white'/%3E%3C/svg%3E">
+<script>document.documentElement.className+=' js';</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --blue:#2563EB;--blue-d:#1D4ED8;--blue-x:#1E40AF;--blue-l:#EFF4FF;--blue-l2:#DCE7FF;
+  --ink:#0B1220;--ink2:#3A4759;--ink3:#66748B;--line:#E2E8F2;--bg:#F7F9FC;--white:#fff;
+  --ok:#0E9F6E;--r:16px;--r-sm:12px;--shadow:0 1px 2px rgba(11,18,32,.04),0 12px 32px -12px rgba(11,18,32,.14);
+  --shadow-lg:0 2px 4px rgba(11,18,32,.04),0 24px 60px -24px rgba(37,99,235,.30);
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --max:1160px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"cv02","cv03","cv04"}
+img,svg{max-width:100%;display:block}
+a{color:var(--blue-d);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.14;letter-spacing:-.022em;font-weight:800;color:var(--ink)}
+h1{font-size:clamp(2.05rem,4.6vw,3.5rem)}
+h2{font-size:clamp(1.55rem,3vw,2.35rem)}
+h3{font-size:1.075rem;letter-spacing:-.012em;font-weight:700}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.sec{padding:clamp(56px,7vw,96px) 0}
+.sec--white{background:var(--white)}
+.sec--ink{background:linear-gradient(160deg,#0A1B3D 0%,#0B1220 60%);color:#DCE3F0}
+.sec--ink h2,.sec--ink h3{color:#fff}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.775rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--blue-d);background:var(--blue-l);border:1px solid var(--blue-l2);
+  padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.sec--ink .eyebrow{color:#BFD3FF;background:rgba(37,99,235,.18);border-color:rgba(120,160,255,.28)}
+.lead{color:var(--ink2);font-size:clamp(1rem,1.4vw,1.125rem);margin-top:16px;max-width:62ch}
+.sec--ink .lead{color:#B9C6DC}
+.sec-head{max-width:720px;margin-bottom:clamp(30px,4vw,48px)}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.center .lead{margin-left:auto;margin-right:auto}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-size:.955rem;
+  font-weight:700;letter-spacing:-.01em;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s;white-space:nowrap}
+.btn:hover{text-decoration:none}
+.btn--p{background:var(--blue);color:#fff;box-shadow:0 8px 20px -8px rgba(37,99,235,.6)}
+.btn--p:hover{background:var(--blue-d);transform:translateY(-1px);box-shadow:0 14px 28px -10px rgba(37,99,235,.65)}
+.btn--g{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn--g:hover{border-color:#C6D2E6;transform:translateY(-1px);box-shadow:var(--shadow)}
+.sec--ink .btn--g{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22)}
+.sec--ink .btn--g:hover{background:rgba(255,255,255,.12)}
+.btn--w{width:100%}
+/* header */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(247,249,252,.86);backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.hdr.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(11,18,32,.5)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:18px;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.19rem;letter-spacing:-.035em;color:var(--ink)}
+.logo:hover{text-decoration:none}
+.logo__mark{width:32px;height:32px;border-radius:9px;background:var(--blue);display:grid;place-items:center;
+  box-shadow:0 6px 14px -6px rgba(37,99,235,.75)}
+.logo__mark svg{width:16px;height:16px}
+.logo span b{color:var(--blue)}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{color:var(--ink2);font-size:.925rem;font-weight:600;padding:9px 12px;border-radius:9px;transition:.15s}
+.nav a:hover{color:var(--ink);background:rgba(37,99,235,.07);text-decoration:none}
+.hdr__cta{display:flex;align-items:center;gap:10px}
+.hdr__cta .btn{padding:10px 18px;font-size:.9rem}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:10px;
+  align-items:center;justify-content:center;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:.2s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.mnav{display:none;border-top:1px solid var(--line);background:#fff}
+.mnav.open{display:block}
+.mnav ul{padding:10px 0 18px}
+.mnav a{display:block;padding:12px 20px;color:var(--ink);font-weight:600;border-bottom:1px solid #F1F5FA}
+.mnav .btn{margin:14px 20px 0;width:calc(100% - 40px)}
+@media(max-width:940px){.nav,.hdr__cta .btn--g{display:none}.burger{display:flex}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(40px,5vw,68px) 0 clamp(52px,6vw,84px)}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto;height:620px;
+  background:radial-gradient(60% 60% at 78% 20%,rgba(37,99,235,.16),transparent 70%),
+             radial-gradient(50% 50% at 8% 0%,rgba(37,99,235,.10),transparent 70%);pointer-events:none}
+.hero__grid{position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4vw,56px);align-items:center}
+.hero h1 span{color:var(--blue);position:relative;white-space:nowrap}
+.hero__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero__mini{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;color:var(--ink3);font-size:.875rem;font-weight:600}
+.hero__mini li{display:flex;align-items:center;gap:7px}
+.hero__mini svg{width:15px;height:15px;color:var(--ok);flex:none}
+/* mock */
+.mock{position:relative}
+.mock__card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);padding:18px}
+.mock__top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px solid #EEF2F8}
+.mock__tag{font-size:.72rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--blue-d);
+  background:var(--blue-l);padding:5px 10px;border-radius:999px}
+.mock__dot{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;color:var(--ok)}
+.mock__dot i{width:7px;height:7px;border-radius:50%;background:var(--ok);display:block;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.mock__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.mock__stat{background:var(--bg);border:1px solid #EDF1F7;border-radius:11px;padding:10px}
+.mock__stat b{display:block;font-size:1.16rem;letter-spacing:-.03em;color:var(--ink)}
+.mock__stat small{font-size:.685rem;color:var(--ink3);font-weight:600;line-height:1.3;display:block;margin-top:2px}
+.mock__stat b em{font-style:normal;color:var(--ok);font-size:.75rem;font-weight:800;margin-left:3px}
+.mock__row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed #EDF1F7;font-size:.84rem;color:var(--ink2);font-weight:600}
+.mock__row:last-child{border-bottom:0;padding-bottom:2px}
+.mock__ico{width:26px;height:26px;border-radius:8px;background:var(--blue-l);display:grid;place-items:center;flex:none}
+.mock__ico svg{width:14px;height:14px;color:var(--blue-d)}
+.mock__row span{margin-left:auto;font-size:.7rem;font-weight:800;color:var(--ink3);background:#F3F6FB;padding:3px 8px;border-radius:6px}
+.mock__row span.ok{color:#067A55;background:#E6F7F0}
+.mock__float{position:absolute;right:-14px;bottom:-22px;background:#fff;border:1px solid var(--line);border-radius:13px;
+  box-shadow:var(--shadow);padding:11px 14px;display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700}
+.mock__float svg{width:22px;height:22px;color:var(--blue)}
+@media(max-width:900px){.hero__grid{grid-template-columns:1fr}.mock{max-width:460px;margin:8px auto 0}.mock__float{right:6px;bottom:-18px}}
+/* trust */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:22px 0}
+.trust__in{display:flex;align-items:center;gap:14px 34px;flex-wrap:wrap;justify-content:center}
+.trust p{font-size:.775rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.trust li{font-size:.9rem;font-weight:700;color:var(--ink2);display:flex;align-items:center;gap:7px}
+.trust li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--blue-l2)}
+/* grid cards */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#CFDCF1}
+.card p{color:var(--ink2);font-size:.945rem;margin-top:9px}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--blue-l);display:grid;place-items:center;margin-bottom:16px;
+  border:1px solid var(--blue-l2)}
+.ico svg{width:21px;height:21px;color:var(--blue-d)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+@media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;position:relative;overflow:hidden}
+.step b{display:block;font-size:.8rem;font-weight:800;color:var(--blue);letter-spacing:.08em;margin-bottom:10px}
+.step h3{font-size:1rem}
+.step p{font-size:.9rem;color:var(--ink2);margin-top:8px}
+.step::after{content:"";position:absolute;right:-24px;top:-24px;width:64px;height:64px;border-radius:50%;background:var(--blue-l);opacity:.6}
+/* cases */
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;
+  transition:transform .18s,box-shadow .18s}
+.case:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.case__k{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+.case__m{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.case__m b{font-size:1.85rem;letter-spacing:-.035em;color:var(--blue);font-weight:800;line-height:1}
+.case__m span{font-size:.85rem;color:var(--ink3);font-weight:600}
+.case p{font-size:.92rem;color:var(--ink2)}
+.case__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font-size:.72rem;font-weight:700;color:var(--ink2);background:#F3F6FB;border:1px solid #E8EEF7;padding:4px 9px;border-radius:7px}
+/* sectors */
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.895rem;font-weight:600;color:var(--ink2)}
+.pill:hover{border-color:var(--blue-l2);color:var(--blue-d)}
+/* split / platform */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,54px);align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.checks{margin-top:22px;display:grid;gap:11px}
+.checks li{display:flex;gap:10px;font-size:.945rem;color:var(--ink2);font-weight:600}
+.checks svg{width:18px;height:18px;color:var(--blue);flex:none;margin-top:3px}
+.sec--ink .checks li{color:#C6D2E6}
+.sec--ink .checks svg{color:#7FA8FF}
+/* coverage */
+.cover{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(26px,4vw,50px);align-items:start}
+@media(max-width:900px){.cover{grid-template-columns:1fr}}
+.citygrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.citygrid li{font-size:.85rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:7px 13px;border-radius:8px}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.info dl{margin:0;display:grid;gap:14px}
+.info dt{font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+.info dd{margin:3px 0 0;font-size:.955rem;font-weight:600;color:var(--ink)}
+.info dd a{font-weight:700}
+.info hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+/* form */
+.formwrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(26px,4vw,54px);align-items:start}
+@media(max-width:900px){.formwrap{grid-template-columns:1fr}}
+form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,32px);box-shadow:var(--shadow-lg)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:700;color:var(--ink);letter-spacing:-.005em}
+label .req{color:#D92D20}
+input,select,textarea{font-family:inherit;font-size:.945rem;color:var(--ink);background:#FCFDFF;border:1px solid #D8E1EF;
+  border-radius:10px;padding:11px 13px;width:100%;transition:border-color .15s,box-shadow .15s;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2366748B' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+textarea{min-height:104px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.16);background:#fff}
+.check{display:flex;gap:10px;align-items:flex-start;margin:16px 0 6px}
+.check input{width:17px;height:17px;flex:none;margin-top:3px;accent-color:var(--blue)}
+.check label{font-size:.8rem;font-weight:500;color:var(--ink2);line-height:1.5}
+.check a{font-weight:700;text-decoration:underline}
+.legal-note{font-size:.735rem;color:var(--ink3);line-height:1.5;margin-top:12px}
+.legal-note b{color:var(--ink2)}
+.fmsg{display:none;margin-top:14px;padding:13px 15px;border-radius:10px;background:#E6F7F0;border:1px solid #B7E8D3;
+  color:#06694A;font-size:.885rem;font-weight:600}
+.fmsg.show{display:block}
+/* faq */
+.faq{max-width:840px;margin:0 auto;display:grid;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 20px;transition:border-color .15s}
+details[open]{border-color:var(--blue-l2);box-shadow:var(--shadow)}
+summary{cursor:pointer;list-style:none;font-weight:700;font-size:.98rem;padding:17px 34px 17px 0;position:relative;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.35rem;
+  font-weight:400;color:var(--blue);line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 18px;color:var(--ink2);font-size:.935rem}
+/* footer */
+.ftr{background:#0B1220;color:#94A3B8;padding:clamp(44px,5vw,68px) 0 26px;font-size:.9rem}
+.ftr h4{color:#fff;font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;margin-bottom:14px;font-weight:800}
+.ftr a{color:#C4D0E2}
+.ftr a:hover{color:#fff}
+.ftr__grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.15fr;gap:34px}
+@media(max-width:900px){.ftr__grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ftr__grid{grid-template-columns:1fr}}
+.ftr .logo{color:#fff;margin-bottom:14px}
+.ftr ul{display:grid;gap:9px}
+.ftr__bot{margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7C8BA1}
+.ftr__bot nav{display:flex;gap:18px;flex-wrap:wrap}
+/* cookies */
+.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:90;max-width:720px;margin:0 auto;background:#fff;
+  border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 60px -20px rgba(11,18,32,.45);padding:18px 20px;
+  display:none;gap:16px;align-items:center;flex-wrap:wrap}
+.ck.show{display:flex}
+.ck p{font-size:.83rem;color:var(--ink2);flex:1 1 300px;line-height:1.55}
+.ck__b{display:flex;gap:9px;flex-wrap:wrap}
+.ck .btn{padding:9px 16px;font-size:.85rem}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(11,18,32,.55);backdrop-filter:blur(3px);display:none;
+  padding:20px;overflow:auto}
+.modal.open{display:block}
+.modal__box{background:#fff;max-width:720px;margin:6vh auto;border-radius:16px;padding:clamp(20px,3vw,34px);position:relative;
+  box-shadow:0 40px 80px -30px rgba(11,18,32,.6)}
+.modal__box h3{font-size:1.3rem;margin-bottom:6px}
+.modal__box h4{font-size:.95rem;margin:18px 0 6px}
+.modal__box p,.modal__box li{font-size:.88rem;color:var(--ink2);line-height:1.62}
+.modal__box ul{margin:6px 0 0;padding-left:18px;list-style:disc;display:grid;gap:4px}
+.modal__x{position:absolute;right:14px;top:12px;background:#F3F6FB;border:0;width:34px;height:34px;border-radius:9px;
+  cursor:pointer;font-size:1.1rem;color:var(--ink2);line-height:1}
+.modal__x:hover{background:#E8EEF7}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}
+  .mock__dot i{animation:none}}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px 16px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid rgba(37,99,235,.45);outline-offset:2px}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#inicio" aria-label="Influweb, inicio">
+      <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 20V4h3v16H6Zm5.5 0V4h3v16h-3ZM17 20V4h3v16h-3Z" fill="#fff"/></svg></span>
+      <span>influ<b>web</b></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#casos">Casos</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#creadores">Creadores</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="btn btn--g" href="#contacto">Pedir presupuesto</a>
+      <a class="btn btn--p" href="#contacto">Agenda una llamada</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mnav"><span></span></button>
+    </div>
+  </div>
+  <div class="mnav" id="mnav">
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#sectores">Sectores</a></li>
+      <li><a href="#creadores">Creadores</a></li>
+      <li><a href="#cobertura">Cobertura</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ul>
+    <a class="btn btn--p" href="#contacto">Agenda una llamada</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="eyebrow">Agencia de marketing online · España</span>
+      <h1>Tu próximo equipo de marketing <span>empieza aquí</span></h1>
+      <p class="lead">Estrategia, redes sociales, contenido, diseño web y anuncios. Trabajamos con marcas de toda España desde Valencia, con un solo equipo y un solo flujo de trabajo.</p>
+      <div class="hero__btns">
+        <a class="btn btn--p" href="#contacto">Agenda una llamada de 20 min
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--g" href="#casos">Ver casos reales</a>
+      </div>
+      <ul class="hero__mini">
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Presupuesto cerrado en euros</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin permanencia</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Respuesta en 24 h laborables</li>
+      </ul>
+    </div>
+    <div class="mock rv">
+      <div class="mock__card">
+        <div class="mock__top">
+          <span class="mock__tag">Campaña · Clínica dental</span>
+          <span class="mock__dot"><i></i>Activa</span>
+        </div>
+        <div class="mock__stats">
+          <div class="mock__stat"><b>+38%<em>↑</em></b><small>Citas nuevas / mes</small></div>
+          <div class="mock__stat"><b>18,40 €</b><small>Coste por cita</small></div>
+          <div class="mock__stat"><b>4,2x</b><small>Retorno publicitario</small></div>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          Landing de captación publicada <span class="ok">OK</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 3v4m8-4v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          Calendario de octubre · 12 piezas <span>Revisión</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          Meta Ads · Madrid y Valencia <span class="ok">En curso</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M16 19v-1a4 4 0 0 0-8 0v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="9" r="3.2" stroke="currentColor" stroke-width="2"/></svg></span>
+          5 creadores postulando <span>2 nuevos</span>
+        </div>
+      </div>
+      <div class="mock__float">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l5-5 3.5 3.5L21 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Informe mensual listo
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust__in">
+    <p>Confían en nosotros</p>
+    <ul class="trust__in" style="gap:10px 22px">
+      <li>Clínica dental · Valencia</li>
+      <li>Restauración · Madrid</li>
+      <li>Inmobiliaria · Málaga</li>
+      <li>Cosmética natural · Sevilla</li>
+      <li>Despacho profesional · Bilbao</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Servicios</span>
+      <h2>Todo lo que tu marca necesita para vender más, en un solo sitio</h2>
+      <p class="lead">Nos encargamos de la estrategia y de la ejecución. Sin coordinar cinco proveedores distintos ni perseguir a nadie para que entregue una pieza.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg></div>
+        <h3>Estrategia y análisis</h3>
+        <p>Estudiamos tu mercado, tu competencia en España y tus canales para decidir dónde merece la pena invertir cada euro.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L4 21l1.2-4A8.4 8.4 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Redes sociales</h3>
+        <p>Instagram, TikTok, LinkedIn y YouTube. Gestión, calendario editorial, comunidad y reporting mensual con métricas claras.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h11M4 18h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h3>Contenido y copywriting</h3>
+        <p>Textos que se entienden a la primera: web, fichas de producto, guiones de vídeo, emails y publicaciones.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 20V9" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Diseño gráfico e identidad</h3>
+        <p>Logotipo, manual de marca, plantillas y piezas para redes, escaparate, cartelería y campañas.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Web y landing pages</h3>
+        <p>Webs rápidas, responsive y bien posicionadas, más landings de captación pensadas para convertir visitas en clientes.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Publicidad y automatización</h3>
+        <p>Meta Ads y Google Ads gestionados con criterio, más automatizaciones y flujos con IA para no perder ni un contacto.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="sec sec--white" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>De la idea a la campaña en cinco pasos</h2>
+      <p class="lead">El mismo orden que seguiría un buen equipo de marketing, pero sin reuniones de más y con entregas en fechas.</p>
+    </div>
+    <div class="steps">
+      <article class="step rv"><b>01</b><h3>Entendemos tu mercado</h3><p>Analizamos tu negocio, tu competencia y tu presencia digital para detectar oportunidades reales en tu sector.</p></article>
+      <article class="step rv"><b>02</b><h3>Construimos la estrategia</h3><p>Objetivos, posicionamiento, pilares de comunicación y audiencias. Una hoja de ruta que se puede ejecutar.</p></article>
+      <article class="step rv"><b>03</b><h3>Creamos contigo</h3><p>Piezas alineadas con tu identidad, textos, guiones e ideas pensadas para cumplir el objetivo, no solo para rellenar.</p></article>
+      <article class="step rv"><b>04</b><h3>Planificamos</h3><p>Qué se publica, cuándo y con qué objetivo. Todo en un calendario compartido que ves en tiempo real.</p></article>
+      <article class="step rv"><b>05</b><h3>Amplificamos</h3><p>Activamos campañas y conectamos con creadores de tu nicho en España para llegar a nuevas audiencias.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS -->
+<section class="sec" id="casos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Casos</span>
+      <h2>Resultados de clientes en España</h2>
+      <p class="lead">Datos reales de proyectos activos. Importes en euros, métricas medidas en los últimos 90 días.</p>
+    </div>
+    <div class="grid g4">
+      <article class="case rv">
+        <span class="case__k">Clínica dental · Valencia</span>
+        <div class="case__m"><b>+62</b><span>citas nuevas al mes</span></div>
+        <p>Landing de captación, Meta Ads geolocalizado en Valencia capital y área metropolitana, y seguimiento por WhatsApp.</p>
+        <div class="case__tags"><span class="tag">Landing</span><span class="tag">Meta Ads</span><span class="tag">18,40 € / cita</span></div>
+      </article>
+      <article class="case rv">
+        <span class="case__k">Restauración · Madrid</span>
+        <div class="case__m"><b>+41%</b><span>reservas en 3 meses</span></div>
+        <p>Contenido semanal en Instagram y TikTok, colaboración con creadores gastronómicos de Madrid y reservas integradas.</p>
+        <div class="case__tags"><span class="tag">Redes</span><span class="tag">Creadores</span><span class="tag">Ticket medio 32,50 €</span></div>
+      </article>
+      <article class="case rv">
+        <span class="case__k">Ecommerce · Sevilla</span>
+        <div class="case__m"><b>+68%</b><span>facturación online</span></div>
+        <p>Rediseño de tienda, fichas de producto reescritas, Google Shopping y emails automatizados de recuperación de carrito.</p>
+        <div class="case__tags"><span class="tag">Web</span><span class="tag">Google Ads</span><span class="tag">ROAS 4,2x</span></div>
+      </article>
+      <article class="case rv">
+        <span class="case__k">Inmobiliaria · Málaga</span>
+        <div class="case__m"><b>23</b><span>leads cualificados / mes</span></div>
+        <p>Campañas de captación por zona, formulario con filtro previo y automatización de respuesta en menos de 5 minutos.</p>
+        <div class="case__tags"><span class="tag">Google Ads</span><span class="tag">Automatización</span><span class="tag">27 € / lead</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section class="sec sec--white" id="sectores">
+  <div class="wrap">
+    <div class="cover">
+      <div>
+        <span class="eyebrow">Sectores</span>
+        <h2>Conocemos tu sector y su competencia</h2>
+        <p class="lead">Trabajamos sobre todo con negocios que venden en España y necesitan captar clientes en su provincia. Estos son los sectores donde más experiencia tenemos:</p>
+        <ul class="pills">
+          <li class="pill">Clínicas y salud</li>
+          <li class="pill">Estética y bienestar</li>
+          <li class="pill">Hostelería y restauración</li>
+          <li class="pill">Inmobiliaria</li>
+          <li class="pill">Despachos profesionales</li>
+          <li class="pill">Comercio local y ecommerce</li>
+          <li class="pill">Turismo rural</li>
+          <li class="pill">Industria y B2B</li>
+          <li class="pill">Formación y academias</li>
+          <li class="pill">Talleres y automoción</li>
+        </ul>
+      </div>
+      <div class="info rv">
+        <dl>
+          <div><dt>Especialidad</dt><dd>Captación de clientes locales y venta online</dd></div>
+          <div><dt>Idiomas de trabajo</dt><dd>Español (mercado nacional) e inglés para marcas exportadoras</dd></div>
+          <div><dt>Herramientas</dt><dd>Meta Ads, Google Ads, GA4, Search Console, WordPress y Shopify</dd></div>
+          <div><dt>Facturación</dt><dd>En euros, con IVA español desglosado en cada factura</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREADORES -->
+<section class="sec sec--ink" id="creadores">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Para creadores</span>
+      <h2>Postula a campañas y gestiona tu trabajo desde el móvil</h2>
+      <p class="lead">Si creas contenido en España, aquí encuentras marcas que buscan tu perfil. Descubre campañas compatibles, postula en segundos y coordina cada colaboración sin salir de la app.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Notificaciones en tiempo real de campañas nuevas</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Chat directo con la marca dentro de la plataforma</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Briefs claros y pagos acordados por escrito, en euros</li>
+      </ul>
+      <div class="hero__btns">
+        <a class="btn btn--p" href="#contacto">Quiero recibir campañas</a>
+        <a class="btn btn--g" href="#contacto">Soy marca y busco creadores</a>
+      </div>
+    </div>
+    <div class="mock rv">
+      <div class="mock__card">
+        <div class="mock__top"><span class="mock__tag">Campañas para ti</span><span class="mock__dot"><i></i>3 nuevas</span></div>
+        <div class="mock__row" style="margin-top:6px">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          Marca de cosmética · Reel <span>Madrid</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="2"/></svg></span>
+          Clínica estética · 3 stories <span>Valencia</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L4 21l1.2-4A8.4 8.4 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="2"/></svg></span>
+          Chat con la marca <span class="ok">Abierto</span>
+        </div>
+        <div class="mock__row">
+          <span class="mock__ico"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Postulación enviada <span>Hoy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="sec" id="cobertura">
+  <div class="wrap">
+    <div class="cover">
+      <div>
+        <span class="eyebrow">Dónde estamos</span>
+        <h2>Con base en Valencia, trabajamos con toda España</h2>
+        <p class="lead">Nuestro mercado es España. Atendemos a clientes de cualquier provincia con reuniones por videollamada y visitas presenciales en Valencia y su área metropolitana. Todo se factura en euros y con el IVA español correspondiente.</p>
+        <ul class="citygrid">
+          <li>Madrid</li><li>Barcelona</li><li>Valencia</li><li>Sevilla</li><li>Bilbao</li><li>Málaga</li>
+          <li>Zaragoza</li><li>Alicante</li><li>Murcia</li><li>Valladolid</li><li>A Coruña</li><li>Palma</li>
+          <li>Granada</li><li>Santander</li><li>Las Palmas</li><li>Pamplona</li>
+        </ul>
+      </div>
+      <div class="info">
+        <dl>
+          <div><dt>Horario de atención</dt><dd>Lunes a viernes, 9:00–18:00 (hora peninsular)</dd></div>
+          <div><dt>Reuniones</dt><dd>Videollamada o presencial en Valencia</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34960123456">+34 960 12 34 56</a></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></dd></div>
+        </dl>
+        <hr>
+        <p style="font-size:.85rem;color:var(--ink3)">Influweb · Valencia, España. Atendemos en español a clientes de toda la península y Baleares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec sec--white" id="contacto">
+  <div class="wrap formwrap">
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <h2>Cuéntanos tu caso y te respondemos en menos de 24 h laborables</h2>
+      <p class="lead">Revisamos tu web, tus redes y tu competencia en España antes de la llamada. Así la reunión de 20 minutos se aprovecha de verdad.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin compromiso y sin contratos de permanencia</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Presupuesto en euros, cerrado y por escrito</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Datos tratados conforme al RGPD y a la LOPDGDD</li>
+      </ul>
+      <p style="margin-top:22px;font-size:.9rem;color:var(--ink3)">¿Prefieres escribir directamente? <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a> · <a href="tel:+34960123456">+34 960 12 34 56</a></p>
+    </div>
+    <form id="form" novalidate>
+      <div class="fgrid">
+        <div class="field"><label for="nombre">Nombre y apellidos <span class="req">*</span></label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="+34 600 00 00 00"></div>
+        <div class="field"><label for="ciudad">Ciudad o provincia</label><input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" placeholder="Valencia"></div>
+        <div class="field"><label for="perfil">Tipo de perfil <span class="req">*</span></label>
+          <select id="perfil" name="perfil" required>
+            <option value="">Selecciona…</option>
+            <option>Empresa o autónomo</option>
+            <option>Clínica o centro de salud</option>
+            <option>Agencia</option>
+            <option>Creador de contenido</option>
+          </select>
+        </div>
+        <div class="field"><label for="presupuesto">Presupuesto mensual (IVA no incl.)</label>
+          <select id="presupuesto" name="presupuesto">
+            <option value="">Selecciona…</option>
+            <option>Menos de 500 €</option>
+            <option>500 – 1.000 €</option>
+            <option>1.000 – 2.500 €</option>
+            <option>Más de 2.500 €</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </div>
+        <div class="field full"><label for="msg">¿Qué necesitas? <span class="req">*</span></label>
+          <textarea id="msg" name="mensaje" required placeholder="Ej.: tengo una clínica dental en Valencia y quiero captar más citas por Meta Ads."></textarea>
+        </div>
+      </div>
+      <div class="check">
+        <input id="priv" name="privacidad" type="checkbox" required>
+        <label for="priv">He leído y acepto la <a href="#" data-modal="privacidad">política de privacidad</a> y el tratamiento de mis datos para que Influweb responda a esta solicitud. <span class="req">*</span></label>
+      </div>
+      <button class="btn btn--p btn--w" type="submit">Enviar solicitud</button>
+      <div class="fmsg" id="fmsg" role="status">Gracias. Hemos recibido tu solicitud y te escribimos en menos de 24 h laborables (horario peninsular).</div>
+      <p class="legal-note"><b>Información básica sobre protección de datos.</b> Responsable: Influweb (Valencia, España). Finalidad: atender tu solicitud y enviarte la información que pides. Base jurídica: tu consentimiento. Destinatarios: ningún tercero ajeno al servicio, salvo obligación legal. Derechos: acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>; puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Lo que suelen preguntarnos</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>¿Trabajáis solo en España?</summary>
+        <p>Sí. Nuestro mercado es España: clientes de la península y Baleares, con base en Valencia. Todo el trabajo, los ejemplos y la facturación están pensados para el mercado español, en euros y con el IVA correspondiente.</p>
+      </details>
+      <details>
+        <summary>¿Qué incluye el servicio de agencia?</summary>
+        <p>Estrategia, calendario de contenido, creación de piezas y textos, gestión de redes, diseño web o landing pages y publicidad en Meta y Google Ads. Puedes contratar el paquete completo o solo la parte que te falta.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta y cómo se factura?</summary>
+        <p>Cada propuesta se ajusta a tus objetivos y a tu presupuesto, siempre en euros y con el IVA desglosado en la factura. No hay permanencia: trabajamos con cuotas mensuales revisables y proyectos cerrados cuando tiene más sentido.</p>
+      </details>
+      <details>
+        <summary>¿Cómo son las reuniones si no estoy en Valencia?</summary>
+        <p>Por videollamada, en horario peninsular de lunes a viernes (9:00–18:00). Si estás en Valencia o su área metropolitana, podemos vernos en persona.</p>
+      </details>
+      <details>
+        <summary>Soy creador de contenido, ¿qué tengo que hacer?</summary>
+        <p>Escríbeme desde el formulario marcando «Creador de contenido» y te doy acceso a las campañas disponibles. Desde el móvil ves las que encajan con tu perfil, postulas y coordinas con la marca por chat.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa con mis datos?</summary>
+        <p>Se tratan conforme al RGPD y a la Ley Orgánica 3/2018 (LOPDGDD), solo para responder a tu solicitud. No se ceden a terceros y puedes pedir su supresión en cualquier momento escribiendo a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Influweb">
+          <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 20V4h3v16H6Zm5.5 0V4h3v16h-3ZM17 20V4h3v16h-3Z" fill="#fff"/></svg></span>
+          <span>influ<b style="color:#7FA8FF">web</b></span>
+        </a>
+        <p style="max-width:34ch">Agencia de marketing online en Valencia. Estrategia, contenido, diseño y anuncios para marcas de toda España.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Redes sociales</a></li>
+          <li><a href="#servicios">Contenido y copywriting</a></li>
+          <li><a href="#servicios">Diseño gráfico</a></li>
+          <li><a href="#servicios">Web y landing pages</a></li>
+          <li><a href="#servicios">Meta Ads y Google Ads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Agencia</h4>
+        <ul>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#casos">Casos de éxito</a></li>
+          <li><a href="#sectores">Sectores</a></li>
+          <li><a href="#creadores">Para creadores</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></li>
+          <li><a href="tel:+34960123456">+34 960 12 34 56</a></li>
+          <li>Valencia, España</li>
+          <li>L–V · 9:00–18:00 (hora peninsular)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <p>© 2026 Influweb. Todos los derechos reservados.</p>
+      <nav aria-label="Enlaces legales">
+        <a href="#" data-modal="privacidad">Política de privacidad</a>
+        <a href="#" data-modal="cookies">Política de cookies</a>
+        <a href="#" data-modal="aviso">Aviso legal</a>
+        <a href="#" id="ckopen">Preferencias de cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="ck" id="ck" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias necesarias para que la web funcione y, si lo aceptas, cookies de análisis para medir el tráfico. Puedes aceptarlas todas o quedarte solo con las necesarias. Más información en la <a href="#" data-modal="cookies">política de cookies</a>.</p>
+  <div class="ck__b">
+    <button class="btn btn--g" id="ck-no" type="button">Solo necesarias</button>
+    <button class="btn btn--p" id="ck-yes" type="button">Aceptar todas</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="modal__box">
+    <button class="modal__x" id="mx" aria-label="Cerrar">✕</button>
+    <div id="mbody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var d=document;
+  // header shadow + mobile nav
+  var hdr=d.getElementById('hdr'), burger=d.getElementById('burger'), mnav=d.getElementById('mnav');
+  var onScroll=function(){ hdr.classList.toggle('scrolled', window.scrollY>8); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  burger.addEventListener('click',function(){
+    var open=mnav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  mnav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ mnav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+  // reveal
+  var els=[].slice.call(d.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i,6)*45)+'ms'; io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+  // legal modal
+  var LEGAL={
+    privacidad:{t:'Política de privacidad',h:`
+      <p><b>Responsable del tratamiento:</b> Influweb, con domicilio en Valencia (España) y correo de contacto <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+      <h4>Para qué usamos tus datos</h4>
+      <p>Para responder a las solicitudes que nos envías por el formulario o por correo: preparar una propuesta, agendar una llamada y enviarte la información que nos pides.</p>
+      <h4>Base jurídica</h4>
+      <p>Tu consentimiento al enviar el formulario y, en su caso, la ejecución de un contrato de servicios.</p>
+      <h4>Conservación</h4>
+      <p>Mientras dure la relación o hasta que solicites su supresión. Las solicitudes que no acaban en contratación se eliminan en un plazo máximo de 12 meses.</p>
+      <h4>Destinatarios</h4>
+      <p>No cedemos tus datos a terceros ajenos al servicio, salvo obligación legal. Los proveedores tecnológicos que usamos (hosting y correo) están cubiertos por contratos de encargado del tratamiento y, cuando aplica, por garantías para transferencias internacionales.</p>
+      <h4>Tus derechos</h4>
+      <p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>. También puedes reclamar ante la Agencia Española de Protección de Datos (AEPD), C/ Jorge Juan 6, 28001 Madrid, o en su sede electrónica.</p>
+      <p>Tratamiento conforme al Reglamento (UE) 2016/679 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).</p>`},
+    cookies:{t:'Política de cookies',h:`
+      <p>Esta web usa cookies propias técnicas, necesarias para su funcionamiento, y cookies de análisis que solo se activan si las aceptas.</p>
+      <h4>Cookies necesarias</h4>
+      <ul><li>Preferencia de consentimiento de cookies (12 meses).</li><li>Seguridad y funcionamiento básico del sitio.</li></ul>
+      <h4>Cookies de análisis</h4>
+      <ul><li>Medición agregada de visitas y páginas vistas para mejorar contenidos.</li></ul>
+      <h4>Cómo gestionarlas</h4>
+      <p>Puedes cambiar tu decisión en cualquier momento desde «Preferencias de cookies» en el pie de página, o borrarlas desde la configuración de tu navegador (Chrome, Safari, Firefox o Edge).</p>
+      <p>No usamos cookies publicitarias de terceros sin tu consentimiento previo.</p>`},
+    aviso:{t:'Aviso legal',h:`
+      <p><b>Titular del sitio:</b> Influweb. Domicilio profesional: Valencia, España. Correo: <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>. Teléfono: <a href="tel:+34960123456">+34 960 12 34 56</a>.</p>
+      <h4>Objeto</h4>
+      <p>Este sitio informa sobre los servicios de marketing online de Influweb para clientes de España: estrategia, redes sociales, contenido, diseño, desarrollo web y publicidad digital.</p>
+      <h4>Propiedad intelectual</h4>
+      <p>Los textos, marcas, diseños y elementos gráficos del sitio pertenecen a Influweb o se usan con autorización. No se permite su reproducción sin permiso escrito.</p>
+      <h4>Legislación aplicable</h4>
+      <p>La relación con los usuarios se rige por la legislación española. Para cualquier controversia serán competentes los juzgados y tribunales de Valencia.</p>`}
+  };
+  var modal=d.getElementById('modal'), mbody=d.getElementById('mbody'), mx=d.getElementById('mx');
+  function openModal(k){
+    var o=LEGAL[k]; if(!o) return;
+    mbody.innerHTML='<h3 id="mtitle">'+o.t+'</h3>'+o.h;
+    modal.classList.add('open'); d.body.style.overflow='hidden'; mx.focus();
+  }
+  function closeModal(){ modal.classList.remove('open'); d.body.style.overflow=''; }
+  d.addEventListener('click',function(e){
+    var a=e.target.closest('[data-modal]');
+    if(a){ e.preventDefault(); openModal(a.getAttribute('data-modal')); }
+  });
+  mx.addEventListener('click',closeModal);
+  modal.addEventListener('click',function(e){ if(e.target===modal) closeModal(); });
+  d.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('open')) closeModal(); });
+  // cookies
+  var ck=d.getElementById('ck'), KEY='influweb_ck';
+  function get(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function set(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
+  if(!get()) setTimeout(function(){ ck.classList.add('show'); },1200);
+  d.getElementById('ck-yes').addEventListener('click',function(){ set('all'); ck.classList.remove('show'); });
+  d.getElementById('ck-no').addEventListener('click',function(){ set('necessary'); ck.classList.remove('show'); });
+  d.getElementById('ckopen').addEventListener('click',function(e){ e.preventDefault(); ck.classList.add('show'); });
+  // form
+  var form=d.getElementById('form'), fmsg=d.getElementById('fmsg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    [].forEach.call(form.querySelectorAll('[required]'),function(f){
+      var bad = f.type==='checkbox' ? !f.checked : !String(f.value).trim();
+      f.style.borderColor = bad ? '#D92D20' : '';
+      if(bad){ ok=false; }
+    });
+    if(!ok){ form.querySelector('[required]:invalid') || null; return; }
+    fmsg.classList.add('show');
+    form.querySelector('button[type=submit]').textContent='Solicitud enviada';
+    form.querySelector('button[type=submit]').disabled=true;
+    fmsg.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  // smooth anchors offset
+  d.querySelectorAll('a[href^="#"]:not([data-modal])').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); if(id.length<2) return;
+      var t=d.querySelector(id); if(!t) return;
+      e.preventDefault();
+      var y=t.getBoundingClientRect().top+window.scrollY-72;
+      window.scrollTo({top:y,behavior:'smooth'});
+    });
+  });
+})();
+</script>
+</body>
+</html>
