@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Influweb — Campañas potenciadas por IA | Tu equipo de marketing</title>
+<meta name="description" content="Influweb une análisis de mercado, estrategia, calendario, generación de piezas y creadores en una sola plataforma. Arma tu campaña de principio a fin.">
+<meta name="theme-color" content="#2563EB">
+<link rel="canonical" href="https://influweb.es/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Influweb — Campañas potenciadas por IA">
+<meta property="og:description" content="Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca.">
+<meta property="og:url" content="https://influweb.es/">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563EB'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3Ei%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+--blue:#2563EB;--blue-d:#1D4ED8;--blue-soft:#EFF4FF;--ink:#0F172A;--ink2:#334155;--muted:#5B6478;
+--line:#E4E9F1;--bg:#F8FAFC;--radius:16px;--shadow:0 1px 2px rgba(15,23,42,.05),0 12px 32px -14px rgba(15,23,42,.18);
+--max:1140px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+svg{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0 0 .5em;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+h1{font-size:clamp(2rem,4.6vw,3.5rem)}
+h2{font-size:clamp(1.6rem,3vw,2.4rem)}
+h3{font-size:1.08rem;letter-spacing:-.01em}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:clamp(48px,7vw,88px) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);border:1px solid #DBE6FF;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.06rem;max-width:56ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;padding:13px 22px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;text-decoration:none}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #93B4FF;outline-offset:2px}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 22px -12px rgba(37,99,235,.9)}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:#C9D5E6;background:#FBFDFF}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--blue);padding:10px 16px;z-index:200;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+.hdr{position:sticky;top:0;z-index:60;background:rgba(248,250,252,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.12rem;color:var(--ink);letter-spacing:-.03em}
+.logo:hover{text-decoration:none}
+.logo-mark{width:30px;height:30px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.95rem;font-weight:700;box-shadow:0 6px 14px -6px rgba(37,99,235,.9)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{color:var(--ink2);font-size:.94rem;font-weight:500}
+.nav a:hover{color:var(--blue);text-decoration:none}
+.hdr .btn{padding:10px 18px;font-size:.92rem}
+.burger{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer}
+.burger svg{width:20px;height:20px;stroke:var(--ink);stroke-width:2;fill:none}
+@media(max-width:900px){
+.nav{position:fixed;inset:68px 0 auto;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 18px;display:none;box-shadow:0 18px 30px -22px rgba(15,23,42,.4)}
+.nav.open{display:flex}
+.nav a{padding:13px 4px;border-bottom:1px solid #F1F5F9;font-size:1rem}
+.nav a:last-child{border-bottom:0}
+.nav .btn{margin-top:12px}
+.burger{display:inline-flex}
+}
+.hero{padding-top:clamp(36px,6vw,64px);background:radial-gradient(900px 420px at 78% -8%,rgba(37,99,235,.12),transparent 65%),radial-gradient(700px 380px at 8% 4%,rgba(37,99,235,.07),transparent 60%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,56px);align-items:center}
+.hero p.lead{font-size:1.1rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.chip{font-size:.8rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:999px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.dash{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px}
+.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.dash-title{font-size:.82rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase}
+.dot-row{display:flex;gap:5px}
+.dot{width:7px;height:7px;border-radius:50%;background:#DDE5F0}
+.dot.on{background:var(--blue)}
+.metric{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;background:var(--blue-soft);border:1px solid #DCE7FF;border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.metric b{font-size:1.7rem;color:var(--blue);letter-spacing:-.03em;line-height:1}
+.metric span{display:block;font-size:.76rem;color:var(--muted);margin-top:4px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:44px}
+.bars i{display:block;width:7px;border-radius:4px 4px 2px 2px;background:#BFD3FF;height:50%}
+.bars i:nth-child(2){height:38%}
+.bars i:nth-child(3){height:66%}
+.bars i:nth-child(4){height:44%}
+.bars i:nth-child(5){height:82%;background:var(--blue)}
+.bars i:nth-child(6){height:70%}
+.dash-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid #F1F5F9;font-size:.86rem;color:var(--ink2)}
+.dash-row .ic{width:26px;height:26px;border-radius:8px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:.72rem;font-weight:700;flex:none}
+.dash-row .t{font-weight:600;color:var(--ink)}
+.dash-row .s{font-size:.75rem;color:var(--muted)}
+.pill{margin-left:auto;font-size:.7rem;font-weight:700;padding:4px 9px;border-radius:999px;background:#F1F5F9;color:var(--ink2);white-space:nowrap}
+.pill.b{background:var(--blue);color:#fff}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.g3,.g4{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:box-shadow .2s,transform .2s,border-color .2s}
+.card:hover{box-shadow:var(--shadow);border-color:#D5E0F2;transform:translateY(-2px)}
+.card p{color:var(--muted);font-size:.94rem;margin:0}
+.num{font-size:.76rem;font-weight:700;color:var(--blue);letter-spacing:.12em;display:block;margin-bottom:10px}
+.icon{width:40px;height:40px;border-radius:11px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;margin-bottom:14px;font-weight:700;font-size:.95rem}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:26px 0 30px}
+.tab{font:inherit;font-size:.9rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:10px 16px;border-radius:999px;cursor:pointer;transition:.15s}
+.tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 10px 18px -12px rgba(37,99,235,.9)}
+.panel[hidden]{display:none}
+.panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,36px)}
+@media(max-width:860px){.panel-grid{grid-template-columns:1fr}}
+.panel-grid h3{font-size:1.3rem}
+.panel-grid .lead{font-size:.96rem}
+.bul{margin-top:16px;display:grid;gap:10px}
+.bul li{position:relative;padding-left:26px;color:var(--ink2);font-size:.94rem}
+.bul li::before{content:"";position:absolute;left:0;top:.5em;width:15px;height:15px;border-radius:50%;background:var(--blue-soft);border:1px solid #C7D9FF}
+.bul li::after{content:"";position:absolute;left:5px;top:.72em;width:5px;height:8px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(40deg)}
+.mock{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:9px}
+.mrow{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #EDF1F7;border-radius:10px;padding:10px 12px;font-size:.82rem;color:var(--ink2)}
+.mrow .sq{width:22px;height:22px;border-radius:6px;background:var(--blue-soft);flex:none}
+.mrow .sq.b{background:var(--blue)}
+.mrow .bar{height:6px;border-radius:4px;background:#E8EEF8;flex:1}
+.mrow .bar.w70{max-width:70%}
+.mrow.hi{background:var(--blue-soft);border-color:#DCE7FF;color:var(--blue);font-weight:600}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,56px);align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.feats{display:grid;gap:14px;margin-top:24px}
+.feat{display:flex;gap:13px;align-items:flex-start}
+.feat .icon{margin:0;flex:none;width:36px;height:36px}
+.feat h3{margin:0 0 2px;font-size:.98rem}
+.feat p{margin:0;font-size:.9rem;color:var(--muted)}
+.phone{width:min(300px,100%);margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:16px 14px 20px}
+.phone::before{content:"";display:block;width:64px;height:5px;border-radius:9px;background:#E6ECF5;margin:0 auto 14px}
+.ph-h{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.ph-card{background:var(--blue-soft);border:1px solid #DCE7FF;border-radius:12px;padding:12px;margin-bottom:9px;font-size:.82rem;color:var(--ink2)}
+.ph-card b{display:block;font-size:.86rem;color:var(--ink);margin-bottom:2px}
+.ph-card.alt{background:#fff;border-color:#EDF1F7}
+.ph-card.hi{background:var(--blue);border-color:var(--blue);color:#DCE7FF}
+.ph-card.hi b{color:#fff}
+.tool{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.tool h3{font-size:.98rem;margin-bottom:6px}
+.tool p{font-size:.9rem;color:var(--muted);margin:0}
+.tool .icon{width:34px;height:34px;border-radius:9px;margin-bottom:12px;font-size:.85rem}
+.demo{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.demo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,4vw,56px);align-items:start}
+@media(max-width:900px){.demo-grid{grid-template-columns:1fr}}
+.demo-list{display:grid;gap:12px;margin-top:22px}
+.demo-list li{position:relative;padding-left:28px;color:var(--ink2);font-size:.94rem}
+.demo-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--blue);font-weight:700}
+.mail{display:inline-block;font-weight:600;margin-top:8px;word-break:break-word}
+.form{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3vw,30px)}
+.form h3{font-size:1.15rem;margin-bottom:4px}
+.sub{font-size:.88rem;color:var(--muted);margin-bottom:20px}
+.field{margin-bottom:16px}
+.field>label{display:block;font-size:.85rem;font-weight:600;color:var(--ink2);margin-bottom:6px}
+.req{color:var(--blue)}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:.94rem;color:var(--ink);background:#fff;border:1px solid #D7DFEC;border-radius:10px;padding:11px 13px;transition:border-color .15s,box-shadow .15s}
+textarea{resize:vertical;min-height:96px}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.14);outline:none}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--ink2)}
+.check input{margin-top:3px;width:17px;height:17px;flex:none;accent-color:var(--blue)}
+.check label{font-weight:400;font-size:.86rem;margin:0}
+.err{color:#B42318;font-size:.82rem;font-weight:500;margin:6px 0 0;display:none}
+.err.show{display:block}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#E5A6A0;box-shadow:0 0 0 3px rgba(180,35,24,.08)}
+.form .btn{width:100%;margin-top:18px}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin:12px 0 0}
+.ok{display:none;background:#ECFDF3;border:1px solid #A6E8C3;color:#05603A;border-radius:12px;padding:14px 16px;font-size:.9rem;margin-bottom:16px}
+.ok.show{display:block}
+.faq{max-width:780px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+details[open]{border-color:#CFDDFA;box-shadow:0 8px 20px -18px rgba(15,23,42,.5)}
+summary{cursor:pointer;padding:16px 46px 16px 18px;font-weight:600;font-size:.98rem;position:relative;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--blue);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 16px;margin:0;color:var(--muted);font-size:.93rem}
+.ftr{background:#0B1220;color:#C7D2E3;padding:clamp(40px,5vw,64px) 0 26px;font-size:.9rem}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px}
+@media(max-width:860px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ftr-grid{grid-template-columns:1fr}}
+.ftr .logo{color:#fff;margin-bottom:12px}
+.ftr p{color:#94A3B8;font-size:.88rem;max-width:34ch}
+.ftr h4{color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.ftr li{margin-bottom:9px}
+.ftr a{color:#C7D2E3}
+.ftr a:hover{color:#fff}
+.lnk{background:none;border:0;padding:0;font:inherit;color:#C7D2E3;cursor:pointer;text-align:left}
+.lnk:hover{color:#fff;text-decoration:underline}
+.ftr-bot{margin-top:36px;padding-top:20px;border-top:1px solid #1E293B;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;color:#7E8DA5;font-size:.82rem}
+/* modal */
+.m-overlay{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(9,14,26,.62);backdrop-filter:blur(4px)}
+.m-overlay.open{display:flex}
+.m-box{background:#fff;border-radius:18px;width:min(760px,100%);max-height:min(88vh,860px);display:flex;flex-direction:column;box-shadow:0 32px 80px -20px rgba(2,6,23,.5);overflow:hidden;animation:mIn .18s ease-out}
+@keyframes mIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.m-box{animation:none}.card,.btn{transition:none}}
+.m-head{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#F5F8FF,#fff)}
+.m-head h2{margin:0;font-size:1.25rem;letter-spacing:-.02em}
+.m-kicker{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.m-close{margin-left:auto;flex:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink2);cursor:pointer;display:grid;place-items:center;font-size:1.2rem;line-height:1}
+.m-close:hover{background:var(--blue-soft);border-color:#C7D9FF;color:var(--blue)}
+.m-body{padding:22px;overflow:auto;overscroll-behavior:contain;font-size:.94rem;color:var(--ink2)}
+.m-body h3{font-size:.98rem;margin:22px 0 8px;color:var(--ink)}
+.m-body h3:first-of-type{margin-top:0}
+.m-body p{margin:0 0 10px}
+.pmeta{font-size:.8rem;color:var(--muted);margin-bottom:16px}
+.pending{background:#FFF8E6;border:1px dashed #E8C978;color:#7A5B00;border-radius:10px;padding:12px 14px;font-size:.86rem;font-weight:600;margin:0 0 12px}
+.m-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:14px 22px;border-top:1px solid var(--line);background:#FAFBFD;font-size:.8rem;color:var(--muted)}
+.m-foot .btn{padding:9px 16px;font-size:.86rem}
+.cbar{position:fixed;left:0;right:0;bottom:0;z-index:100;display:none;padding:14px}
+.cbar.show{display:block}
+.cbar-in{max-width:1000px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 50px -20px rgba(2,6,23,.45);padding:16px 18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.cbar p{margin:0;font-size:.86rem;color:var(--ink2);max-width:62ch}
+.cbar .bts{display:flex;gap:8px;flex-wrap:wrap}
+.cbar .btn{padding:9px 16px;font-size:.85rem}
+.inl{background:none;border:0;padding:0;font:inherit;color:var(--blue);font-weight:600;cursor:pointer;text-decoration:underline}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#main" aria-label="Influweb, inicio"><span class="logo-mark" aria-hidden="true">i</span>influ<span style="color:var(--blue)">web</span></a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#plataforma">Usuarios</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#demo" class="btn btn-primary">Agenda una demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Campañas potenciadas por IA</span>
+      <h1>Tu próximo equipo de marketing empieza acá</h1>
+      <p class="lead">Estrategia, contenido, planificación y creadores trabajando juntos para hacer crecer tu marca. Todo desde una sola plataforma.</p>
+      <div class="hero-cta">
+        <a href="#demo" class="btn btn-primary">Agenda una demo</a>
+        <a href="#contacto" class="btn btn-ghost">Escríbenos</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Análisis de mercado</span>
+        <span class="chip">Estrategia</span>
+        <span class="chip">Calendario</span>
+        <span class="chip">Piezas</span>
+        <span class="chip">Creadores</span>
+      </div>
+    </div>
+    <div class="dash" aria-hidden="true">
+      <div class="dash-top">
+        <span class="dash-title">Campaña · Marca</span>
+        <span class="dot-row"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span>
+      </div>
+      <div class="metric">
+        <div><b>+38%</b><span>Alcance · últimas 4 semanas</span></div>
+        <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="dash-row"><span class="ic">01</span><span><span class="t">3 contenidos en revisión</span><br><span class="s">Esta semana</span></span><span class="pill">Calendario</span></div>
+      <div class="dash-row"><span class="ic">02</span><span><span class="t">5 creadores postulando</span><br><span class="s">2 nuevos</span></span><span class="pill b">Creators</span></div>
+      <div class="dash-row"><span class="ic">03</span><span><span class="t">Campaña asistida por IA</span><br><span class="s">Estrategia lista</span></span><span class="pill">Lista</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>De la idea a la campaña en cinco pasos</h2>
+      <p class="lead">El mismo flujo que seguiría un equipo de marketing, pero ordenado y en un solo lugar.</p>
+    </div>
+    <div class="grid g3" style="margin-top:38px">
+      <article class="card reveal"><span class="num">01</span><h3>Entendemos tu mercado</h3><p>Analizamos tu negocio, competencia, presencia digital y tendencias para detectar oportunidades reales.</p></article>
+      <article class="card reveal"><span class="num">02</span><h3>Construimos tu estrategia</h3><p>Definimos objetivos, posicionamiento, pilares de comunicación, audiencias y una estrategia orientada al crecimiento de tu marca.</p></article>
+      <article class="card reveal"><span class="num">03</span><h3>Creamos contigo</h3><p>Genera piezas gráficas alineadas a tu identidad, copies, ideas, guiones y contenido pensado para cumplir tus objetivos.</p></article>
+      <article class="card reveal"><span class="num">04</span><h3>Planificamos tus redes</h3><p>Transforma la estrategia en un plan concreto: qué comunicar, cuándo hacerlo y con qué objetivo.</p></article>
+      <article class="card reveal"><span class="num">05</span><h3>Amplifica con creadores</h3><p>Crea campañas, genera briefs y conecta con creadores para llevar tu marca a nuevas audiencias.</p></article>
+      <article class="card reveal" style="background:linear-gradient(160deg,#2563EB,#1D4ED8);border-color:#1D4ED8;color:#fff">
+        <span class="num" style="color:#BFD3FF">Empieza hoy</span>
+        <h3 style="color:#fff">Arma tu campaña en minutos</h3>
+        <p style="color:#DCE7FF;margin-bottom:16px">Análisis, estrategia, calendario, piezas y creadores en un mismo flujo.</p>
+        <a href="#demo" class="btn btn-ghost" style="padding:9px 16px;font-size:.88rem">Agenda una demo</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="plataforma" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Una sola plataforma</span>
+      <h2>Todo en una misma plataforma</h2>
+      <p class="lead">Análisis competitivo, estrategia, calendario, piezas y creadores. Sin saltar entre cinco herramientas.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Funciones de la plataforma">
+      <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">Análisis competitivo</button>
+      <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1">Estrategia</button>
+      <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1">Calendario</button>
+      <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1">Generador de piezas</button>
+      <button class="tab" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1">Creator</button>
+    </div>
+    <div class="panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+      <div class="panel-grid">
+        <div>
+          <h3>Descubre qué está haciendo tu competencia</h3>
+          <p class="lead">Identifica a tus competidores, analiza sus estrategias de comunicación y recibe recomendaciones para diferenciarte.</p>
+          <ul class="bul"><li>Seguimiento de perfiles y formatos que mejor funcionan en tu sector.</li><li>Comparativa de tono, frecuencia y pilares de contenido.</li><li>Recomendaciones concretas para destacar.</li></ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mrow"><span class="sq"></span>Competidor A<span class="bar w70"></span></div>
+          <div class="mrow"><span class="sq"></span>Competidor B<span class="bar"></span></div>
+          <div class="mrow"><span class="sq b"></span>Tu marca<span class="bar w70"></span></div>
+          <div class="mrow hi">Oportunidad detectada</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+      <div class="panel-grid">
+        <div>
+          <h3>Convierte información en una estrategia concreta</h3>
+          <p class="lead">Diseña una estrategia de marketing a medida, basada en tus objetivos, tu marca y las tendencias actuales del mercado.</p>
+          <ul class="bul"><li>Objetivos, posicionamiento y audiencias definidas.</li><li>Pilares de comunicación claros para todo el equipo.</li><li>Hoja de ruta para los próximos meses.</li></ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mrow">Objetivo<span class="bar w70"></span></div>
+          <div class="mrow">Audiencia<span class="bar"></span></div>
+          <div class="mrow">Pilar 01<span class="bar"></span></div>
+          <div class="mrow hi">Pilar 02</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+      <div class="panel-grid">
+        <div>
+          <h3>De la estrategia a un plan de contenido</h3>
+          <p class="lead">Organiza tus campañas en un calendario claro donde ves fechas de entrega, estados y próximas acciones en un solo lugar.</p>
+          <ul class="bul"><li>Qué se publica, cuándo y con qué objetivo.</li><li>Estados de cada pieza: idea, en revisión, aprobada, publicada.</li><li>Vista compartida para marca, equipo y creadores.</li></ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mrow">Lun · Reel<span class="bar w70"></span></div>
+          <div class="mrow">Mié · Carrusel<span class="bar"></span></div>
+          <div class="mrow">Vie · Story<span class="bar w70"></span></div>
+          <div class="mrow hi">Dom · UGC creador</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0" hidden>
+      <div class="panel-grid">
+        <div>
+          <h3>Crea contenido alineado a tu marca</h3>
+          <p class="lead">Genera piezas visuales, copies y guiones a partir de texto, adaptados a cada formato y a tu identidad de marca.</p>
+          <ul class="bul"><li>Ideas de contenido basadas en tu nicho y en tendencias.</li><li>Guiones de vídeo y copies con hashtags por plataforma.</li><li>Feedback automático con sugerencias de mejora.</li></ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mrow">Brief<span class="bar"></span></div>
+          <div class="mrow">Guión de vídeo<span class="bar w70"></span></div>
+          <div class="mrow">Copy + hashtags<span class="bar"></span></div>
+          <div class="mrow hi">Pieza gráfica</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="panel-5" role="tabpanel" aria-labelledby="tab-5" tabindex="0" hidden>
+      <div class="panel-grid">
+        <div>
+          <h3>Amplifica con personas reales</h3>
+          <p class="lead">Publica tu campaña, recibe postulaciones de creadores compatibles y coordina todo desde la misma cuenta.</p>
+          <ul class="bul"><li>Briefs claros para cada colaboración.</li><li>Postulaciones y chat dentro de la plataforma.</li><li>Historial y estado de cada campaña.</li></ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="mrow">Campaña publicada<span class="bar w70"></span></div>
+          <div class="mrow">12 postulaciones<span class="bar"></span></div>
+          <div class="mrow">3 seleccionados<span class="bar w70"></span></div>
+          <div class="mrow hi">Contenido entregado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="creadores">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Para creadores</span>
+      <h2>Postula a campañas y gestiona tu trabajo desde el móvil</h2>
+      <p class="lead">La app de Influweb es para ti, creador de contenido. Descubre campañas compatibles con tu perfil, postula en segundos y gestiona tus colaboraciones con marcas sin salir de tu celular.</p>
+      <div class="feats">
+        <div class="feat"><span class="icon" aria-hidden="true">01</span><div><h3>Notificaciones en tiempo real</h3><p>Entérate al instante de nuevas campañas disponibles y del estado de tus postulaciones.</p></div></div>
+        <div class="feat"><span class="icon" aria-hidden="true">02</span><div><h3>Chat en tiempo real</h3><p>Coordina directamente con las marcas, sin salir de la app.</p></div></div>
+        <div class="feat"><span class="icon" aria-hidden="true">03</span><div><h3>Postula en segundos</h3><p>Un perfil claro y tus mejores contenidos: las marcas ven por qué encajas en su campaña.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="phone" aria-hidden="true">
+        <div class="ph-h">Campañas para ti</div>
+        <div class="ph-card"><b>Marca de belleza · Reel</b>Presupuesto y brief definidos · Postula hoy</div>
+        <div class="ph-card"><b>Retail · 3 stories</b>Campaña compatible con tu perfil</div>
+        <div class="ph-card alt"><b>Chat con la marca</b>Coordina entregas dentro de la app</div>
+        <div class="ph-card hi"><b>Postulación enviada</b>Estado actualizado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="usuarios" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Para quién es</span>
+      <h2>Una plataforma diseñada para cualquier negocio que quiera crecer</h2>
+      <p class="lead">Si comunicas, vendes o creas contenido, aquí tienes un lugar donde ordenar el trabajo y ganar tiempo.</p>
+    </div>
+    <div class="grid g4" style="margin-top:38px">
+      <article class="card reveal"><div class="icon" aria-hidden="true">P</div><h3>Emprendedores y Pymes</h3><p>Construye una estrategia profesional sin necesidad de contratar un equipo de marketing.</p></article>
+      <article class="card reveal"><div class="icon" aria-hidden="true">M</div><h3>Marcas en crecimiento</h3><p>Escala la creación de contenido, organiza procesos y trabaja con mayor eficiencia.</p></article>
+      <article class="card reveal"><div class="icon" aria-hidden="true">A</div><h3>Agencias</h3><p>Gestiona múltiples clientes desde una sola plataforma y optimiza el trabajo de tu equipo.</p></article>
+      <article class="card reveal"><div class="icon" aria-hidden="true">C</div><h3>Creadores</h3><p>Accede a oportunidades de colaboración y trabaja con marcas de manera simple y profesional.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="herramientas">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Herramientas</span>
+      <h2>Herramientas de Influweb</h2>
+      <p class="lead">Nueve utilidades conectadas entre sí para que la campaña avance de principio a fin.</p>
+    </div>
+    <div class="grid g3" style="margin-top:38px">
+      <article class="tool"><div class="icon" aria-hidden="true">01</div><h3>Planificación de contenido</h3><p>Organiza tus campañas en un calendario claro donde puedes ver fechas de entrega, estados y próximas acciones en un solo lugar.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">02</div><h3>Análisis de mercado</h3><p>Identifica a tus competidores, analiza sus estrategias de comunicación y recibe recomendaciones para diferenciarte.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">03</div><h3>Generación de ideas de contenido</h3><p>Descubre ideas creativas basadas en tu nicho y en tendencias actuales.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">04</div><h3>Creación de guiones de vídeo</h3><p>Genera guiones adaptados a tu audiencia, formato y plataforma.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">05</div><h3>Copywriting para textos</h3><p>Crea textos, descripciones y hashtags optimizados para cada plataforma, enfocados en alcance y engagement.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">06</div><h3>Generador de imágenes</h3><p>Crea piezas visuales a partir de texto, adaptadas a cada formato y alineadas a tu identidad de marca.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">07</div><h3>Feedback automático</h3><p>Recibe un análisis de tu contenido con sugerencias de mejora, detección de errores y una evaluación de calidad e impacto.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">08</div><h3>Estrategias de marketing</h3><p>Diseña una estrategia de marketing a medida, basada en tus objetivos, tu marca y las tendencias actuales del mercado.</p></article>
+      <article class="tool"><div class="icon" aria-hidden="true">09</div><h3>Campaña asistida</h3><p>Crea tu campaña de principio a fin en minutos con ayuda de IA.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="demo">
+  <div class="wrap demo-grid">
+    <div>
+      <span class="eyebrow">Ya está disponible</span>
+      <h2>Crea tu cuenta y arma tu primera campaña</h2>
+      <p class="lead">Si prefieres que te la mostremos, agenda una demo y te acompañamos en vivo.</p>
+      <ul class="demo-list">
+        <li>Demo personalizada de 20 minutos, sin compromiso.</li>
+        <li>Revisamos tu marca y tu competencia antes de la llamada.</li>
+        <li>Te confirmamos por correo con el enlace de la reunión.</li>
+      </ul>
+      <p style="margin-top:22px"><a class="mail" href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></p>
+    </div>
+
+    <div class="form">
+      <h3>Pide tu demo</h3>
+      <p class="sub">Cuéntanos un poco y te respondemos en menos de 24 h laborables.</p>
+      <div class="ok" id="ok" role="status" aria-live="polite">Gracias. Hemos recibido tu solicitud: te escribimos a la brevedad con la confirmación de la demo.</div>
+      <form id="demo-form" novalidate>
+        <div class="field">
+          <label for="f-nombre">Nombre y apellido <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="f-nombre" name="nombre" autocomplete="name" required aria-describedby="e-nombre">
+          <p class="err" id="e-nombre" role="alert">Escribe tu nombre y apellido.</p>
+        </div>
+        <div class="field">
+          <label for="f-email">Correo de trabajo <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required aria-describedby="e-email">
+          <p class="err" id="e-email" role="alert">Introduce un correo electrónico válido.</p>
+        </div>
+        <div class="field">
+          <label for="f-tel">Teléfono (opcional)</label>
+          <input type="tel" id="f-tel" name="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-perfil">Tipo de perfil <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-perfil" name="perfil" required aria-describedby="e-perfil">
+            <option value="">Seleccionar…</option>
+            <option>Empresa</option>
+            <option>Creador</option>
+            <option>Agencia</option>
+          </select>
+          <p class="err" id="e-perfil" role="alert">Selecciona un tipo de perfil.</p>
+        </div>
+        <div class="field">
+          <label for="f-msg">¿Qué buscas en Influweb? <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-msg" name="mensaje" required aria-describedby="e-msg"></textarea>
+          <p class="err" id="e-msg" role="alert">Cuéntanos brevemente qué necesitas.</p>
+        </div>
+        <div class="field">
+          <div class="check">
+            <input type="checkbox" id="f-consent" name="consent" required aria-describedby="e-consent">
+            <label for="f-consent">He leído y acepto la <button type="button" class="inl" data-legal="privacidad">política de privacidad</button> y el uso de cookies descrito en la <button type="button" class="inl" data-legal="cookies">política de cookies</button>.</label>
+          </div>
+          <p class="err" id="e-consent" role="alert">Debes aceptar la política de privacidad y de cookies para continuar.</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+        <p class="form-note">También puedes escribirnos a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Lo que suelen preguntarnos</h2>
+    </div>
+    <div class="faq" style="margin-top:32px">
+      <details><summary>¿Qué es Influweb?</summary><p>Una plataforma de marketing con inteligencia artificial que junta en un mismo lugar el análisis de tu competencia, la estrategia, el calendario de contenido, la generación de las piezas y la colaboración con creadores. En vez de saltar entre cinco herramientas, armas la campaña de principio a fin en un solo flujo.</p></details>
+      <details><summary>¿Qué puedo hacer como empresa?</summary><p>Ver qué está publicando tu competencia, convertir eso en una estrategia concreta, bajarla a un calendario de contenido y generar las piezas alineadas a tu marca. Cuando quieras amplificar, publicas una campaña y los creadores postulan; coordinas con ellos desde la misma cuenta.</p></details>
+      <details><summary>¿Qué puedo hacer como creador?</summary><p>Desde tu celular: descubrir campañas compatibles con tu perfil, postular en segundos y coordinar por chat directamente con la marca. Las notificaciones te avisan cuando aparece una campaña nueva o cambia el estado de tu postulación.</p></details>
+      <details><summary>¿Cuándo estará disponible?</summary><p>Ya está disponible y puedes crear tu cuenta hoy. Agenda una demo y te la mostramos en vivo.</p></details>
+      <details><summary>¿Necesitas ayuda o soporte?</summary><p>Escríbenos a <a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a> y te responde alguien del equipo. Si prefieres verlo con calma y en vivo, agenda una demo y lo revisamos juntos.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr" id="contacto">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#main"><span class="logo-mark" aria-hidden="true">i</span>influ<span style="color:#93B4FF">web</span></a>
+        <p>Campañas potenciadas por IA. Estrategia, contenido, planificación y creadores en una sola plataforma.</p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#plataforma">Usuarios</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#creadores">Creadores</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#demo">Agenda una demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><button type="button" class="lnk" data-legal="aviso">Aviso legal</button></li>
+          <li><button type="button" class="lnk" data-legal="privacidad">Política de privacidad</button></li>
+          <li><button type="button" class="lnk" data-legal="cookies">Política de cookies</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:empresa@influweb.ai">empresa@influweb.ai</a></li>
+          <li>5200 Waterford District Dr Ste 120</li>
+          <li>Miami, FL 33126, United States</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© 2026 INFLUWEB LLC. Todos los derechos reservados.</span>
+      <button type="button" class="lnk" data-legal="cookies">Preferencias de cookies</button>
+    </div>
+  </div>
+</footer>
+
+<div class="cbar" id="cbar" role="region" aria-label="Aviso de cookies">
+  <div class="cbar-in">
+    <p>Usamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia. Puedes aceptarlas todas o quedarte solo con las necesarias. Más información en la <button type="button" class="inl" data-legal="cookies">política de cookies</button>.</p>
+    <div class="bts">
+      <button type="button" class="btn btn-primary" id="c-accept">Aceptar todas</button>
+      <button type="button" class="btn btn-ghost" id="c-reject">Solo necesarias</button>
+    </div>
+  </div>
+</div>
+
+<div class="m-overlay" id="m-overlay" hidden>
+  <div class="m-box" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <div class="m-head">
+      <div>
+        <div class="m-kicker">Información legal</div>
+        <h2 id="m-title">Aviso legal</h2>
+      </div>
+      <button type="button" class="m-close" id="m-close" aria-label="Cerrar ventana legal">✕</button>
+    </div>
+    <div class="m-body" id="m-body" tabindex="0">
+      <p class="sr" id="m-desc">Documento legal en ventana modal. Pulsa Escape para cerrar.</p>
+      <div class="legal-doc" id="doc-aviso">
+        <p class="pmeta">Última actualización: pendiente de validación legal.</p>
+        <h3>1. Datos identificativos del titular</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>2. Objeto y ámbito de aplicación</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>3. Condiciones de acceso y uso</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>4. Propiedad intelectual e industrial</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>5. Exclusión de responsabilidad</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>6. Enlaces a terceros</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>7. Modificaciones</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>8. Legislación aplicable y jurisdicción</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>9. Contacto</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+      </div>
+      <div class="legal-doc" id="doc-privacidad" hidden>
+        <p class="pmeta">Última actualización: pendiente de validación legal.</p>
+        <h3>1. Responsable del tratamiento</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>2. Finalidades del tratamiento</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>3. Base jurídica</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>4. Categorías de datos tratados</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>5. Plazo de conservación</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>6. Destinatarios y encargados del tratamiento</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>7. Transferencias internacionales</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>8. Derechos de las personas interesadas</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>9. Medidas de seguridad</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>10. Menores de edad</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>11. Actualizaciones de esta política</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+      </div>
+      <div class="legal-doc" id="doc-cookies" hidden>
+        <p class="pmeta">Última actualización: pendiente de validación legal.</p>
+        <h3>1. Qué son las cookies</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>2. Tipos de cookies que utilizamos</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>3. Cookies necesarias</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>4. Cookies analíticas y de medición</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>5. Cookies de terceros</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>6. Plazos de conservación</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>7. Cómo aceptar, configurar o rechazar cookies</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>8. Cómo eliminar las cookies de tu navegador</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+        <h3>9. Actualizaciones de esta política</h3><p class="pending">[PENDIENTE: TEXTO ELENA]</p>
+      </div>
+    </div>
+    <div class="m-foot">
+      <span>Documento en revisión legal · [PENDIENTE: TEXTO ELENA]</span>
+      <button type="button" class="btn btn-primary" id="m-ok">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,c){return (c||document).querySelector(s);};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));};
+
+  /* Menú móvil */
+  var burger=$('#burger'), nav=$('#nav');
+  if(burger){
+    burger.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+      burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+    });
+    $$('a',nav).forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        burger.setAttribute('aria-label','Abrir menú');
+      });
+    });
+  }
+
+  /* Pestañas */
+  var tabs=$$('.tab');
+  function selectTab(tab){
+    tabs.forEach(function(t){
+      var on=(t===tab);
+      t.setAttribute('aria-selected',on?'true':'false');
+      t.tabIndex=on?0:-1;
+      var p=document.getElementById(t.getAttribute('aria-controls'));
+      if(p){ if(on){p.removeAttribute('hidden');}else{p.setAttribute('hidden','');} }
+    });
+  }
+  tabs.forEach(function(tab,i){
+    tab.addEventListener('click',function(){selectTab(tab);});
+    tab.addEventListener('keydown',function(e){
+      var idx=i,k=e.key;
+      if(k==='ArrowRight'){idx=(i+1)%tabs.length;}
+      else if(k==='ArrowLeft'){idx=(i-1+tabs.length)%tabs.length;}
+      else if(k==='Home'){idx=0;}
+      else if(k==='End'){idx=tabs.length-1;}
+      else{return;}
+      e.preventDefault();selectTab(tabs[idx]);tabs[idx].focus();
+    });
+  });
+
+  /* Reveal */
+  var revs=$$('.reveal');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    revs.forEach(function(r){io.observe(r);});
+  }else{
+    revs.forEach(function(r){r.classList.add('in');});
+  }
+
+  /* ====== MODAL LEGAL ACCESIBLE ====== */
+  var overlay=$('#m-overlay'),
+      box=$('.m-box',overlay),
+      titleEl=$('#m-title'),
+      bodyEl=$('#m-body'),
+      closeBtn=$('#m-close'),
+      okBtn=$('#m-ok'),
+      lastFocus=null,
+      isOpen=false;
+
+  var DOCS={
+    aviso:{title:'Aviso legal',id:'doc-aviso'},
+    privacidad:{title:'Política de privacidad',id:'doc-privacidad'},
+    cookies:{title:'Política de cookies',id:'doc-cookies'}
+  };
+
+  function focusables(){
+    return $$('a[href],button:not([disabled]),input:not([disabled]),select,textarea,summary,[tabindex]:not([tabindex="-1"])',box)
+      .filter(function(el){return el.offsetWidth>0||el.offsetHeight>0||el===document.activeElement;});
+  }
+
+  function openDoc(key,trigger){
+    var doc=DOCS[key]||DOCS.aviso;
+    lastFocus=trigger||document.activeElement;
+    $$('.legal-doc',overlay).forEach(function(d){d.hidden=(d.id!==doc.id);});
+    titleEl.textContent=doc.title;
+    bodyEl.scrollTop=0;
+    overlay.hidden=false;
+    overlay.classList.add('open');
+    document.body.classList.add('locked');
+    isOpen=true;
+    closeBtn.focus();
+  }
+
+  function closeDoc(){
+    if(!isOpen) return;
+    overlay.classList.remove('open');
+    overlay.hidden=true;
+    document.body.classList.remove('locked');
+    isOpen=false;
+    if(lastFocus && document.contains(lastFocus) && typeof lastFocus.focus==='function'){lastFocus.focus();}
+  }
+
+  document.addEventListener('click',function(e){
+    var trg=e.target.closest?e.target.closest('[data-legal]'):null;
+    if(!trg) return;
+    e.preventDefault();
+    openDoc(trg.getAttribute('data-legal'),trg);
+  });
+
+  closeBtn.addEventListener('click',closeDoc);
+  okBtn.addEventListener('click',closeDoc);
+  overlay.addEventListener('mousedown',function(e){if(e.target===overlay)closeDoc();});
+
+  document.addEventListener('keydown',function(e){
+    if(!isOpen) return;
+    if(e.key==='Escape'||e.key==='Esc'){e.preventDefault();closeDoc();return;}
+    if(e.key==='Tab'){
+      var f=focusables();
+      if(!f.length){e.preventDefault();return;}
+      var first=f[0],last=f[f.length-1],act=document.activeElement;
+      if(e.shiftKey && (act===first||!box.contains(act))){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && (act===last||!box.contains(act))){e.preventDefault();first.focus();}
+    }
+  });
+
+  /* ====== FORMULARIO: .err unificado (incluye consentimiento) ====== */
+  var form=$('#demo-form');
+  function setErr(fieldId,on){
+    var input=document.getElementById(fieldId);
+    var err=document.getElementById('e-'+fieldId.replace(/^f-/,''));
+    var field=input?input.closest('.field'):null;
+    if(err) err.classList.toggle('show',on);
+    if(field) field.classList.toggle('invalid',on);
+    if(input) input.setAttribute('aria-invalid',on?'true':'false');
+  }
+  function validEmail(v){return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v);}
+
+  if(form){
+    ['f-nombre','f-email','f-perfil','f-msg','f-consent'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(!el) return;
+      el.addEventListener('input',function(){if(el.type==='checkbox'?el.checked:el.value.trim())setErr(id,false);});
+      el.addEventListener('change',function(){if(el.type==='checkbox'?el.checked:el.value.trim())setErr(id,false);});
+    });
+
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var errs=[];
+      if(!$('#f-nombre').value.trim()){setErr('f-nombre',true);errs.push('#f-nombre');}else{setErr('f-nombre',false);}
+      if(!validEmail($('#f-email').value.trim())){setErr('f-email',true);errs.push('#f-email');}else{setErr('f-email',false);}
+      if(!$('#f-perfil').value){setErr('f-perfil',true);errs.push('#f-perfil');}else{setErr('f-perfil',false);}
+      if(!$('#f-msg').value.trim()){setErr('f-msg',true);errs.push('#f-msg');}else{setErr('f-msg',false);}
+      if(!$('#f-consent').checked){setErr('f-consent',true);errs.push('#f-consent');}else{setErr('f-consent',false);}
+
+      if(errs.length){
+        var first=$(errs[0]);
+        if(first) first.focus();
+        return;
+      }
+      var ok=$('#ok');
+      ok.classList.add('show');
+      ok.scrollIntoView({behavior:'smooth',block:'center'});
+      form.reset();
+    });
+  }
+
+  /* ====== COOKIES ====== */
+  var cbar=$('#cbar');
+  function readPref(){try{return localStorage.getItem('infl_cookies');}catch(err){return '1';}}
+  function savePref(v){try{localStorage.setItem('infl_cookies',v);}catch(err){}}
+  if(cbar && !readPref()){setTimeout(function(){cbar.classList.add('show');},700);}
+  function hideBar(v){savePref(v);cbar.classList.remove('show');}
+  var ca=$('#c-accept'),cr=$('#c-reject');
+  if(ca) ca.addEventListener('click',function(){hideBar('all');});
+  if(cr) cr.addEventListener('click',function(){hideBar('necessary');});
+})();
+</script>
+</body>
+</html>
