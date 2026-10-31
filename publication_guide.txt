@@ -1,0 +1,28 @@
+Guía de publicación paso a paso
+
+1. Git (oficina sube sola):
+   - git add .
+   - git commit -m "Versión final INFLUWEB - landing page correciones"
+   - git push origin main
+
+2. Vercel (publicación automática):
+   - Conectar repositorio GitHub de INFLUWEB con Vercel (ya está configurado).
+   - Cada push a la rama main despliega automáticamente en https://influweb.es.
+   - Verificar que el dominio apunte a Vercel en la configuración del proyecto.
+
+3. Checklist previo a push:
+   - [ ] index.html actualizado sin referencias LLC ni dirección física de Valencia.
+   - [ ] Correo electrónico info@influweb.es presente en el formulario y footer.
+   - [ ] Meta tags y título optimizados para SEO.
+   - [ ] Imágenes y assets optimizados (< 60 KB cada uno).
+   - [ ] CSS y JS minificados.
+   - [ ] Archivo robots.txt (si aplica).
+   - [ ] Sitemap generado (si aplica).
+   - [ ] Verificar que no haya enlaces file:// ni rutas absolutas del ordenador.
+   - [ ] Probar responsividad en móvil y desktop.
+   - [ ] Velocidad de carga > 90 en PageSpeed Insights.
+
+4. Después del push:
+   - La Oficina notificará la URL pública (https://influweb.es).
+   - Comprobar que el sitio carga correctamente.
+   - Confirmar que el formulario de contacto envía a info@influweb.es.
