@@ -3,265 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INFLUWEB | Agencia de Marketing Digital</title>
-  <meta name="description" content="Somos INFLUWEB, tu agencia de marketing digital. Redes sociales, diseño web, anuncios y contenido que impulsa tu negocio. Hablemos.">
+  <title>INFLUWEB — Automatización y marketing digital</title>
+  <meta name="description" content="Automatizo procesos y construyo webs para clínicas, fisioterapeutas y pymes. Sin relleno, con resultados medibles.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,750&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container navbar">
-      <a href="#" class="logo">INFLU<span>WEB</span></a>
-      
-      <nav class="nav-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      
-      <div class="nav-cta">
-        <a href="#contacto" class="btn btn-primary">Empezar ahora</a>
-      </div>
-
-      <button class="menu-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo">INFLUWEB</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
+      <ul class="nav-links">
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#para-quien">Para quién</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto" class="btn btn-primary btn-sm">Hablemos</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="mobile-menu">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#contacto" class="btn btn-primary" style="text-align:center; margin-top:8px;">Empezar ahora</a>
+  <!-- HERO -->
+  <header class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="section-label">Automatización y web</span>
+        <h1>Dejo de perder tiempo en tareas que puede hacer una máquina.</h1>
+        <p class="lead">Diseño webs rápidas y automatizo procesos para que tú te centres en tu negocio. Sin humo, sin plantillas genéricas.</p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn btn-primary">Quiero automatizar</a>
+          <a href="#proceso" class="btn btn-outline">Ver cómo trabajo</a>
+        </div>
+        <ul class="guarantees">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin permanencia</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Entregas en días, no meses</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Código limpio y tuyo</li>
+        </ul>
+      </div>
+      <div class="hero-card-wrapper reveal">
+        <div class="flow-card surface-2 border radius-lg">
+          <h3 class="flow-title">Flujo: pedidos → facturas</h3>
+          <div class="flow-row"><span class="flow-action">Nuevo pedido recibido</span><span class="flow-time mono">00:00</span></div>
+          <div class="flow-row"><span class="flow-action">Generar factura PDF</span><span class="flow-time mono">00:02</span></div>
+          <div class="flow-row"><span class="flow-action">Enviar por email al cliente</span><span class="flow-time mono">00:05</span></div>
+          <div class="flow-row"><span class="flow-action">Registrar en hoja de cálculo</span><span class="flow-time mono">00:08</span></div>
+          <div class="flow-compare">
+            <div class="compare-item"><span class="text-muted">A mano</span><span class="mono compare-old">3 h 10 min</span></div>
+            <div class="compare-item"><span class="text-accent">Automatizado</span><span class="mono compare-new">8 segundos</span></div>
+          </div>
+        </div>
+        <p class="disclaimer text-muted">Ejemplo ilustrativo, no un caso real.</p>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-    </div>
-    <div class="container hero-content">
-      <div class="hero-badge">🚀 Tu crecimiento digital empieza aquí</div>
-      <h1>Hacemos que tu marca <span class="highlight">destaque en digital</span></h1>
-      <p>Somos INFLUWEB. Creamos estrategias, diseñamos experiencias y lanzamos campañas que conectan con tu audiencia y multiplican tus resultados.</p>
-      <div class="hero-buttons">
-        <a href="#contacto" class="btn btn-primary">Quiero hablar con vosotros</a>
-        <a href="#servicios" class="btn btn-outline">Ver qué hacemos</a>
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="section surface-1">
+    <div class="container reveal">
+      <span class="section-label">Beneficios</span>
+      <h2>Menos clics, más margen.</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <h3>Ahorro de tiempo</h3>
+          <p>Elimino las tareas repetitivas. El ejemplo del flujo pasa de 3 horas y 10 minutos a 8 segundos.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Cero errores humanos</h3>
+          <p>Las máquinas no se equivocan copiando datos de un sitio a otro. Tu contabilidad lo agradece.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <h3>Escalabilidad real</h3>
+          <p>Si mañana tienes el doble de clientes, el sistema aguanta sin contratar a nadie más para picar datos.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- SERVICIOS -->
   <section id="servicios" class="section">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-label">Nuestros Servicios</span>
-        <h2 class="section-title">Todo lo que necesitas para crecer online</h2>
-        <p class="section-desc">No hacemos de todo por hacer. Nos especializamos en lo que realmente mueve la aguja de tu negocio.</p>
-      </div>
-
+    <div class="container reveal">
+      <span class="section-label">Servicios</span>
+      <h2>Esto es lo que construyo y lo que consigue.</h2>
       <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>Redes Sociales</h3>
-          <p>Gestionamos tus perfiles, creamos comunidades reales y publicamos contenido que genera conversación y conversiones.</p>
-        </div>
+        <article class="service-card surface-2 border radius-lg">
+          <h3>Landing pages rápidas</h3>
+          <p>Páginas de un solo archivo, sin WordPress ni constructores pesados. Cargan en menos de 1 segundo y convierten mejor.</p>
+        </article>
+        <article class="service-card surface-2 border radius-lg">
+          <h3>Automatización de procesos</h3>
+          <p>Conecto formularios, CRMs, emails y bases de datos. Lo que haces en 3 horas, el sistema lo hace en 8 segundos.</p>
+        </article>
+        <article class="service-card surface-2 border radius-lg">
+          <h3>Identidad visual y diseño</h3>
+          <p>Sistemas de diseño coherentes como este tema oscuro. Tipografía limpia, contraste accesible, cero adornos innecesarios.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <!-- Service 2 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <h3>Textos y Contenido</h3>
-          <p>Copys persuasivos, artículos SEO y guiones que cuentan tu historia exactamente como tu cliente necesita escucharla.</p>
-        </div>
+  <!-- PROCESO -->
+  <section id="proceso" class="section surface-1">
+    <div class="container reveal">
+      <span class="section-label">Proceso</span>
+      <h2>4 pasos. Sin sorpresas.</h2>
+      <ol class="process-list">
+        <li class="process-step"><span class="step-num mono">01</span><div><h3>Auditoría rápida</h3><p>Miro qué haces a mano y cuánto tiempo pierdes. Te digo si merece la pena automatizarlo o no.</p></div></li>
+        <li class="process-step"><span class="step-num mono">02</span><div><h3>Propuesta cerrada</h3><p>Te doy un precio y un plazo. Nada de "ya veremos sobre la marcha".</p></div></li>
+        <li class="process-step"><span class="step-num mono">03</span><div><h3>Construcción</h3><p>Maqueto, programo y conecto. Te paso avances para que valides que vamos por buen camino.</p></div></li>
+        <li class="process-step"><span class="step-num mono">04</span><div><h3>Entrega y soporte</h3><p>Publicamos. Te explico cómo funciona todo y me quedo disponible para ajustes iniciales.</p></div></li>
+      </ol>
+    </div>
+  </section>
 
-        <!-- Service 3 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-          </div>
-          <h3>Diseño Gráfico</h3>
-          <p>Identidad visual, branding y piezas gráficas que hacen que tu marca sea inolvidable a primera vista.</p>
+  <!-- PARA QUIÉN -->
+  <section id="para-quien" class="section">
+    <div class="container reveal">
+      <span class="section-label">Para quién</span>
+      <h2>Trabajo con quien necesita hechos, no promesas.</h2>
+      <div class="audience-grid">
+        <div class="audience-card surface-2 border radius-lg">
+          <h3>Clínicas dentales</h3>
+          <p>Recordatorios de citas automáticos, gestión de reseñas y webs que transmiten confianza antes de que el paciente llame.</p>
         </div>
-
-        <!-- Service 4 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Diseño Web</h3>
-          <p>Landing pages rápidas, webs corporativas y tiendas online pensadas para convertir visitas en clientes.</p>
+        <div class="audience-card surface-2 border radius-lg">
+          <h3>Fisioterapeutas</h3>
+          <p>Formularios de primera visita que van directos a tu calendario. Menos llamadas perdidas, más tiempo en cabina.</p>
         </div>
-
-        <!-- Service 5 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3>Anuncios (Ads)</h3>
-          <p>Campañas en Meta Ads, Google Ads y TikTok Ads optimizadas al milímetro para maximizar tu retorno de inversión.</p>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Estrategia y Funnels</h3>
-          <p>Automatizaciones, embudos de venta y estrategia integral para que cada pieza de tu marketing trabaje junta.</p>
+        <div class="audience-card surface-2 border radius-lg">
+          <h3>Autónomos y pymes</h3>
+          <p>Facturación automática, landings para campañas y sistemas que te quitan el trabajo administrativo de encima.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="nosotros" class="section about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual fade-up">
-          <div class="about-graphic">
-            <div class="graph-bar active"></div>
-            <div class="graph-bar"></div>
-            <div class="graph-bar active"></div>
-            <div class="graph-bar"></div>
-          </div>
-        </div>
-        <div class="about-content fade-up">
-          <span class="section-label">Sobre Nosotros</span>
-          <h2>No somos una agencia más. Somos tu equipo digital.</h2>
-          <p>En INFLUWEB combinamos creatividad, datos y tecnología para llevar tu marca al siguiente nivel. Trabajamos codo con codo contigo, sin humo ni métricas vacías.</p>
-          <p>Nuestro objetivo es simple: que tu presencia digital genere impacto real y medible en tu negocio.</p>
-          
-          <div class="stats-row">
-            <div class="stat-item">
-              <h4>+150</h4>
-              <p>Proyectos entregados</p>
-            </div>
-            <div class="stat-item">
-              <h4>98%</h4>
-              <p>Clientes satisfechos</p>
-            </div>
-            <div class="stat-item">
-              <h4>24/7</h4>
-              <p>Soporte continuo</p>
-            </div>
-          </div>
-        </div>
+  <!-- SOBRE INFLUWEB -->
+  <section id="sobre" class="section surface-1">
+    <div class="container reveal about-grid">
+      <div>
+        <span class="section-label">Sobre INFLUWEB</span>
+        <h2>Hago webs y automatizaciones. Punto.</h2>
+        <p>Soy Diego, el equipo técnico detrás de INFLUWEB. No somos una agencia de 40 personas cobrando por reunirse. Trabajo directo, código limpio y sistemas que funcionan solos.</p>
+        <p>Nuestra oficina está en Valencia, pero trabajo con negocios de toda España. Si necesitas algo rápido, bien hecho y sin pagar de más por "nombre de agencia", estamos alineados.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contacto" class="section">
-    <div class="container">
-      <div class="section-header fade-up">
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container reveal">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Dudas resueltas.</h2>
+      <div class="faq-list">
+        <details class="faq-item border radius-sm">
+          <summary>¿Cuánto tarda un proyecto?</summary>
+          <p>Una landing page suele estar lista en 5-7 días laborables. Una automatización compleja, entre 2 y 3 semanas. Te doy el plazo exacto antes de empezar.</p>
+        </details>
+        <details class="faq-item border radius-sm">
+          <summary>¿Tengo que pagar mantenimiento mensual?</summary>
+          <p>No obligatoriamente. Entrego el código y los accesos. Si quieres que yo lo mantenga, hay planes de soporte, pero no te ato con contratos.</p>
+        </details>
+        <details class="faq-item border radius-sm">
+          <summary>¿Usáis WordPress o Wix?</summary>
+          <p>No. Construyo páginas en HTML, CSS y JS puro o con generadores estáticos. Son más rápidas, más seguras y más baratas de alojar.</p>
+        </details>
+        <details class="faq-item border radius-sm">
+          <summary>¿Qué pasa si no me gusta el resultado?</summary>
+          <p>Incluyo rondas de revisión durante la fase de construcción. Validamos juntos antes de publicar nada definitivo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Y CONTACTO -->
+  <section id="contacto" class="section surface-1">
+    <div class="container reveal">
+      <div class="cta-block">
         <span class="section-label">Contacto</span>
-        <h2 class="section-title">¿Listo para impulsar tu marca?</h2>
-        <p class="section-desc">Cuéntanos qué necesitas y te responderemos en menos de 24 horas con un plan a medida.</p>
-      </div>
-
-      <div class="contact-wrapper fade-up">
-        <div class="contact-info">
-          <h3>Hablemos</h3>
-          <p>Puedes escribirnos directamente o usar el formulario. Estamos aquí para ayudarte a crecer.</p>
-          
-          <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="info-text">
-              <strong>Email</strong>
-              <span>hola@influweb.es</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="info-text">
-              <strong>Ubicación</strong>
-              <span>100% Remotos, España</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="info-text">
-              <strong>Horario</strong>
-              <span>Lunes a Viernes, 9:00 - 18:00</span>
-            </div>
-          </div>
-        </div>
-
-        <form id="contact-form" class="contact-form">
+        <h2>¿Hablamos de lo que necesitas?</h2>
+        <p class="lead">Rellena el formulario o escríbeme directo. Respondo en menos de 24 horas laborables.</p>
+        <form action="mailto:info@influweb.es" method="post" enctype="text/plain" class="contact-form">
           <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            <input type="email" id="email" name="email" required autocomplete="email">
           </div>
           <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
           </div>
-          <p class="form-note">Al enviar este formulario aceptas nuestra <a href="#">Política de Privacidad</a> y el uso de cookies según nuestra <a href="#">Política de Cookies</a>.</p>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Enviar mensaje</button>
-          <div id="form-success">¡Mensaje enviado! Te contactaremos muy pronto.</div>
+          <div class="form-group full-width">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Abrir cliente de correo</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="logo">INFLU<span style="color:white;">WEB</span></a>
-          <p>Tu agencia de marketing digital. Estrategia, diseño y tecnología para hacer crecer tu negocio.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="#servicios">Redes Sociales</a></li>
-            <li><a href="#servicios">Diseño Web</a></li>
-            <li><a href="#servicios">Anuncios</a></li>
-            <li><a href="#servicios">Contenido</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Empresa</h4>
-          <ul>
-            <li><a href="#nosotros">Sobre nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
+    <div class="container footer-inner">
+      <div class="footer-info">
+        <span class="logo">INFLUWEB</span>
+        <p>711 546 147 · info@influweb.es</p>
+        <p>Manuela Estelles 97, Valencia</p>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-legal">
         <p>&copy; 2026 INFLUWEB. Todos los derechos reservados.</p>
-        <div class="footer-legal">
-          <a href="#">Aviso Legal</a>
-          <a href="#">Privacidad</a>
-          <a href="#">Cookies</a>
-        </div>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
       </div>
     </div>
   </footer>
