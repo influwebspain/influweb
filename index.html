@@ -1,133 +1,23 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INFLUWEB – Agencia de Marketing Digital</title>
-  <style>
-    :root {
-      --primary:#2563EB; /* Azul eléctrico */
-      --dark:#0F172A;
-      --light:#F8FAFC;
-      --text:#1F2937;
-      --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:var(--font-sans);color:var(--text);background-color:var(--light);line-height:1.6;}
-    a{text-decoration:none;color:inherit;}
-    header{background:var(--primary);color:#fff;}
-    .container{max-width:1200px;margin:auto;padding:0 1rem;}
-    .nav{display:flex;justify-content:space-between;align-items:center;height:60px;}
-    .nav .logo{font-size:1.5rem;font-weight:bold;}
-    .nav ul{display:flex;gap:1.5rem;list-style:none;}
-    .nav ul li a{color:#fff;transition:opacity .3s;}
-    .nav ul li a:hover{opacity:0.8;}
-    .hero{background:linear-gradient(135deg,var(--primary),#1D4ED8);color:#fff;padding:4rem 0;text-align:center;}
-    .hero h1{font-size:2.5rem;margin-bottom:.5rem;}
-    .hero p{font-size:1.2rem;margin-bottom:1.5rem;}
-    .btn{display:inline-block;background:#fff;color:var(--primary);padding:.75rem 1.5rem;border-radius:.5rem;font-weight:bold;transition:background .3s;}
-    .btn:hover{background:#e2e8f0;}
-    .section{padding:4rem 0;}
-    .section h2{font-size:2rem;margin-bottom:1rem;text-align:center;}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;}
-    .service{background:#fff;padding:2rem;border-radius:.5rem;box-shadow:0 2px 6px rgba(0,0,0,.1);text-align:center;}
-    .service i{font-size:2.5rem;color:var(--primary);margin-bottom:1rem;}
-    .contact{background:var(--primary);color:#fff;}
-    .contact form{display:flex;flex-direction:column;gap:.75rem;max-width:500px;margin:auto;}
-    .contact input,.contact textarea{padding:.75rem;border:none;border-radius:.4rem;}
-    .contact input{width:100%;}
-    .contact textarea{resize:vertical;min-height:120px;}
-    .contact button{background:#fff;color:var(--primary);border:none;padding:.75rem;border-radius:.4rem;font-weight:bold;cursor:pointer;}
-    footer{background:#0F172A;color:#fff;padding:2rem 0;text-align:center;font-size:.9rem;}
-    @media(max-width:768px){
-      .nav ul{display:none;}
-      .nav .menu{display:block;cursor:pointer;}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INFLUWEB | Estamos renovando nuestra web</title>
+<meta name="description" content="INFLUWEB está renovando su web. Escríbenos a info@influweb.es.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#f8fafc;color:#0f172a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}
+main{max-width:520px}h1{font-size:clamp(1.8rem,5vw,2.6rem);margin:0 0 12px;color:#2563eb}p{font-size:1.1rem;line-height:1.6;margin:0 0 20px;color:#334155}
+a{display:inline-block;padding:14px 24px;border-radius:10px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}a:focus-visible{outline:3px solid #0f172a;outline-offset:3px}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">INFLUWEB</div>
-      <div class="menu" onclick="toggleMenu()" style="display:none;color:#fff;font-size:1.5rem;">&#9776;</div>
-      <ul>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Potenciamos tu presencia digital</h1>
-      <p>Marketing en redes, contenidos, diseño y desarrollo web a medida.</p>
-      <a href="#contact" class="btn">Empieza ahora</a>
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="services">
-        <div class="service">
-          <i>📱</i>
-          <h3>Gestión de Redes Sociales</h3>
-          <p>Creación y publicación de contenido que genera comunidad y leads.</p>
-        </div>
-        <div class="service">
-          <i>✍️</i>
-          <h3>Copywriting y SEO</h3>
-          <p>Textos persuasivos optimizados para buscadores y conversiones.</p>
-        </div>
-        <div class="service">
-          <i>🎨</i>
-          <h3>Diseño Gráfico</h3>
-          <p>Identidad visual moderna y piezas publicitarias de alto impacto.</p>
-        </div>
-        <div class="service">
-          <i>💻</i>
-          <h3>Desarrollo Web</h3>
-          <p>Landing pages y sitios responsive, rápidos y SEO‑friendly.</p>
-        </div>
-        <div class="service">
-          <i>📈</i>
-          <h3>Publicidad Online</h3>
-          <p>Campañas en Google Ads, Meta Ads y otras plataformas con ROI medible.</p>
-        </div>
-        <div class="service">
-          <i>⚙️</i>
-          <h3>Automatización y Funnels</h3>
-          <p>Implementación de automatizaciones que convierten leads en clientes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contacta con nosotros</h2>
-      <form action="/contact" method="post">
-        <input type="text" name="name" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-        <textarea name="message" placeholder="¿En qué podemos ayudarte?" required></textarea>
-        <button type="submit" class="btn">Enviar mensaje</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 INFLUWEB</p>
-      <p>Email: <a href="mailto:info@influweb.es">info@influweb.es</a></p>
-    </div>
-  </footer>
-
-  <script>
-    // Simple responsive menu toggle (optional)
-    function toggleMenu(){
-      const ul=document.querySelector('header ul');
-      ul.style.display=ul.style.display==='flex'?'none':'flex';
-    }
-  </script>
+<main>
+<h1>Estamos renovando nuestra web</h1>
+<p>Muy pronto volveremos con una web nueva. Mientras tanto, puedes escribirnos.</p>
+<a href="mailto:info@influweb.es">info@influweb.es</a>
+</main>
 </body>
 </html>
