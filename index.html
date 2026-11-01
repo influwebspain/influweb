@@ -1,23 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INFLUWEB | Estamos renovando nuestra web</title>
-<meta name="description" content="INFLUWEB está renovando su web. Escríbenos a info@influweb.es.">
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3C/svg%3E">
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#f8fafc;color:#0f172a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}
-main{max-width:520px}h1{font-size:clamp(1.8rem,5vw,2.6rem);margin:0 0 12px;color:#2563eb}p{font-size:1.1rem;line-height:1.6;margin:0 0 20px;color:#334155}
-a{display:inline-block;padding:14px 24px;border-radius:10px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}a:focus-visible{outline:3px solid #0f172a;outline-offset:3px}
-</style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing digital premium – Estrategias a medida | INFLUWEB</title>
+  <meta name="description" content="INFLUWEB potencia tu negocio con soluciones de marketing online modernas y profesionales. Descubre nuestra propuesta de valor, servicios integrales y el proceso que nos convierte en tu aliado estratégico." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marketing digital premium – Estrategias a medida | INFLUWEB" />
+  <meta property="og:description" content="INFLUWEB potencia tu negocio con soluciones de marketing online modernas y profesionales. Descubre nuestra propuesta de valor, servicios integrales y el proceso que nos convierte en tu aliado estratégico." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://influweb.es/" />
+  <meta property="og:image" content="https://influweb.es/assets/og-image.jpg" />
+  <!-- Inline SVG favicon (primary colour) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%222563EB%22/></svg>" type="image/svg+xml" />
+  <!-- JSON‑LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INFLUWEB",
+    "url": "https://influweb.es",
+    "logo": "https://influweb.es/logo.svg",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "[DATO – Teléfono]",
+      "email": "[DATO – Email]",
+      "contactType": "customer service"
+    }]
+  }
+  </script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2563EB;
+      --bg: #f9fafb;
+      --text: #111827;
+      --radius: .5rem;
+      --spacing: 1rem;
+      --max-width: 1200px;
+    }
+    *, *::before, *::after {box-sizing: border-box;}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a {color: var(--primary); text-decoration: none;}
+    a:hover, a:focus {text-decoration: underline;}
+    img {max-width: 100%; height: auto; display: block;}
+    .container {width: 90%; max-width: var(--max-width); margin: 0 auto;}
+    header, main, footer {padding: var(--spacing) 0;}
+    h1, h2, h3 {margin: 0 0 .5rem; line-height: 1.2;}
+    h1 {font-size: 2rem; font-weight: 700;}
+    h2 {font-size: 1.5rem; font-weight: 600;}
+    button, .btn {
+      display: inline-block;
+      padding: .75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--primary);
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button:hover, .btn:hover {background: #1e4bb8;}
+    .hero {background: linear-gradient(135deg, var(--primary), #1e40af);
+      color: #fff; text-align: center; padding: 4rem var(--spacing);
+    }
+    .hero h1 {font-size: 2.5rem; margin-bottom: .5rem;}
+    .hero p {font-size: 1.125rem; margin-bottom: 1.5rem;}
+    .section {padding: 3rem var(--spacing);}
+    .section:nth-child(even) {background: #fff;}
+    .cta-section {text-align: center; background: var(--primary); color: #fff; padding: 2.5rem var(--spacing);}
+    .cta-section a {color: #fff;}
+    .faq dl {margin: 0;}
+    .faq dt {font-weight: 600; margin-top: 1rem;}
+    .faq dd {margin: .25rem 0 0;}
+    footer {font-size: .875rem; background: #e5e7eb; color: #4b5563; text-align: center; padding: 2rem var(--spacing);}
+    @media (min-width: 768px) {
+      h1 {font-size: 3rem;}
+      .hero h1 {font-size: 3.5rem;}
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {animation-duration: 0.001ms !important; transition-duration: 0.001ms !important;}
+    }
+  </style>
 </head>
 <body>
-<main>
-<h1>Estamos renovando nuestra web</h1>
-<p>Muy pronto volveremos con una web nueva. Mientras tanto, puedes escribirnos.</p>
-<a href="mailto:info@influweb.es">info@influweb.es</a>
-</main>
+  <header class="hero">
+    <div class="container">
+      <h1>Transformamos tu presencia digital con estrategia y creatividad</h1>
+      <p>En INFLUWEB combinamos la experiencia de un equipo multidisciplinar con un enfoque data‑driven para ofrecerte resultados medibles y diferenciadores.</p>
+      <a href="#contacto" class="btn">Solicita una consultoría gratuita</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="propuesta-valor" class="section container">
+      <h2>Propuesta de valor</h2>
+      <p>En INFLUWEB combinamos la experiencia de un equipo multidisciplinar con un enfoque data‑driven para ofrecerte resultados medibles y diferenciadores. Nuestra misión: <strong>convertir cada interacción en oportunidad de negocio</strong>, siempre con la calidad que exige el mercado premium.</p>
+    </section>
+
+    <section id="servicios-resumen" class="section container">
+      <h2>Servicios a tu medida</h2>
+      <p>Diseñamos y ejecutamos campañas de <em>redes sociales, contenido, diseño gráfico, desarrollo web y publicidad online</em> que se adaptan a tus objetivos y a tu audiencia. Cada proyecto incluye un plan de acción personalizado y la entrega de métricas claras.</p>
+    </section>
+
+    <section id="diferenciacion" class="section container">
+      <h2>¿Por qué elegir INFLUWEB?</h2>
+      <ul>
+        <li>🔵 <strong>Especialización premium:</strong> trabajamos para marcas que buscan excelencia.</li>
+        <li>⚡ <strong>Metodología probada:</strong> descubrimiento → estrategia → ejecución → optimización → reporting.</li>
+        <li>🧩 <strong>Solución integral:</strong> cubrimos todo el ecosistema digital sin depender de terceros.</li>
+      </ul>
+    </section>
+
+    <section id="cta" class="cta-section">
+      <h2>Comienza ahora</h2>
+      <p>Solicita una <a href="#contacto" class="btn">consultoría gratuita</a> y descubre cómo podemos impulsar tu crecimiento.</p>
+    </section>
+
+    <section id="faq-home" class="section container faq">
+      <h2>Preguntas frecuentes</h2>
+      <dl>
+        <dt>¿Qué diferencia a INFLUWEB de otras agencias?</dt>
+        <dd>Nuestro enfoque premium combina creatividad, tecnología y análisis continuo para maximizar el ROI.</dd>
+        <dt>¿Trabajáis con empresas de cualquier sector?</dt>
+        <dd>Sí. Tenemos experiencia en B2B, B2C, e‑commerce y marcas de lujo.</dd>
+        <dt>¿Cuánto tarda el primer informe?</dt>
+        <dd>Entregamos un reporte de resultados preliminares a los 30 días de la puesta en marcha.</dd>
+      </dl>
+    </section>
+
+    <section id="contacto" class="section container">
+      <h2>Contacto</h2>
+      <p><strong>Teléfono:</strong> [DATO – Teléfono]<br>
+      <strong>Email:</strong> [DATO – Email]<br>
+      <strong>Dirección:</strong> [DATO – Dirección completa]</p>
+      <p>Rellena los campos y nos pondremos en contacto en 24 horas.</p>
+      <!-- Formulario pendiente de implementación -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 INFLUWEB – Todos los derechos reservados.</p>
+      <p><a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a> | <a href="#">Política de cookies</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
 </body>
 </html>
