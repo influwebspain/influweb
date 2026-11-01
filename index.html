@@ -1,18 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INFLUWEB</title>
-<meta name="description" content="Web en renovación. Próximamente.">
-<meta name="robots" content="noindex">
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:48px;background:#f8fafc;color:#0f172a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}h1{font-size:clamp(2rem,6vw,2.8rem);margin:0 0 12px;color:#2563eb}p{font-size:1.1rem;line-height:1.6;margin:0 0 20px;color:#334155}a{display:inline-block;padding:14px 24px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:600}a:focus-visible{outline:3px solid #0f172a;outline-offset:3px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFLUWEB – Automatización con IA para Pymes y Autónomos</title>
+    <meta name="description" content="Automatiza citas, recordatorios, reseñas y seguimiento con IA. Soluciones para clínicas dentales, fisioterapeutas y autónomos.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>INFLUWEB</h1>
-<p>Web en renovación. Próximamente.</p>
-<a href="mailto:info@influweb.es">info@influweb.es</a>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <h1>Automatiza tu negocio con IA</h1>
+            <p>Gestionamos citas, recordatorios, reseñas y seguimiento de clientes para que te dediques a lo que mejor sabes hacer.</p>
+            <a href="#contacto" class="cta-btn">Quiero saber más</a>
+        </div>
+    </section>
+
+    <!-- Qué hacemos -->
+    <section id="que-hacemos">
+        <div class="container">
+            <h2>¿Qué hacemos?</h2>
+            <p>Implementamos sistemas de automatización basados en inteligencia artificial que reducen tareas repetitivas, mejoran la relación con tus pacientes o clientes y aumentan la visibilidad online.</p>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Citas y recordatorios</h3>
+                    <p>Agenda y envía recordatorios automáticos por email o SMS.</p>
+                </div>
+                <div class="card">
+                    <h3>Gestión de reseñas</h3>
+                    <p>Pide y publica reseñas en tiempo real para mejorar tu reputación.</p>
+                </div>
+                <div class="card">
+                    <h3>Seguimiento post‑cita</h3>
+                    <p>Contacta a tus pacientes después de la visita y detecta oportunidades de mejora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para quién -->
+    <section id="para-quien" style="background:#fff;">
+        <div class="container">
+            <h2>¿A quién va dirigido?</h2>
+            <p>Soluciones diseñadas para pequeños negocios y profesionales independientes que buscan ganar tiempo y clientes.</p>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Clínicas dentales</h3>
+                    <p>Control total de citas, recordatorios y gestión de valoraciones.</p>
+                </div>
+                <div class="card">
+                    <h3>Fisioterapeutas</h3>
+                    <p>Automatiza recordatorios, historiales de pacientes y seguimiento.</p>
+                </div>
+                <div class="card">
+                    <h3>Autónomos</h3>
+                    <p>Gestión de leads, citas y feedback sin complicaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>1. Diagnóstico</h3>
+                    <p>Analizamos tu flujo de trabajo y definimos los puntos de automatización.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Configuración IA</h3>
+                    <p>Instalamos herramientas de IA que gestionan citas, recordatorios y reseñas.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Integración</h3>
+                    <p>Conectamos con tu calendario, CRM y plataformas de mensajería.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Puesta en marcha</h3>
+                    <p>Lanzamos la solución y monitorizamos los resultados para optimizar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios destacados -->
+    <section id="servicios" style="background:#fff;">
+        <div class="container">
+            <h2>Automatizaciones destacadas</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Recordatorios automáticos</h3>
+                    <p>SMS y email con IA que evitan ausencias y mejoran la puntualidad.</p>
+                </div>
+                <div class="card">
+                    <h3>Solicitar reseñas</h3>
+                    <p>Envío de peticiones de reseñas justo después de la visita, con respuesta automática.</p>
+                </div>
+                <div class="card">
+                    <h3>Follow‑up inteligente</h3>
+                    <p>Mensajes personalizados que fomentan la fidelización y la recomendación.</p>
+                </div>
+                <div class="card">
+                    <h3>Análisis de datos</h3>
+                    <p>Reportes semanales con IA sobre citas, ausencias y satisfacción del cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section id="cta-final" style="background:#2563EB; color:#fff;">
+        <div class="container" style="text-align:center;">
+            <h2>¿Listo para crecer con IA?</h2>
+            <p>Deja tus datos y empezamos a automatizar tu negocio.</p>
+            <a href="#contacto" class="cta-btn" style="background:#fff; color:#2563EB;">Solicita tu diagnóstico gratuito</a>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" style="background:#fff;">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="mailto:info@influweb.es" method="post" enctype="text/plain">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+                <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Información de contacto -->
+    <section id="info-contacto" style="background:#e5e7eb;">
+        <div class="container">
+            <h2>Datos de contacto</h2>
+            <p>Teléfono: <a href="tel:+34611546147">711 546 147</a></p>
+            <p>Email: <a href="mailto:info@influweb.es">info@influweb.es</a></p>
+            <p>Dirección: Manuela Estelles 97, Valencia</p>
+        </div>
+    </section>
+
+    <!-- Testimonios (comentado) -->
+    <!--
+    <section id="testimonios">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="grid grid-3">
+                <!-- Aquí irán los testimonios del cliente -->
+            </div>
+        </div>
+    </section>
+    -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 INFLUWEB – Todos los derechos reservados.</p>
+            <p><a href="https://influweb.es">influweb.es</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
