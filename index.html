@@ -1,195 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INFLUWEB – Automatización con IA para tu negocio</title>
-    <meta name="description" content="Descubre cómo INFLUWEB potencia tu clínica dental, fisioterapia o negocio independiente con automatización basada en IA. Solicita una demo y transforma tu gestión." />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-    <!-- JSON‑LD FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué procesos pueden automatizarse con INFLUWEB?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Podemos automatizar la captación de clientes, gestión de citas, recordatorios, seguimiento post‑consulta y la generación de contenidos para redes sociales." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es necesario saber programar para usar la plataforma?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. La herramienta está diseñada para ser usada sin conocimientos técnicos, con interfaces visuales y asistentes guiados por IA." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué diferencia a INFLUWEB de otras agencias?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Combinamos experiencia en marketing digital con automatización IA, ofreciendo soluciones rápidas, medibles y personalizadas para cada sector." }
-        }
-      ]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INFLUWEB – Agencia de Marketing Digital</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <h1>Automatiza tu negocio con IA y gana tiempo</h1>
-            <p>INFLUWEB implementa soluciones de IA que gestionan citas, captan pacientes y generan contenido, sin que necesites programar.</p>
-            <div class="buttons">
-                <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
-                <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
-            </div>
+  <!-- Header / Nav -->
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#" class="logo"><span>INFLUWEB</span></a>
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú">
+        <!-- Hamburger icon -->
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <p class="text-label">Marketing Digital</p>
+      <h1 class="h1 reveal">Potencia tu negocio con automatizaciones inteligentes</h1>
+      <p class="body-text reveal">En INFLUWEB diseñamos flujos que ahorran tiempo, aumentan ventas y mejoran la experiencia de tus clientes.</p>
+      <div class="hero-ctas">
+        <a href="#servicios" class="btn btn-primary">Ver servicios</a>
+        <a href="#contacto" class="btn btn-secondary">Solicitar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué automatizamos -->
+  <section class="section" id="automatizamos">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="text-label">Qué automatizamos</p>
+        <h2 class="h2">Herramientas que trabajan por ti</h2>
+        <p class="body-text">Integramos tus plataformas favoritas y creamos procesos sin fricción.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="card-icon">
+            <!-- Icon: Email automation -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3 class="card-title">Email Marketing</h3>
+          <p class="card-description">Campañas segmentadas, automatizaciones de respuesta y seguimiento.</p>
         </div>
-    </section>
-
-    <!-- QUÉ AUTOMATIZAMOS -->
-    <section class="container" id="que-automatizamos">
-        <h2 class="text-center">¿Qué automatizamos?</h2>
-        <div class="grid grid-3 mt-4">
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 4a28 28 0 1 0 28 28A28.032 28.032 0 0 0 32 4Zm0 52a24 24 0 1 1 24-24 24.027 24.027 0 0 1-24 24Z"/></svg>
-                <h3>Citas y recordatorios</h3>
-                <p>Gestión automática de agenda, recordatorios por SMS y correo, y reprogramación inteligente.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M12 8h40v48H12z" fill="none" stroke="currentColor" stroke-width="4"/></svg>
-                <h3>Captación de clientes</h3>
-                <p>Chatbots IA en tu web y redes que convierten visitas en leads calificados.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M8 48h48v4H8zm0-12h48v4H8zm0-12h48v4H8z"/></svg>
-                <h3>Content Marketing</h3>
-                <p>Generación automática de publicaciones, newsletters y anuncios adaptados a tu sector.</p>
-            </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <!-- Icon: Chatbot -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="card-title">Chatbots IA</h3>
+          <p class="card-description">Atención 24/7, generación de leads y soporte inmediato.</p>
         </div>
-    </section>
-
-    <!-- PARA QUIÉN -->
-    <section class="container" id="para-quien">
-        <h2 class="text-center">¿Para quién es INFLUWEB?</h2>
-        <div class="grid grid-3 mt-4">
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="4" fill="none"/><path d="M12 52c0-11 20-11 20-11s20 0 20 11v4H12z" fill="none" stroke="currentColor" stroke-width="4"/></svg>
-                <h3>Clínicas dentales</h3>
-                <p>Automatiza reservas, recordatorios y campañas de fidelización para pacientes.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M20 12h24v40H20z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M12 48h40v4H12z" fill="none" stroke="currentColor" stroke-width="4"/></svg>
-                <h3>Fisioterapeutas</h3>
-                <p>Gestión de sesiones, envío de ejercicios personalizados y seguimiento de resultados.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M12 12h40v40H12z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 22v20" stroke="currentColor" stroke-width="4"/></svg>
-                <h3>Autónomos y pymes</h3>
-                <p>Optimiza procesos administrativos, crea contenidos y potencia tu presencia online.</p>
-            </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <!-- Icon: Social posting -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="card-title">Gestión de Redes</h3>
+          <p class="card-description">Publicaciones programadas, análisis de resultados y optimización.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section class="container" id="como-funciona">
-        <h2 class="text-center">¿Cómo funciona?</h2>
-        <div class="steps mt-8">
-            <div class="step">
-                <div class="step-number">1</div>
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 8l24 48H8z" fill="none" stroke="currentColor" stroke-width="4"/></svg>
-                <h4>Análisis de necesidades</h4>
-                <p>Entendemos tu negocio y definimos los procesos que pueden ser automatizados.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="4"/></svg>
-                <h4>Implementación con IA</h4>
-                <p>Configuramos chatbots, recordatorios y generadores de contenido usando IA entrenada en tu sector.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M12 32h40" stroke="currentColor" stroke-width="4"/><path d="M32 12v40" stroke="currentColor" stroke-width="4"/></svg>
-                <h4>Optimización continua</h4>
-                <p>Monitoreamos resultados y ajustamos la IA para mejorar la conversión y eficiencia.</p>
-            </div>
+  <!-- Para quién -->
+  <section class="section" id="audiencia">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="text-label">Para quién</p>
+        <h2 class="h2">Soluciones a medida</h2>
+        <p class="body-text">Desde clínicas dentales hasta autónomos, adaptamos la tecnología a tu sector.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card audience-card reveal">
+          <div class="card-icon">
+            <!-- Icon: Dental clinic -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7v3a5 5 0 0 0 5 5h4a5 5 0 0 0 5-5V9a7 7 0 0 0-7-7z"/></svg>
+          </div>
+          <h3 class="card-title">Clínicas Dentales</h3>
+          <p class="card-description">Recordatorios de citas, gestión de pacientes y campañas de fidelización.</p>
         </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section class="container" id="servicios">
-        <h2 class="text-center">Servicios</h2>
-        <ul class="mt-4" style="list-style: disc inside; max-width: 800px; margin:auto; font-size:1rem; line-height:1.6; color:var(--color-muted);">
-            <li>Automatización de agenda y recordatorios.</li>
-            <li>Chatbots IA para captación de leads.</li>
-            <li>Generación automática de contenido para redes y newsletters.</li>
-            <li>Gestión de campañas publicitarias con optimización IA.</li>
-            <li>Analytics y reporting en tiempo real.</li>
-            <li>Soporte y entrenamiento personalizado.</li>
-        </ul>
-    </section>
-
-    <!-- TESTIMONIOS (comentado) -->
-    <!--
-    <section class="container" id="testimonios">
-        <h2 class="text-center">Testimonios</h2>
-        <div class="grid grid-3 mt-4">
-            <div class="card">
-                <p>""</p>
-                <p><strong>- </strong></p>
-            </div>
+        <div class="card audience-card reveal">
+          <div class="card-icon">
+            <!-- Icon: Physiotherapy -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M12 3v18"/></svg>
+          </div>
+          <h3 class="card-title">Fisioterapeutas</h3>
+          <p class="card-description">Agendamiento online, seguimiento de tratamientos y contenido educativo.</p>
         </div>
-    </section>
-    -->
+        <div class="card audience-card reveal">
+          <div class="card-icon">
+            <!-- Icon: Small business -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/></svg>
+          </div>
+          <h3 class="card-title">Autónomos & PYMES</h3>
+          <p class="card-description">Automatiza cotizaciones, facturación y marketing multicanal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- FORMULARIO DE CONTACTO -->
-    <section class="container" id="contacto">
-        <h2 class="text-center">¿Listo para transformar tu negocio?</h2>
-        <form action="mailto:info@influweb.es" method="post" enctype="text/plain" class="mt-8">
-            <div class="field">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required />
-            </div>
-            <div class="field">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-            <div class="field">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" required />
-            </div>
-            <div class="field">
-                <label for="tipo">Tipo de negocio</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="">Selecciona...</option>
-                    <option>Dental</option>
-                    <option>Fisioterapia</option>
-                    <option>Autónomo / PyME</option>
-                    <option>Otro</option>
-                </select>
-            </div>
-            <div class="field">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-            </div>
-            <button type="submit">Enviar información</button>
+  <!-- Cómo funciona -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="text-label">Cómo funciona</p>
+        <h2 class="h2">Tu proyecto en 4 pasos</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step reveal">
+          <div class="step-number">1</div>
+          <h3 class="h3">Diagnóstico</h3>
+          <p>Analizamos tus procesos y definimos oportunidades de automatización.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">2</div>
+          <h3 class="h3">Diseño</h3>
+          <p>Creación de flujos a medida, selección de herramientas y diseño visual.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">3</div>
+          <h3 class="h3">Implementación</h3>
+          <p>Configuración, integración y pruebas para asegurar el correcto funcionamiento.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">4</div>
+          <h3 class="h3">Optimización</h3>
+          <p>Monitorización continua y ajustes para maximizar resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios destacados -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="text-label">Servicios</p>
+        <h2 class="h2">Automatizaciones destacadas</h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item reveal">
+          <div class="service-icon">
+            <!-- Icon: Lead funnel -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8v8H8z"/></svg>
+          </div>
+          <div class="service-content">
+            <h4>Funnel de Captura</h4>
+            <p>Landing, formularios y secuencias de email para convertir visitantes en clientes.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-icon">
+            <!-- Icon: Calendar sync -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="service-content">
+            <h4>Sincronización de Calendarios</h4>
+            <p>Automatiza recordatorios, reservas y evita solapamientos de citas.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <div class="service-icon">
+            <!-- Icon: CRM integration -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>
+          </div>
+          <div class="service-content">
+            <h4>Integración CRM</h4>
+            <p>Conecta leads, clientes y ventas en una única base de datos automatizada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final + Formulario -->
+  <section class="section cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-wrapper">
+        <div class="reveal">
+          <h2 class="h2">¿Listo para transformar tu negocio?</h2>
+          <p class="body-text">Déjanos tus datos y te contactaremos en menos de 24h.</p>
+        </div>
+        <form action="mailto:info@influweb.es" method="post" enctype="text/plain" class="reveal">
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+34 600 000 000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Cuéntanos tu proyecto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA FINAL -->
-    <section class="cta-final" id="cta-final">
-        <div class="container">
-            <h2>Impulsa tu crecimiento con IA hoy mismo</h2>
-            <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">INFLUWEB</div>
+          <p>Agencia de marketing online especializada en automatizaciones y contenidos digitales.</p>
         </div>
-    </section>
+        <div>
+          <h4>Enlaces útiles</h4>
+          <nav class="footer-links" aria-label="Enlaces del sitio">
+            <a href="#" class="footer-link">Inicio</a>
+            <a href="#servicios" class="footer-link">Servicios</a>
+            <a href="#contacto" class="footer-link">Contacto</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2v6a4 4 0 0 1-4 4h-6"/><path d="M2 22l5-5"/><path d="M2 22h6a4 4 0 0 0 4-4v-6"/></svg>
+            <span>711 546 147</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2v6a4 4 0 0 1-4 4h-6"/></svg>
+            <span>info@influweb.es</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8 15c.5 1.5 2 3 2 3s1-.5 2-2c1.5 1 3.5 1 5 0 1 1.5 2 2 2 2s1.5-1.5 2-3a10 10 0 0 0-8-15z"/></svg>
+            <span>Manuela Estelles 97, Valencia</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 INFLUWEB. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>© 2026 INFLUWEB. Todos los derechos reservados.</p>
-            <p>Tel: <a href="tel:+34611546147">711 546 147</a> | Email: <a href="mailto:info@influweb.es">info@influweb.es</a></p>
-            <p>Dirección: Manuela Estelles 97, 46022 Valencia</p>
-        </div>
-    </footer>
+  <!-- Testimonios (comentado) -->
+  <!--
+  <section class="section" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <p class="text-label">Testimonios</p>
+        <h2 class="h2">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="grid grid-2">
+        <!-- Aquí se insertarán tarjetas de testimonios -->
+      </div>
+    </div>
+  </section>
+  -->
+
+  <script src="script.js"></script>
 </body>
 </html>
