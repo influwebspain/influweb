@@ -1,80 +1,120 @@
 /* =========================================
-   INFLUWEB - LANDING PREMIUM SCRIPTS
-   Autor: Diego (Diseño web)
+   INFLUWEB - Landing Page Scripts
    ========================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Mobile Menu Toggle ---
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-  // --- SCROLL REVEAL (Intersection Observer, sin librerías) ---
-  const revealElements = document.querySelectorAll('.reveal');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const spans = menuToggle.querySelectorAll('span');
+      if (mobileMenu.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      });
+    });
+  }
+
+  // --- Scroll Animations (Intersection Observer) ---
+  const fadeElements = document.querySelectorAll('.fade-up');
   
   if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // Solo animar una vez
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    fadeElements.forEach(el => observer.observe(el));
   } else {
-    // Fallback para navegadores muy antiguos
-    revealElements.forEach(el => el.classList.add('is-visible'));
+    // Fallback for older browsers
+    fadeElements.forEach(el => el.classList.add('visible'));
   }
 
-  // --- HEADER STICKY CON SOMBRA AL HACER SCROLL ---
+  // --- Header Background on Scroll ---
   const header = document.querySelector('.header');
-  if (header) {
-    const handleHeaderScroll = () => {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    };
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-    handleHeaderScroll(); // Estado inicial
-  }
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
 
-  // --- MENÚ MÓVIL (Hamburger) ---
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // --- Contact Form Handling ---
+  const contactForm = document.getElementById('contact-form');
+  const formSuccess = document.getElementById('form-success');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      navMenu.classList.toggle('is-open');
-      document.body.classList.toggle('menu-open'); // Prevenir scroll del body
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('is-open');
-        document.body.classList.remove('menu-open');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Basic validation visual feedback
+      const inputs = contactForm.querySelectorAll('input, textarea');
+      let isValid = true;
+      
+      inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          input.style.borderColor = '#EF4444';
+          isValid = false;
+        } else {
+          input.style.borderColor = '';
+        }
       });
+
+      if (isValid) {
+        // Simulate submission
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 1200);
+      }
     });
   }
 
-  // --- SCROLL SUAVE PARA ENLACES INTERNOS ---
+  // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
       
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
         e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         
         window.scrollTo({
           top: targetPosition,
@@ -83,37 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // --- VALIDACIÓN BÁSICA DE FORMULARIO ---
-  const form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      const inputs = form.querySelectorAll('input[required], textarea[required]');
-      let isValid = true;
-
-      inputs.forEach(input => {
-        // Limpiar estados previos
-        input.style.borderColor = '';
-        
-        if (!input.value.trim()) {
-          isValid = false;
-          input.style.borderColor = '#EF4444'; // Rojo de error temporal
-          
-          // Quitar el borde rojo al interactuar
-          input.addEventListener('input', function handler() {
-            this.style.borderColor = '';
-            this.removeEventListener('input', handler);
-          });
-        }
-      });
-
-      if (!isValid) {
-        e.preventDefault();
-        // Opcional: enfocar el primer campo inválido
-        const firstInvalid = form.querySelector('input[required]:invalid, textarea[required]:invalid, input[style*="border-color"]');
-        if (firstInvalid) firstInvalid.focus();
-      }
-    });
-  }
-
 });
