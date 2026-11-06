@@ -3,234 +3,540 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INFLUWEB — Automatización y marketing digital</title>
-  <meta name="description" content="Automatizo procesos y construyo webs para clínicas, fisioterapeutas y pymes. Sin relleno, con resultados medibles.">
+  <title>INFLUWEB | Automatización y marketing para negocios reales</title>
+  <meta name="description" content="En INFLUWEB construyo sistemas que te ahorran horas. Webs rápidas, automatizaciones claras y contenido que convierte para clínicas dentales, fisioterapia y autónomos.">
+  <link rel="canonical" href="https://influweb.es/">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,750&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema LD-JSON FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo se tarda en montar una automatización?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del proceso. Un flujo básico de captación y recordatorios puede estar funcionando en menos de una semana. Primero analizo lo que haces a mano y luego lo traduzco a sistema."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito saber de tecnología para trabajar contigo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Tú me explicas cómo funciona tu negocio y qué te quita tiempo. Yo me encargo de la parte técnica, los flujos y las herramientas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Trabajas con cualquier tipo de negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Me centro en clínicas dentales, centros de fisioterapia y profesionales autónomos. Son perfiles donde una hora ahorrada al día cambia por completo la rentabilidad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye exactamente tu trabajo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Diseño web, configuración de automatizaciones, redacción de textos orientados a conversión y gestión de campañas. Todo medible y sin relleno."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <a href="#" class="logo">INFLUWEB</a>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  <!-- ====================================================================
+       NAVBAR
+       ==================================================================== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="INFLUWEB - Inicio">
+        INFLU<span>WEB</span>
+      </a>
+      
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proceso">Proceso</a></li>
-        <li><a href="#para-quien">Para quién</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacto" class="btn btn-primary btn-sm">Hablemos</a></li>
-      </ul>
+
+      <div class="nav-links" id="nav-menu">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#sobre-nosotros">Sobre mí</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto" class="btn btn-primary nav-cta">Hablamos</a>
+      </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero section">
-    <div class="container hero-grid">
-      <div class="hero-content reveal">
-        <span class="section-label">Automatización y web</span>
-        <h1>Dejo de perder tiempo en tareas que puede hacer una máquina.</h1>
-        <p class="lead">Diseño webs rápidas y automatizo procesos para que tú te centres en tu negocio. Sin humo, sin plantillas genéricas.</p>
-        <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-primary">Quiero automatizar</a>
-          <a href="#proceso" class="btn btn-outline">Ver cómo trabajo</a>
+  <main>
+    <!-- ====================================================================
+         HERO
+         ==================================================================== -->
+    <section class="hero section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Columna Izquierda: Copy -->
+          <div class="hero-content reveal">
+            <span class="section-label">Marketing y automatización</span>
+            <h1>Dejo tu negocio en piloto automático mientras tú atiendes.</h1>
+            <p class="lead">Diseño webs, escribo textos que venden y conecto tus herramientas para que no pierdas ni un minuto más en tareas repetitivas.</p>
+            
+            <div class="hero-buttons">
+              <a href="#contacto" class="btn btn-primary">Quiero automatizar mi negocio</a>
+              <a href="#proceso" class="btn btn-outline">Cómo trabajo</a>
+            </div>
+
+            <div class="hero-guarantees">
+              <div class="guarantee-item">
+                <svg class="icon icon-sm icon-accent" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Sin permanencias</span>
+              </div>
+              <div class="guarantee-item">
+                <svg class="icon icon-sm icon-accent" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Resultados en días</span>
+              </div>
+              <div class="guarantee-item">
+                <svg class="icon icon-sm icon-accent" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Comunicación directa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Tarjeta Flujo -->
+          <div class="hero-card reveal reveal-delay-2">
+            <div class="hero-card-header">
+              <span class="hero-card-title">Flujo automatizado</span>
+              <span class="badge-example">Ejemplo ilustrativo</span>
+            </div>
+
+            <div class="flow-rows">
+              <div class="flow-row">
+                <span class="flow-action">
+                  <svg class="icon icon-sm icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  Lead entra por la web
+                </span>
+                <span class="flow-time">0s</span>
+              </div>
+              <div class="flow-row">
+                <span class="flow-action">
+                  <svg class="icon icon-sm icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+                  Registro en CRM y ficha creada
+                </span>
+                <span class="flow-time">2s</span>
+              </div>
+              <div class="flow-row">
+                <span class="flow-action">
+                  <svg class="icon icon-sm icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="1" fill="currentColor" stroke="none"/></svg>
+                  Cita agendada automáticamente
+                </span>
+                <span class="flow-time">4s</span>
+              </div>
+              <div class="flow-row">
+                <span class="flow-action">
+                  <svg class="icon icon-sm icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><line x1="12" y1="2" x2="12" y2="4"/></svg>
+                  WhatsApp + Email de confirmación
+                </span>
+                <span class="flow-time">8s</span>
+              </div>
+            </div>
+
+            <div class="comparison-box">
+              <div class="comparison-item">
+                <span class="comparison-label">A mano</span>
+                <span class="comparison-value manual">3 h 10 min</span>
+              </div>
+              <div class="comparison-item">
+                <span class="comparison-label">Automatizado</span>
+                <span class="comparison-value auto">8 segundos</span>
+              </div>
+            </div>
+            <p style="font-size: 0.7rem; color: var(--color-text-muted); margin-top: 16px; text-align: center;">* Este es un ejemplo ilustrativo de un flujo teórico, no un resultado garantizado de un cliente.</p>
+          </div>
+
         </div>
-        <ul class="guarantees">
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin permanencia</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Entregas en días, no meses</li>
-          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Código limpio y tuyo</li>
-        </ul>
       </div>
-      <div class="hero-card-wrapper reveal">
-        <div class="flow-card surface-2 border radius-lg">
-          <h3 class="flow-title">Flujo: pedidos → facturas</h3>
-          <div class="flow-row"><span class="flow-action">Nuevo pedido recibido</span><span class="flow-time mono">00:00</span></div>
-          <div class="flow-row"><span class="flow-action">Generar factura PDF</span><span class="flow-time mono">00:02</span></div>
-          <div class="flow-row"><span class="flow-action">Enviar por email al cliente</span><span class="flow-time mono">00:05</span></div>
-          <div class="flow-row"><span class="flow-action">Registrar en hoja de cálculo</span><span class="flow-time mono">00:08</span></div>
-          <div class="flow-compare">
-            <div class="compare-item"><span class="text-muted">A mano</span><span class="mono compare-old">3 h 10 min</span></div>
-            <div class="compare-item"><span class="text-accent">Automatizado</span><span class="mono compare-new">8 segundos</span></div>
+    </section>
+
+    <!-- ====================================================================
+         BENEFICIOS CON PRUEBA
+         ==================================================================== -->
+    <section class="section surface-1" id="beneficios">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Por qué hacerlo</span>
+          <h2>Menos tareas manuales. Más margen real.</h2>
+          <p class="lead" style="max-width: 640px;">Cada hora que pasas copiando datos o persiguiendo clientes es dinero que dejas sobre la mesa. Lo mido antes y después de tocar nada.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="card benefit-card reveal reveal-delay-1">
+            <div class="benefit-icon">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+            </div>
+            <h3>Detecto cuellos de botella</h3>
+            <p>Analizo dónde pierdes tiempo. Si tardas 40 minutos en confirmar citas, ahí está el primer fallo. Te lo muestro con números antes de proponer soluciones.</p>
+          </div>
+
+          <div class="card benefit-card reveal reveal-delay-2">
+            <div class="benefit-icon">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><line x1="7" y1="11" x2="17" y2="7"/><line x1="7" y1="13" x2="17" y2="17"/></svg>
+            </div>
+            <h3>Conecto lo que ya usas</h3>
+            <p>No te obligo a cambiar de software. Uno tu calendario, tu email y tu CRM para que hablen entre ellos sin que tú tengas que copiar y pegar nada.</p>
+          </div>
+
+          <div class="card benefit-card reveal reveal-delay-3">
+            <div class="benefit-icon">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
+            </div>
+            <h3>Mido el impacto</h3>
+            <p>Si un flujo te ahorra 15 horas al mes, lo vas a ver reflejado en pacientes atendidos o facturas cerradas. Nada de métricas de vanidad.</p>
           </div>
         </div>
-        <p class="disclaimer text-muted">Ejemplo ilustrativo, no un caso real.</p>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- BENEFICIOS -->
-  <section id="beneficios" class="section surface-1">
-    <div class="container reveal">
-      <span class="section-label">Beneficios</span>
-      <h2>Menos clics, más margen.</h2>
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <h3>Ahorro de tiempo</h3>
-          <p>Elimino las tareas repetitivas. El ejemplo del flujo pasa de 3 horas y 10 minutos a 8 segundos.</p>
+    <!-- ====================================================================
+         QUÉ CONSTRUYO Y QUÉ CONSIGUES
+         ==================================================================== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Qué hago</span>
+          <h2>Lo que construyo y lo que consigues.</h2>
+          <p class="lead" style="max-width: 600px;">No vendo paquetes genéricos. Hago piezas concretas que resuelven problemas concretos.</p>
         </div>
-        <div class="benefit-item">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h3>Cero errores humanos</h3>
-          <p>Las máquinas no se equivocan copiando datos de un sitio a otro. Tu contabilidad lo agradece.</p>
-        </div>
-        <div class="benefit-item">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          <h3>Escalabilidad real</h3>
-          <p>Si mañana tienes el doble de clientes, el sistema aguanta sin contratar a nadie más para picar datos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section">
-    <div class="container reveal">
-      <span class="section-label">Servicios</span>
-      <h2>Esto es lo que construyo y lo que consigue.</h2>
-      <div class="services-grid">
-        <article class="service-card surface-2 border radius-lg">
-          <h3>Landing pages rápidas</h3>
-          <p>Páginas de un solo archivo, sin WordPress ni constructores pesados. Cargan en menos de 1 segundo y convierten mejor.</p>
-        </article>
-        <article class="service-card surface-2 border radius-lg">
-          <h3>Automatización de procesos</h3>
-          <p>Conecto formularios, CRMs, emails y bases de datos. Lo que haces en 3 horas, el sistema lo hace en 8 segundos.</p>
-        </article>
-        <article class="service-card surface-2 border radius-lg">
-          <h3>Identidad visual y diseño</h3>
-          <p>Sistemas de diseño coherentes como este tema oscuro. Tipografía limpia, contraste accesible, cero adornos innecesarios.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section id="proceso" class="section surface-1">
-    <div class="container reveal">
-      <span class="section-label">Proceso</span>
-      <h2>4 pasos. Sin sorpresas.</h2>
-      <ol class="process-list">
-        <li class="process-step"><span class="step-num mono">01</span><div><h3>Auditoría rápida</h3><p>Miro qué haces a mano y cuánto tiempo pierdes. Te digo si merece la pena automatizarlo o no.</p></div></li>
-        <li class="process-step"><span class="step-num mono">02</span><div><h3>Propuesta cerrada</h3><p>Te doy un precio y un plazo. Nada de "ya veremos sobre la marcha".</p></div></li>
-        <li class="process-step"><span class="step-num mono">03</span><div><h3>Construcción</h3><p>Maqueto, programo y conecto. Te paso avances para que valides que vamos por buen camino.</p></div></li>
-        <li class="process-step"><span class="step-num mono">04</span><div><h3>Entrega y soporte</h3><p>Publicamos. Te explico cómo funciona todo y me quedo disponible para ajustes iniciales.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- PARA QUIÉN -->
-  <section id="para-quien" class="section">
-    <div class="container reveal">
-      <span class="section-label">Para quién</span>
-      <h2>Trabajo con quien necesita hechos, no promesas.</h2>
-      <div class="audience-grid">
-        <div class="audience-card surface-2 border radius-lg">
-          <h3>Clínicas dentales</h3>
-          <p>Recordatorios de citas automáticos, gestión de reseñas y webs que transmiten confianza antes de que el paciente llame.</p>
-        </div>
-        <div class="audience-card surface-2 border radius-lg">
-          <h3>Fisioterapeutas</h3>
-          <p>Formularios de primera visita que van directos a tu calendario. Menos llamadas perdidas, más tiempo en cabina.</p>
-        </div>
-        <div class="audience-card surface-2 border radius-lg">
-          <h3>Autónomos y pymes</h3>
-          <p>Facturación automática, landings para campañas y sistemas que te quitan el trabajo administrativo de encima.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE INFLUWEB -->
-  <section id="sobre" class="section surface-1">
-    <div class="container reveal about-grid">
-      <div>
-        <span class="section-label">Sobre INFLUWEB</span>
-        <h2>Hago webs y automatizaciones. Punto.</h2>
-        <p>Soy Diego, el equipo técnico detrás de INFLUWEB. No somos una agencia de 40 personas cobrando por reunirse. Trabajo directo, código limpio y sistemas que funcionan solos.</p>
-        <p>Nuestra oficina está en Valencia, pero trabajo con negocios de toda España. Si necesitas algo rápido, bien hecho y sin pagar de más por "nombre de agencia", estamos alineados.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="container reveal">
-      <span class="section-label">Preguntas frecuentes</span>
-      <h2>Dudas resueltas.</h2>
-      <div class="faq-list">
-        <details class="faq-item border radius-sm">
-          <summary>¿Cuánto tarda un proyecto?</summary>
-          <p>Una landing page suele estar lista en 5-7 días laborables. Una automatización compleja, entre 2 y 3 semanas. Te doy el plazo exacto antes de empezar.</p>
-        </details>
-        <details class="faq-item border radius-sm">
-          <summary>¿Tengo que pagar mantenimiento mensual?</summary>
-          <p>No obligatoriamente. Entrego el código y los accesos. Si quieres que yo lo mantenga, hay planes de soporte, pero no te ato con contratos.</p>
-        </details>
-        <details class="faq-item border radius-sm">
-          <summary>¿Usáis WordPress o Wix?</summary>
-          <p>No. Construyo páginas en HTML, CSS y JS puro o con generadores estáticos. Son más rápidas, más seguras y más baratas de alojar.</p>
-        </details>
-        <details class="faq-item border radius-sm">
-          <summary>¿Qué pasa si no me gusta el resultado?</summary>
-          <p>Incluyo rondas de revisión durante la fase de construcción. Validamos juntos antes de publicar nada definitivo.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Y CONTACTO -->
-  <section id="contacto" class="section surface-1">
-    <div class="container reveal">
-      <div class="cta-block">
-        <span class="section-label">Contacto</span>
-        <h2>¿Hablamos de lo que necesitas?</h2>
-        <p class="lead">Rellena el formulario o escríbeme directo. Respondo en menos de 24 horas laborables.</p>
-        <form action="mailto:info@influweb.es" method="post" enctype="text/plain" class="contact-form">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required autocomplete="name">
+        <div class="services-list">
+          <div class="service-item card reveal reveal-delay-1">
+            <span class="service-number">01</span>
+            <div>
+              <h3>Landing pages y webs rápidas</h3>
+              <p>Páginas que cargan en menos de 2 segundos. Estructura clara, copy directo y diseño enfocado en que el usuario pulse el botón, no en que se distraiga.</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
-          </div>
-          <div class="form-group full-width">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Abrir cliente de correo</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
+          <div class="service-item card reveal reveal-delay-2">
+            <span class="service-number">02</span>
+            <div>
+              <h3>Automatización de procesos</h3>
+              <p>Desde recordatorios de citas hasta facturación automática. Elimino las tareas de 3 horas que puedes hacer en 8 segundos (como en el ejemplo del inicio).</p>
+            </div>
+          </div>
+
+          <div class="service-item card reveal reveal-delay-3">
+            <span class="service-number">03</span>
+            <div>
+              <h3>Copywriting y contenido</h3>
+              <p>Escribo los textos de tu web y tus anuncios. Sin palabras vacías. Frases cortas que explican qué haces, para quién y por qué deberían elegirte hoy.</p>
+            </div>
+          </div>
+
+          <div class="service-item card reveal reveal-delay-4">
+            <span class="service-number">04</span>
+            <div>
+              <h3>Campañas de anuncios</h3>
+              <p>Configuro y optimizo campañas en Meta y Google. Segmentación limpia, seguimiento de conversiones real y pausa inmediata si un anuncio no trae cuentas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PROCESO EN 4 PASOS
+         ==================================================================== -->
+    <section class="section surface-1" id="proceso">
+      <div class="container">
+        <div class="reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <span class="section-label">Cómo trabajo</span>
+          <h2 style="max-width: 20ch;">4 pasos desde la llamada hasta el sistema funcionando.</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+            </div>
+            <span class="step-num-text">Paso 01</span>
+            <h3>Diagnóstico</h3>
+            <p>Hablamos 20 minutos. Me cuentas qué te quita tiempo y qué quieres vender. Yo te digo si puedo ayudarte o no.</p>
+          </div>
+
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <span class="step-num-text">Paso 02</span>
+            <h3>Arquitectura</h3>
+            <p>Dibujo el mapa de herramientas, textos y flujos. Ves el esquema antes de que toque una sola línea de código.</p>
+          </div>
+
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><line x1="7" y1="11" x2="17" y2="7"/><line x1="7" y1="13" x2="17" y2="17"/></svg>
+            </div>
+            <span class="step-num-text">Paso 03</span>
+            <h3>Implantación</h3>
+            <p>Construyo la web, conecto el CRM y lanzo los flujos. Tienes visibilidad total del avance cada 48 horas.</p>
+          </div>
+
+          <div class="step reveal reveal-delay-4">
+            <div class="step-number">
+              <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            </div>
+            <span class="step-num-text">Paso 04</span>
+            <h3>Optimización</h3>
+            <p>Mido resultados reales durante 15 días. Ajusto textos, tiempos de envío y segmentación hasta que el sistema rinde solo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PARA QUIÉN
+         ==================================================================== -->
+    <section class="section" id="para-quien">
+      <div class="container">
+        <div class="reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <span class="section-label">Para quién es esto</span>
+          <h2>Trabajo con negocios donde el tiempo es dinero literal.</h2>
+        </div>
+
+        <div class="audience-grid">
+          <div class="card audience-card reveal reveal-delay-1">
+            <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin: 0 auto;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="17" y1="3" x2="17" y2="7"/><line x1="15" y1="5" x2="19" y2="5"/></svg>
+            <h3>Clínicas Dentales</h3>
+            <p>Automatizo recordatorios de citas, seguimientos post-tratamiento y captación de nuevos pacientes. Tu recepcionista deja de ser un contestador humano.</p>
+          </div>
+
+          <div class="card audience-card reveal reveal-delay-2">
+            <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin: 0 auto;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="1" fill="currentColor" stroke="none"/></svg>
+            <h3>Fisioterapia</h3>
+            <p>Gestión de sesiones, avisos por WhatsApp y cobros recurrentes sin perseguir a nadie. Te centras en tratar, yo me encargo de la logística digital.</p>
+          </div>
+
+          <div class="card audience-card reveal reveal-delay-3">
+            <svg class="icon icon-lg icon-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin: 0 auto;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+            <h3>Autónomos</h3>
+            <p>Facturación, propuestas y seguimiento de leads en un solo flujo. Si trabajas solo, necesitas que tu sistema haga el trabajo de tres personas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SOBRE INFLUWEB
+         ==================================================================== -->
+    <section class="section surface-1" id="sobre-nosotros">
+      <div class="container">
+        <div class="about-content">
+          <div class="reveal">
+            <span class="section-label">Sobre INFLUWEB</span>
+            <h2 style="max-width: 18ch;">Soy Diego. Hago que internet trabaje para ti.</h2>
+            <p style="margin-bottom: 16px;">INFLUWEB es mi agencia. Trabajo con un equipo pequeño y especializado porque prefiero entregar rápido y bien antes que acumular proyectos a medias.</p>
+            <p style="margin-bottom: 16px;">No uso jerga de agencia. No te voy a hablar de "sinergias" ni de "soluciones 360". Te digo qué falla, cómo lo arreglo y cuánto tiempo te va a ahorrar.</p>
+            <p>Todo lo que construimos es tuyo. Sin bloqueos técnicos, sin letras pequeñas.</p>
+          </div>
+
+          <div class="about-stats reveal reveal-delay-2">
+            <div class="card stat-box">
+              <div class="stat-number">100%</div>
+              <p>Propiedad de tus datos y sistemas. Siempre.</p>
+            </div>
+            <div class="card stat-box">
+              <div class="stat-number">&lt;48h</div>
+              <p>Tiempo máximo de respuesta ante cualquier incidencia técnica.</p>
+            </div>
+            <div class="card stat-box">
+              <div class="stat-number">0</div>
+              <p>Permanencias obligatorias. Te quedas si el sistema te da dinero.</p>
+            </div>
+            <div class="card stat-box">
+              <div class="stat-number">Directo</div>
+              <p>Trato conmigo o con mi equipo técnico. Sin comerciales de por medio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FAQ
+         ==================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <span class="section-label">Preguntas frecuentes</span>
+          <h2 style="max-width: 20ch;">Lo que me suelen preguntar antes de empezar.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              ¿Cuánto tiempo se tarda en montar una automatización?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <p>Depende del proceso. Un flujo básico de captación y recordatorios puede estar funcionando en menos de una semana. Primero analizo lo que haces a mano y luego lo traduzco a sistema.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              ¿Necesito saber de tecnología para trabajar contigo?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <p>No. Tú me explicas cómo funciona tu negocio y qué te quita tiempo. Yo me encargo de la parte técnica, los flujos y las herramientas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              ¿Trabajas con cualquier tipo de negocio?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <p>Me centro en clínicas dentales, centros de fisioterapia y profesionales autónomos. Son perfiles donde una hora ahorrada al día cambia por completo la rentabilidad.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              ¿Qué incluye exactamente tu trabajo?
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <p>Diseño web, configuración de automatizaciones, redacción de textos orientados a conversión y gestión de campañas. Todo medible y sin relleno.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACTO
+         ==================================================================== -->
+    <section class="section surface-1" id="contacto">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Contacto</span>
+          <h2>Cuéntame qué te quita tiempo.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal reveal-delay-1">
+            <p class="lead">Rellena el formulario o escríbeme directo. Respondo en menos de 24 horas laborables.</p>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <h3>Teléfono</h3>
+                <a href="tel:+34711546147">711 546 147</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <h3>Email</h3>
+                <a href="mailto:info@influweb.es">info@influweb.es</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <h3>Dirección</h3>
+                <p>Manuela Estelles 97, Valencia</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal reveal-delay-2" action="mailto:info@influweb.es" method="post" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@email.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="600 000 000">
+              </div>
+              <div class="form-group">
+                <label for="negocio">Tipo de negocio *</label>
+                <select id="negocio" name="negocio" required>
+                  <option value="" disabled selected>Selecciona uno</option>
+                  <option value="clinica-dental">Clínica dental</option>
+                  <option value="fisioterapia">Centro de fisioterapia</option>
+                  <option value="autonomo">Autónomo / Freelance</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Cuéntame brevemente qué proceso te quita más tiempo ahora mismo."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-info">
-        <span class="logo">INFLUWEB</span>
-        <p>711 546 147 · info@influweb.es</p>
-        <p>Manuela Estelles 97, Valencia</p>
-      </div>
-      <div class="footer-legal">
-        <p>&copy; 2026 INFLUWEB. Todos los derechos reservados.</p>
-        <a href="#">Privacidad</a>
-        <a href="#">Cookies</a>
-      </div>
+    <div class="container">
+      <p>&copy; 2026 INFLUWEB. Todos los derechos reservados. Manuela Estelles 97, Valencia.</p>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
