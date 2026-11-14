@@ -1,14 +1,5 @@
-(function(){
-  const btn = document.getElementById('btnDemo');
-  const msg = document.getElementById('demoMsg');
-  const year = document.getElementById('year');
-
-  if(year) year.textContent = String(new Date().getFullYear());
-
-  if(btn && msg){
-    btn.addEventListener('click', () => {
-      const text = 'Confirmación lista: la página se carga correctamente sin dependencias externas.';
-      msg.textContent = text;
-    });
-  }
-})();
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('#main-menu');
+const links = menu ? menu.querySelectorAll('a') : [];
+function closeMenu(){ if(!menu || !toggle) return; menu.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); const label=toggle.querySelector('b'); if(label) label.textContent='Abrir menú'; }
+if(toggle && menu){ toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true'; toggle.setAttribute('aria-expanded',String(!open)); menu.classList.toggle('is-open',!open); const label=toggle.querySelector('b'); if(label) label.textContent=open?'Abrir menú':'Cerrar menú';}); links.forEach(link=>link.addEventListener('click',closeMenu)); document.addEventListener('keydown',e=>{if(e.key==='Escape') closeMenu();}); }
