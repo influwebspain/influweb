@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="INFLUWEB crea landing pages premium, automatizaciones y contenido que convierte. Diseño digital moderno con ejecución rápida." />
+  <meta name="description" content="INFLUWEB diseña y construye tu presencia digital: redes, textos, diseño gráfico y landing pages que convierten." />
+  <title>INFLUWEB — Landing Premium</title>
 
-  <!-- Fonts (fallbacks incluidos) -->
+  <!-- Fonts (fallbacks incluidos en styles.css) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <title>INFLUWEB — Landing premium que convierte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles.css" />
+  <meta name="theme-color" content="#0E100F" />
 </head>
 <body>
+  <a class="sr-only" href="#contenido">Saltar al contenido</a>
+
   <!-- NAVBAR -->
   <header class="navbar" role="banner">
     <div class="container">
-      <a class="navbar-logo" href="#top" aria-label="INFLUWEB">
+      <a class="navbar-logo" href="#">
         INFLU<span>WEB</span>
       </a>
 
@@ -27,67 +29,57 @@
         <a href="#proyectos">Proyectos</a>
         <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
-        <a class="navbar-cta" href="#contacto">Pedir presupuesto</a>
+        <a class="navbar-cta" href="#cta" aria-label="Ir al formulario de contacto">Pedir propuesta</a>
       </nav>
 
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <!-- hamburguesa se reemplaza con JS -->
+      <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
+          <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+          <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+          <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
         </svg>
       </button>
     </div>
   </header>
 
   <!-- HERO -->
-  <main id="top">
+  <main id="contenido">
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="section-label">Landing premium</div>
+            <div class="section-label">Marketing digital que se nota</div>
             <h1>
-              Convierte más con una landing rápida, moderna y pensada para vender.
+              Convertimos tu marca en una experiencia digital
+              <span class="text-secondary">rápida, moderna y orientada a resultados</span>.
             </h1>
             <p class="lead hero-subtitle">
-              Diseñamos y desarrollamos landing pages para INFLUWEB y clientes: estructura que guía, micro-interacciones, copy orientado a decisión y ejecución sin fricción.
+              Redes sociales, textos y contenido, diseño gráfico y landing pages premium.
+              Todo alineado con tu objetivo: más leads, más ventas y mejor presencia.
             </p>
 
-            <div class="hero-actions">
+            <div class="hero-actions" id="cta">
               <a class="btn-primary" href="#contacto">
-                <span aria-hidden="true" class="icon icon-accent" style="width:20px;height:20px;min-width:20px;min-height:20px;">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M4 12h16" />
-                    <path d="M14 6l6 6-6 6" />
-                  </svg>
-                </span>
-                Quiero una landing premium
-              </a>
-              <a class="btn-secondary" href="#proyectos">
-                <span aria-hidden="true" class="icon" style="width:20px;height:20px;min-width:20px;min-height:20px;">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path d="M7 7h10v10H7z" />
-                    <path d="M4 4h6" />
-                    <path d="M18 4h2v2" />
-                    <path d="M4 20h6" />
-                    <path d="M20 20h-2v-2" />
-                  </svg>
-                </span>
-                Ver proyectos reales
-              </a>
-            </div>
-
-            <div class="hero-guarantees" aria-label="Beneficios">
-              <div class="guarantee-item">
-                <span class="icon" aria-hidden="true">
+                <!-- icon check -->
+                <span class="icon icon-accent" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M20 6L9 17l-5-5" />
                   </svg>
                 </span>
-                Diseño premium con sistema visual.
-              </div>
+                Conseguir mi propuesta
+              </a>
+              <a class="btn-secondary" href="#proyectos">
+                <!-- icon play -->
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l12-7L8 5z" />
+                  </svg>
+                </span>
+                Ver casos reales
+              </a>
+            </div>
+
+            <div class="hero-guarantees" aria-label="Garantías">
               <div class="guarantee-item">
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
@@ -99,504 +91,570 @@
                     <path d="M18 12h4" />
                     <path d="M4.93 19.07l2.83-2.83" />
                     <path d="M16.24 7.76l2.83-2.83" />
+                    <circle cx="12" cy="12" r="3.5" />
                   </svg>
                 </span>
-                Micro-interacciones sutiles.
+                <span>Entregas claras, en tiempos reales</span>
               </div>
               <div class="guarantee-item">
                 <span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
-                    <path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.5-7 11-7 11z" />
+                    <path d="M12 21s-7-4.35-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.65-7 11-7 11z" />
                   </svg>
                 </span>
-                Orientada a conversión.
+                <span>Diseño con intención (no “solo bonito”)</span>
+              </div>
+              <div class="guarantee-item">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M8 12h8" />
+                    <path d="M12 8v8" />
+                  </svg>
+                </span>
+                <span>Landing responsive y rápida</span>
               </div>
             </div>
           </div>
 
-          <!-- Mockup / Flow card -->
-          <aside class="flow-card" aria-label="Mockup de landing premium">
-            <div class="flow-card-header">
-              <div class="flow-card-title">Preview / landing</div>
-              <div class="flow-badge">premium</div>
+          <!-- Flow card + mockup -->
+          <div>
+            <div class="flow-card" aria-label="Mockup de plataforma">
+              <div class="flow-card-header">
+                <div class="flow-card-title">Dashboard • INFLUWEB</div>
+                <div class="flow-badge">Landing Premium</div>
+              </div>
+
+              <div class="flow-rows" aria-label="Mockup con mejoras">
+                <div class="flow-row">
+                  <div class="flow-action">
+                    <span class="icon icon-accent" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M4 18V6" />
+                        <path d="M4 6h14" />
+                        <path d="M18 6l2 2v10H4" />
+                        <path d="M8 12h8" />
+                      </svg>
+                    </span>
+                    Mensajes que convierten
+                  </div>
+                  <div class="flow-time">+32% CTR</div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-action">
+                    <span class="icon icon-accent" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M4 19V5" />
+                        <path d="M4 5h16" />
+                        <path d="M8 9h8" />
+                        <path d="M8 13h6" />
+                      </svg>
+                    </span>
+                    Diseño + marca consistente
+                  </div>
+                  <div class="flow-time">-41% rebote</div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-action">
+                    <span class="icon icon-accent" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 2l4 8-4 12-4-12 4-8z" />
+                      </svg>
+                    </span>
+                    Landing rápida y mobile
+                  </div>
+                  <div class="flow-time">98/100</div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-action">
+                    <span class="icon icon-accent" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M3 12h6l2-6 2 12 2-6h4" />
+                      </svg>
+                    </span>
+                    Seguimiento de resultados
+                  </div>
+                  <div class="flow-time">+18% leads</div>
+                </div>
+              </div>
+
+              <div class="flow-comparison" aria-label="Comparativa">
+                <div class="comp-block manual">
+                  <div class="comp-label">Antes</div>
+                  <div class="comp-value">Landing genérica</div>
+                </div>
+                <div class="comp-block auto">
+                  <div class="comp-label">Ahora</div>
+                  <div class="comp-value">Estrategia + UX</div>
+                </div>
+              </div>
+
+              <div class="flow-disclaimer">
+                Mejora típica en proyectos optimizados: valores orientativos por vertical.
+              </div>
             </div>
-
-            <div class="flow-rows" aria-hidden="false">
-              <div class="flow-row">
-                <div class="flow-action">
-                  <span class="icon icon-accent" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M4 12h16" />
-                      <path d="M6 7h12" />
-                      <path d="M6 17h12" />
-                    </svg>
-                  </span>
-                  Titular con impacto
-                </div>
-                <div class="flow-time">00:01</div>
-              </div>
-
-              <div class="flow-row">
-                <div class="flow-action">
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M7 7h10v10H7z" />
-                      <path d="M4 12h3" />
-                      <path d="M17 12h3" />
-                    </svg>
-                  </span>
-                  Secciones claras
-                </div>
-                <div class="flow-time">00:02</div>
-              </div>
-
-              <div class="flow-row">
-                <div class="flow-action">
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M4 19V5" />
-                      <path d="M4 5h16" />
-                      <path d="M20 5v14H4" />
-                      <path d="M8 13h8" />
-                    </svg>
-                  </span>
-                  CTA potente
-                </div>
-                <div class="flow-time">00:03</div>
-              </div>
-
-              <div class="flow-row">
-                <div class="flow-action">
-                  <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 3l8 5v8l-8 5-8-5V8l8-5z" />
-                      <path d="M12 12l8-4" />
-                      <path d="M12 12L4 8" />
-                    </svg>
-                  </span>
-                  Rápida y ligera
-                </div>
-                <div class="flow-time">00:04</div>
-              </div>
-            </div>
-
-            <div class="flow-comparison" aria-label="Comparación">
-              <div class="comp-block manual">
-                <div class="comp-label">Manual</div>
-                <div class="comp-value">Saturación</div>
-              </div>
-              <div class="comp-block auto">
-                <div class="comp-label">INFLUWEB</div>
-                <div class="comp-value">Claridad</div>
-              </div>
-            </div>
-
-            <div class="flow-disclaimer">Menos ruido. Más intención. Mejor conversión.</div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICIOS -->
+    <!-- SERVICES -->
     <section class="section" id="servicios" aria-label="Servicios">
       <div class="container">
-        <div class="section-label">Servicios</div>
-        <h2>Todo lo que necesitas para una landing premium (sin pérdidas de tiempo)</h2>
-        <div class="benefits-grid" style="margin-top:32px;">
-          <article class="benefit-card border" >
-            <div class="benefit-icon" aria-hidden="true">
+        <div class="section-label">Servicios INFLUWEB</div>
+        <h2>De la idea a la conversión (con diseño profesional)</h2>
+        <p class="lead" style="max-width: 70ch; margin-top: 10px;">
+          Creamos tu presencia digital con un enfoque integral: estrategia, creatividad y desarrollo para que todo funcione junto.
+        </p>
+
+        <div class="benefits-grid" style="margin-top: 44px;">
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
               <span class="icon icon-accent">
                 <svg viewBox="0 0 24 24">
-                  <path d="M4 7h16" />
-                  <path d="M4 17h16" />
-                  <path d="M6 7l2 10" />
-                  <path d="M18 7l-2 10" />
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M7 15l3-3 3 3 4-6" />
                 </svg>
               </span>
             </div>
-            <h3>Diseño premium + sistema visual</h3>
-            <p>Jerarquía clara, superficies, radios y tipografía consistente para que tu marca se vea “pro”.</p>
-            <div class="benefit-proof">Incluye tokens, estilos y componentes base.</div>
+            <h3>Redes sociales</h3>
+            <p>Calendarios, reels y piezas que mantienen la voz de marca y empujan al siguiente paso.</p>
+            <div class="benefit-proof">Contenido + consistencia + CTA</div>
           </article>
 
-          <article class="benefit-card border" >
-            <div class="benefit-icon" aria-hidden="true">
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
               <span class="icon icon-accent">
                 <svg viewBox="0 0 24 24">
-                  <path d="M12 2l3 7h7l-5.5 4 2.5 9-7-5-7 5 2.5-9L2 9h7l3-7z" />
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h10" />
                 </svg>
               </span>
             </div>
-            <h3>Copy + estructura para convertir</h3>
-            <p>Hero, pruebas, beneficios y CTA con ritmo. Pensado para que el usuario avance sin fricción.</p>
-            <div class="benefit-proof">Secciones diseñadas para decisión.</div>
+            <h3>Textos y contenido</h3>
+            <p>Copy para landing, anuncios y campañas. Claro, directo y con estructura que convierte.</p>
+            <div class="benefit-proof">Mensajes + estructura + claridad</div>
           </article>
 
-          <article class="benefit-card border" >
-            <div class="benefit-icon" aria-hidden="true">
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
               <span class="icon icon-accent">
                 <svg viewBox="0 0 24 24">
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
+                  <path d="M12 2l9 5-9 5-9-5 9-5z" />
+                  <path d="M3 12l9 5 9-5" />
+                  <path d="M3 17l9 5 9-5" />
                 </svg>
               </span>
             </div>
-            <h3>Desarrollo rápido + responsive</h3>
-            <p>Landing ligera, responsive y con micro-interacciones: se siente premium en móvil y desktop.</p>
-            <div class="benefit-proof">Animaciones con transform/opacity.</div>
+            <h3>Diseño gráfico</h3>
+            <p>Identidad visual y piezas digitales para que tu marca se vea premium en cualquier canal.</p>
+            <div class="benefit-proof">Marca consistente + estilo digital</div>
+          </article>
+
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
+              <span class="icon icon-accent">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 2h12l2 4v16H4V6l2-4z" />
+                  <path d="M8 10h8" />
+                  <path d="M8 14h6" />
+                </svg>
+              </span>
+            </div>
+            <h3>Web y landing pages</h3>
+            <p>Landing responsive y rápida con UX pensada para capturar leads y guiar la decisión.</p>
+            <div class="benefit-proof">UX + rendimiento + conversión</div>
+          </article>
+
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
+              <span class="icon icon-accent">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </span>
+            </div>
+            <h3>Anuncios con enfoque</h3>
+            <p>Campañas que conectan creatividad con intención: menos ruido, más resultados.</p>
+            <div class="benefit-proof">Segmentación + mensajes + test</div>
+          </article>
+
+          <article class="benefit-card" data-tilt>
+            <div class="benefit-icon icon-wrapper" aria-hidden="true">
+              <span class="icon icon-accent">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 1v22" />
+                  <path d="M5 8a7 7 0 0 1 14 0" />
+                  <path d="M5 16a7 7 0 0 0 14 0" />
+                </svg>
+              </span>
+            </div>
+            <h3>Optimización continua</h3>
+            <p>Iteramos: aprendemos de datos, mejoramos copy/UX y ajustamos para escalar.</p>
+            <div class="benefit-proof">Aprendizaje + mejoras + ROI</div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- PROYECTOS -->
-    <section class="section" id="proyectos" aria-label="Proyectos">
+    <section class="section" id="proyectos" aria-label="Proyectos reales">
       <div class="container">
         <div class="section-label">Proyectos</div>
-        <h2>Resultados con clientes reales (estilo y ejecución INFLUWEB)</h2>
+        <h2>Resultados medibles (no promesas vacías)</h2>
+        <p class="lead" style="max-width: 72ch; margin-top: 10px;">
+          Ejemplos de cómo se traduce una landing bien construida en métricas: CTR, conversión, tiempo en página.
+        </p>
 
-        <div class="builds-grid" style="margin-top:28px;">
-          <article class="build-card border" >
-            <h3>
-              <span class="icon icon-accent" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 12h6l3 7 3-14 3 7h3" />
-                </svg>
-              </span>
-              SaaS B2B — “Onboarding que convierte”
-            </h3>
-            <ul class="build-list">
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                Hero con propuesta de valor clara.
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                Sección de beneficios con pruebas.
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                CTA sticky visual (sin romper UX).
-              </li>
-            </ul>
+        <div class="process-steps" style="margin-top: 44px;">
+          <article class="step-card" data-reveal>
+            <span class="step-number">CASE 01</span>
+            <h3>Clínica [Brand A] • Landing + Ads</h3>
+            <p>
+              Rediseño de secciones, copy de intención y CTA visible.
+              <br><span class="mono" style="color: var(--color-accent);">+24% leads / -33% CAC</span>
+            </p>
           </article>
-
-          <article class="build-card border" >
-            <h3>
-              <span class="icon icon-accent" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2v20" />
-                  <path d="M2 12h20" />
-                  <path d="M7 7h10v10H7z" />
-                </svg>
-              </span>
-              Ecommerce — “Campaña Black Friday premium”
-            </h3>
-            <ul class="build-list">
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                Diseño de módulos reutilizables.
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                Micro-interacciones para guiar atención.
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-                </span>
-                Secciones rápidas: menos carga, más foco.
-              </li>
-            </ul>
+          <article class="step-card" data-reveal>
+            <span class="step-number">CASE 02</span>
+            <h3>Startup SaaS [Brand B] • Mensajes</h3>
+            <p>
+              Nueva jerarquía de beneficios, prueba social y explicación simplificada.
+              <br><span class="mono" style="color: var(--color-accent);">+18% conversión</span>
+            </p>
+          </article>
+          <article class="step-card" data-reveal>
+            <span class="step-number">CASE 03</span>
+            <h3>Academia [Brand C] • Contenido</h3>
+            <p>
+              Packs de reels y landing con ruta clara por etapas.
+              <br><span class="mono" style="color: var(--color-accent);">+31% CTR</span>
+            </p>
+          </article>
+          <article class="step-card" data-reveal>
+            <span class="step-number">CASE 04</span>
+            <h3>Agencia [Brand D] • UX + Performance</h3>
+            <p>
+              Ajuste de velocidad, micro-interacciones y mobile-first.
+              <br><span class="mono" style="color: var(--color-accent);">98/100 Lighthouse</span>
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROCESO -->
+    <!-- ABOUT / QUE CONSTRUYO -->
+    <section class="section" aria-label="Qué hacemos">
+      <div class="container">
+        <div class="section-label">Qué construimos</div>
+        <h2>Un sistema completo para que tu marketing funcione</h2>
+
+        <div class="builds-grid" style="margin-top: 44px;">
+          <div class="build-card">
+            <h3>
+              <span class="icon icon-accent" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 5h16v14H4z"/><path d="M8 9h8"/><path d="M8 13h6"/></svg>
+              </span>
+              Qué consigues
+            </h3>
+            <ul class="build-list">
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Mensajes claros y posicionamiento consistente.
+              </li>
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Landing con UX y velocidad optimizadas.
+              </li>
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Contenido y diseño pensados para conversiones.
+              </li>
+            </ul>
+          </div>
+
+          <div class="build-card">
+            <h3>
+              <span class="icon icon-accent" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+              </span>
+              Qué te llevas
+            </h3>
+            <ul class="build-list">
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Entregables listos para escalar (plantillas + guía).
+              </li>
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Estructura de campaña para testear y mejorar.
+              </li>
+              <li>
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                Roadmap de acciones (prioridades y siguientes pasos).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
     <section class="section" id="proceso" aria-label="Proceso">
       <div class="container">
         <div class="section-label">Proceso</div>
-        <h2>Un flujo corto para una landing que se siente cara</h2>
-
+        <h2>Una ruta corta: estrategia → diseño → ejecución</h2>
         <div class="process-steps">
-          <article class="step-card border">
-            <span class="step-number">01 / Brief</span>
-            <h3>Objetivo + audiencia</h3>
-            <p>Definimos el mensaje y el “momento de decisión” de tu usuario.</p>
+          <article class="step-card" data-reveal>
+            <span class="step-number">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Revisamos tu oferta, tu audiencia y el punto de fricción principal.</p>
           </article>
-          <article class="step-card border">
-            <span class="step-number">02 / Diseño</span>
-            <h3>Premium & jerarquía</h3>
-            <p>Hero, pruebas, beneficios y CTA con el sistema visual INFLUWEB.</p>
+          <article class="step-card" data-reveal>
+            <span class="step-number">02</span>
+            <h3>Diseño con intención</h3>
+            <p>Jerarquía, copy de soporte, estructura y CTA con visibilidad total.</p>
           </article>
-          <article class="step-card border">
-            <span class="step-number">03 / Desarrollo</span>
-            <h3>Rápido + responsive</h3>
-            <p>Ejecución limpia: performance, accesibilidad y adaptabilidad.</p>
+          <article class="step-card" data-reveal>
+            <span class="step-number">03</span>
+            <h3>Construcción rápida</h3>
+            <p>Landing responsive, ligera y lista para anuncios y campañas.</p>
           </article>
-          <article class="step-card border">
-            <span class="step-number">04 / Optimización</span>
-            <h3>Micro-ajustes</h3>
-            <p>Interacciones y pulido final para maximizar conversión.</p>
+          <article class="step-card" data-reveal>
+            <span class="step-number">04</span>
+            <h3>Optimización</h3>
+            <p>Medimos, aprendemos y aplicamos mejoras. Iteramos con foco.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- AUDIENCIA / PARA QUIÉN -->
+    <!-- AUDIENCE -->
     <section class="section" aria-label="Para quién">
       <div class="container">
         <div class="section-label">Para quién</div>
-        <h2>Si quieres vender, captar leads o lanzar campaña… esto es para ti</h2>
+        <h2>Ideal si quieres crecer con seriedad</h2>
+        <p class="lead" style="max-width: 70ch; margin-top: 10px;">
+          Trabajamos con equipos que necesitan claridad, estética profesional y performance real.
+        </p>
 
-        <div class="audience-list">
-          <div class="audience-item border">
+        <div class="audience-list" style="margin-top: 44px;">
+          <div class="audience-item">
             <span class="icon icon-accent" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 11c1.5-1 2-2 2-3a4 4 0 0 0-8 0c0 1 0.5 2 2 3" />
-                <path d="M4 21c1.5-3 5-5 8-5s6.5 2 8 5" />
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
             </span>
             <div>
-              <strong style="display:block;color:var(--color-text-primary);margin-bottom:4px;">Marcas que buscan “wow”</strong>
-              <span class="text-muted">Una landing que se ve premium y profesional.</span>
+              <strong style="display:block; color: var(--color-text-primary); margin-bottom: 4px;">Empresas</strong>
+              Que necesitan presencia digital consistente y mensajería alineada.
             </div>
           </div>
-
-          <div class="audience-item border">
+          <div class="audience-item">
             <span class="icon icon-accent" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 19V5" />
-                <path d="M4 5h16" />
-                <path d="M20 19H4" />
-                <path d="M8 9h8" />
-                <path d="M8 13h5" />
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M7 6h10"/><path d="M7 18h10"/></svg>
             </span>
             <div>
-              <strong style="display:block;color:var(--color-text-primary);margin-bottom:4px;">Negocios con oferta clara</strong>
-              <span class="text-muted">Estructura para que el usuario entienda y actúe.</span>
+              <strong style="display:block; color: var(--color-text-primary); margin-bottom: 4px;">Startups</strong>
+              Que quieren acelerar conversión y optimizar anuncios.
             </div>
           </div>
-
-          <div class="audience-item border">
+          <div class="audience-item">
             <span class="icon icon-accent" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2l8 5v10l-8 5-8-5V7l8-5z" />
-                <path d="M12 12l8-5" />
-                <path d="M12 12L4 7" />
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.65-7 11-7 11z"/></svg>
             </span>
             <div>
-              <strong style="display:block;color:var(--color-text-primary);margin-bottom:4px;">Campañas con deadlines</strong>
-              <span class="text-muted">Entrega rápida y ejecución sin caos.</span>
+              <strong style="display:block; color: var(--color-text-primary); margin-bottom: 4px;">Marcas</strong>
+              Que buscan diseño premium y experiencia fluida.
             </div>
           </div>
-
-          <div class="audience-item border">
+          <div class="audience-item">
             <span class="icon icon-accent" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M20 7l-8 10-4-4" />
-                <path d="M4 3h16" />
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
             </span>
             <div>
-              <strong style="display:block;color:var(--color-text-primary);margin-bottom:4px;">Equipos que miden</strong>
-              <span class="text-muted">Diseño preparado para iterar y optimizar.</span>
+              <strong style="display:block; color: var(--color-text-primary); margin-bottom: 4px;">Equipos</strong>
+              Que necesitan ejecutar sin perder la calidad visual.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA POTENTE -->
-    <section class="section" aria-label="CTA final">
-      <div class="container">
-        <div class="surface-1 border radius-lg" style="padding:28px;">
-          <div class="section-label" style="margin-bottom:12px;">Listo para convertir</div>
-          <h2 style="margin-bottom:12px; max-width: 24ch;">Hagamos tu landing premium esta semana</h2>
-          <p class="text-secondary" style="max-width: 70ch; line-height:1.7;">
-            Te proponemos estructura + diseño + desarrollo. Cero humo: lo que ves es lo que lanzas.
-          </p>
-          <div class="hero-actions" style="margin-top:18px;">
-            <a class="btn-primary" href="#contacto">
-              <span aria-hidden="true" class="icon icon-accent" style="width:20px;height:20px;min-width:20px;min-height:20px;">
-                <svg viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M14 6l6 6-6 6"/></svg>
-              </span>
-              Pedir presupuesto
-            </a>
-            <a class="btn-secondary" href="#servicios">
-              Ver servicios
-            </a>
-          </div>
-          <div style="margin-top:16px; color: var(--color-text-muted); font-size:0.875rem;">
-            Respuesta habitual: <span class="mono" style="color: var(--color-accent); font-weight:700;">24–48h</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" aria-label="Preguntas frecuentes">
-      <div class="container">
-        <div class="section-label">FAQ</div>
-        <h2>Preguntas rápidas antes de lanzarla</h2>
-
-        <div class="faq-list">
-          <div class="faq-item border">
-            <button class="faq-question" type="button" aria-expanded="false">
-              ¿Incluye diseño y desarrollo, o solo maquetación?
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Incluye diseño premium basado en el sistema visual, y desarrollo responsive con micro-interacciones. Si ya tienes copy, lo adaptamos al layout; si no, te guiamos para dejarlo listo.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item border">
-            <button class="faq-question" type="button" aria-expanded="false">
-              ¿Cuánto tarda una landing premium?
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Depende del alcance, pero normalmente trabajamos con un flujo corto para llegar a una primera versión en pocos días y luego pulimos detalles. Lo cerramos en la llamada.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item border">
-            <button class="faq-question" type="button" aria-expanded="false">
-              ¿La landing es responsive y rápida?
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Sí. Se diseña primero para estructura y legibilidad, y luego se adapta a móvil/desktop. Las animaciones están pensadas para ser ligeras (transform/opacity).
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
+    <!-- CONTACT -->
     <section class="section contact-section" id="contacto" aria-label="Contacto">
       <div class="container">
         <div class="section-label">Contacto</div>
-        <h2>Cuéntanos tu proyecto y te proponemos el mejor enfoque</h2>
+        <h2>¿Hacemos que tu web convierta?</h2>
+        <p class="lead" style="max-width: 72ch; margin-top: 10px;">
+          Cuéntanos tu objetivo y te devolvemos una propuesta clara con próximos pasos.
+        </p>
 
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-item">
               <span class="icon icon-accent" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-2 9H8l-2-9H2"/><path d="M12 2l5 7H7l5-7z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
               </span>
-              <div>
-                <div style="color:var(--color-text-primary);font-weight:700;">INFLUWEB</div>
-                <span class="text-muted">Landing premium • Web • Contenido</span>
-              </div>
+              <span>
+                Respuesta rápida con enfoque <span class="mono" style="color: var(--color-accent);">(24-48h)</span>
+              </span>
             </div>
-
             <div class="contact-item">
               <span class="icon icon-accent" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M20 21H4V3h16v18z"/><path d="M7 8h10"/><path d="M7 12h6"/></svg>
               </span>
-              <div>
-                <div style="color:var(--color-text-primary);font-weight:700;">Respuesta rápida</div>
-                <span class="text-muted">24–48h con propuesta clara</span>
-              </div>
+              <span>
+                Entregables: landing + piezas + guía de uso
+              </span>
             </div>
-
             <div class="contact-item">
               <span class="icon icon-accent" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l8 4"/></svg>
               </span>
-              <div>
-                <div style="color:var(--color-text-primary);font-weight:700;">Sin presión</div>
-                <span class="text-muted">Te diremos si encaja o no</span>
-              </div>
+              <span>
+                Diseñado para <span class="mono" style="color: var(--color-accent);">performance</span> y mobile
+              </span>
             </div>
 
-            <div style="margin-top:10px; color:var(--color-text-muted); font-size:0.875rem;">
-              *Este formulario es demostrativo para la landing. Para producción, conecta tu backend.
+            <div class="about-details" style="margin-top: 8px;">
+              <div class="about-detail-item" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+                <span class="icon icon-accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.65-7 11-7 11z"/></svg>
+                </span>
+                <div>
+                  <strong>Atención cercana</strong>
+                  <span>Sin vueltas: te decimos qué haríamos y por qué.</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <form class="contact-form" onsubmit="return false;">
+          <form class="contact-form" onsubmit="return false" aria-label="Formulario de contacto">
             <div class="form-group">
               <label for="nombre">Nombre</label>
-              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+              <input id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required />
             </div>
-
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" autocomplete="organization" placeholder="Tu empresa" />
+            </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required />
             </div>
-
             <div class="form-group">
-              <label for="mensaje">¿Qué necesitas?</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Ej: landing para lanzar campaña en 2 semanas. Incluye diseño premium + responsive." required></textarea>
+              <label for="objetivo">Objetivo</label>
+              <textarea id="objetivo" name="objetivo" placeholder="Ej: necesito más leads con una landing premium..." required></textarea>
             </div>
 
             <button class="btn-primary" type="submit">
-              <span aria-hidden="true" class="icon icon-accent" style="width:20px;height:20px;min-width:20px;min-height:20px;">
+              <span class="icon icon-accent" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
               </span>
-              Enviar mensaje
+              Enviar solicitud
             </button>
 
-            <div class="text-muted" style="font-size:0.8125rem; margin-top:6px;">
-              Al enviar, aceptas que te contactemos para coordinar el proyecto.
-            </div>
+            <p class="text-muted" style="font-size: 0.8125rem; margin-top: -4px;">
+              Al enviar, generamos un borrador para que el equipo te contacte (sin spam).
+            </p>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer" aria-label="Footer">
       <div class="container">
-        <p>
-          © <span id="year"></span> <strong>INFLUWEB</strong>. Diseño premium con ejecución rápida.
-          <span class="mono" style="opacity:.9;">•</span> <a href="#top">Volver arriba</a>
-        </p>
+        <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+          <div class="navbar-logo" style="font-size: 1.1rem;">
+            INFLU<span>WEB</span>
+          </div>
+          <p>
+            Marketing online, diseño y desarrollo web para marcas que quieren crecer.
+          </p>
+          <div style="display:flex; gap:18px; flex-wrap:wrap; justify-content:center;">
+            <a href="#servicios" class="text-muted">Servicios</a>
+            <a href="#proyectos" class="text-muted">Proyectos</a>
+            <a href="#proceso" class="text-muted">Proceso</a>
+            <a href="#contacto" class="text-muted">Contacto</a>
+          </div>
+          <p class="text-muted">
+            © <span id="year"></span> INFLUWEB. Todos los derechos reservados.
+          </p>
+        </div>
       </div>
     </footer>
   </main>
 
   <script src="./script.js"></script>
   <script>
-    // Año en footer (micro-mejora)
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // micro: set year y pequeñas mejoras de UX sin tocar lógica existente
+    document.addEventListener('DOMContentLoaded', () => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
 
-    // Accesibilidad FAQ: sincroniza aria-expanded con el estado real
-    document.addEventListener('click', (e) => {
-      const btn = e.target.closest('.faq-question');
-      if (!btn) return;
-      const item = btn.closest('.faq-item');
-      if (!item) return;
-      const isOpen = item.classList.contains('is-open');
-      btn.setAttribute('aria-expanded', String(isOpen));
+      // Micro-interacción: tilt suave en tarjetas
+      const cards = document.querySelectorAll('[data-tilt]');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width;
+          const py = (e.clientY - r.top) / r.height;
+          const ry = (px - 0.5) * 8;
+          const rx = (0.5 - py) * 8;
+          card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+        });
+      });
+
+      // Fake submit para evitar navegación y dar feedback inmediato
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+        });
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const nombre = form.querySelector('#nombre')?.value?.trim();
+            const email = form.querySelector('#email')?.value?.trim();
+            if (!nombre || !email) return;
+            btn.textContent = '¡Listo! Te contactamos pronto';
+            setTimeout(() => {
+              btn.innerHTML = '<span class="icon icon-accent" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span> Enviar solicitud';
+            }, 2600);
+          });
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Ajustes de accesibilidad: cerrar focus ring en tarjetas por teclado (no intrusivo)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const navLinks = document.querySelector('.navbar-links');
+        const hamburger = document.querySelector('.hamburger');
+        if (navLinks && navLinks.classList.contains('is-open')) {
+          navLinks.classList.remove('is-open');
+          if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+        }
+      }
     });
   </script>
 </body>

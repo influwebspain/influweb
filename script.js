@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (svg) {
         if (isOpen) {
           // Icono X
-          svg.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+          svg.innerHTML = '<line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>';
         } else {
           // Icono Hamburguesa
-          svg.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+          svg.innerHTML = '<line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>';
         }
       }
     });
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.setAttribute('aria-expanded', 'false');
         const svg = hamburger.querySelector('svg');
         if (svg) {
-          svg.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+          svg.innerHTML = '<line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>';
         }
       });
     });
@@ -63,10 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('is-open')) {
           otherItem.classList.remove('is-open');
-          const otherAnswer = otherItem.querySelector('.faq-answer');
-          if (otherAnswer) otherAnswer.style.maxHeight = '0';
-          const otherBtn = otherItem.querySelector('.faq-question');
-          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          otherItem.querySelector('.faq-answer').style.maxHeight = '0';
         }
       });
 
@@ -74,11 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isOpen) {
         item.classList.remove('is-open');
         answer.style.maxHeight = '0';
-        question.setAttribute('aria-expanded', 'false');
       } else {
         item.classList.add('is-open');
         answer.style.maxHeight = inner.scrollHeight + 24 + 'px';
-        question.setAttribute('aria-expanded', 'true');
       }
     });
   });
@@ -162,41 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       }
-    });
-  });
-
-  /* ------------------------------------------------------------------------
-     6. Micro-interacción CTA: ripple light
-     ------------------------------------------------------------------------ */
-  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-    btn.addEventListener('pointerdown', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const ripple = document.createElement('span');
-      ripple.style.position = 'absolute';
-      ripple.style.left = `${x}px`;
-      ripple.style.top = `${y}px`;
-      ripple.style.width = '10px';
-      ripple.style.height = '10px';
-      ripple.style.transform = 'translate(-50%, -50%)';
-      ripple.style.borderRadius = '999px';
-      ripple.style.background = 'rgba(0,229,160,.22)';
-      ripple.style.pointerEvents = 'none';
-      ripple.style.opacity = '1';
-      ripple.style.transition = 'transform .35s ease, opacity .35s ease';
-      ripple.className = 'ripple';
-
-      btn.style.position = btn.style.position || 'relative';
-      btn.appendChild(ripple);
-
-      requestAnimationFrame(() => {
-        ripple.style.transform = 'translate(-50%, -50%) scale(18)';
-        ripple.style.opacity = '0';
-      });
-
-      setTimeout(() => ripple.remove(), 380);
     });
   });
 
